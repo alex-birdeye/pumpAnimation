@@ -83,11 +83,11 @@ function InitPreview_liq() {
 
     $("preview_box_liq").style.visibility = "hidden";
 
-    var nPicNum = 0;
+    var nPicNum_liq = 0;
 
     for (i = 0; i < nIDNum_liq; i++) {
         var strDivName_liq = "p_liq" + i.toString();
-        var strImgName = "pic_liq" + i.toString();
+        var strImgName_liq = "pic_liq" + i.toString();
 
         var strImg0 = "";
 
@@ -102,7 +102,8 @@ function InitPreview_liq() {
             strImg0 = "http://gifmaker.me/files/download/funny/" + strFolder_liqFunny62 + "/" + strFolder_liq + "/" + arrFile_liq[i];
 
         if (!bUseWHString_liq)
-            strHTML_liq += '<div id="' + strDivName_liq + '" class="preview" style="width:' + strWidth + ';height:' + strHeight + ' ;">' + '<img id="' + strImgName + '" style="margin:0;padding:0;border:0px;width:' + strWidth + ';height:' + strHeight + ';">' + '</div>';
+            //strHTML_liq += '<div id="' + strDivName_liq + '" class="preview" style="width:' + strWidth + ';height:' + strHeight + ' ;">' + '<img id="' + strImgName_liq + '" style="margin:0;padding:0;border:0px;width:' + strWidth + ';height:' + strHeight + ';">' + '</div>';
+            strHTML_liq += '<div id="' + strDivName_liq + '" class="liquid"' + '<img id="' + strImgName_liq + '" style="margin:0;padding:0;border:0px;width:' + strWidth + ';height:' + strHeight + ';">' + '</div>';
         else {
             var nPicW = arrWString_liq[i];
             var nPicH = arrHString_liq[i];
@@ -111,7 +112,7 @@ function InitPreview_liq() {
             //nWidth_liq, nHeight_liq
 
             if (nPicW == nWidth_liq && nPicH == nHeight_liq) {
-                strHTML_liq += '<div id="' + strDivName_liq + '" class="preview" style="width:' + strWidth + ';height:' + strHeight + ' ;">' + '<img id="' + strImgName + '" style="margin:0;padding:0;border:0px;width:' + strWidth + ';height:' + strHeight + ';">' + '</div>';
+                strHTML_liq += '<div id="' + strDivName_liq + '" class="preview" style="width:' + strWidth + ';height:' + strHeight + ' ;">' + '<img id="' + strImgName_liq + '" style="margin:0;padding:0;border:0px;width:' + strWidth + ';height:' + strHeight + ';">' + '</div>';
             }
             else {
                 //scale to same W
@@ -153,7 +154,8 @@ function InitPreview_liq() {
                 var strPaddingH = nPaddingH.toString();
                 var strPadding = "padding:" + strPaddingH + "px " + strPaddingW + "px " + strPaddingH + "px " + strPaddingW + "px;";
 
-                strHTML_liq += '<div id="' + strDivName_liq + '" style="position:absolute;float:left;' + strPadding + 'width:' + strDivW + ';height:' + strDivH + ' ;">' + '<img id="' + strImgName + '" style="margin:0;padding:0;border:0px;width:' + strWidthN + ';height:' + strHeightN + ';">' + '</div>';
+                strHTML_liq += '<div id="' + strDivName_liq + '" style="position:absolute;float:left;' + strPadding + 'width:' + strDivW + ';height:' + strDivH + ' ;">' + '<img id="' + strImgName_liq + '" style="margin:0;padding:0;border:0px;width:' + strWidthN + ';height:' + strHeightN + ';">' + '</div>';
+                //strHTML_liq += '<div id="' + strDivName_liq + '" style="position:absolute;top:300px;left:600px;">' + '<img id="' + strImgName_liq + '" style="margin:0;padding:0;border:0px;width:' + strWidthN + ';height:' + strHeightN + ';">' + '</div>';
 
             }
         }
@@ -162,17 +164,16 @@ function InitPreview_liq() {
         newimages_liq[i].src = strImg0;
         newimages_liq[i].onload = function () {
 
-            nPicNum++;
-            if (nPicNum == nIDNum_liq)
+            nPicNum_liq++;
+            if (nPicNum_liq == nIDNum_liq)
                 OnLoadAllPics_liq();
             else {
-                var nPercent = Math.floor(nPicNum / nIDNum_liq * 100);
+                var nPercent = Math.floor(nPicNum_liq / nIDNum_liq * 100);
                 $("Loading_box").innerHTML = "Loading... " + nPercent.toString() + "%";
             }
         };
 
     }
-
     $("preview_box").innerHTML = strHTML_liq;
     $("preview_box").style.width = strWidth;
     $("preview_box").style.height = "0px";
@@ -181,9 +182,9 @@ function InitPreview_liq() {
 function OnLoadAllPics_liq() {
     for (var i = 0; i < nIDNum_liq; i++) {
         var strDivName_liq = "p_liq" + i.toString();
-        var strImgName = "pic_liq" + i.toString();
+        var strImgName_liq = "pic_liq" + i.toString();
 
-        $(strImgName).src = newimages_liq[i].src;
+        $(strImgName_liq).src = newimages_liq[i].src;
         $(strDivName_liq).style.visibility = "hidden";
     }
 
@@ -216,7 +217,6 @@ function DisplayImages_liq() {
 
 function ReadFileName_liq(strFileNameList) {
     var nNum = arguments.length;
-
     if (nNum > 0) {
         nIDNum_liq = nNum;
         arrFile_liq.length = nNum;

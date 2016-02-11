@@ -272,3 +272,26 @@ textarea {
         page-break-after: avoid;
     }
 }
+
+.engine{
+    position: absolute;
+    top: 300px;
+    left: 300px;
+    visibility: hidden;
+}
+.ggas{
+    position: absolute;
+    top: 235px;
+    left: 405px;
+    visibility: hidden;
+    z-index: 1;
+}
+.liquid{
+    position: absolute;
+    top: 360px;
+    left: 655px;
+    visibility: hidden;
+    z-index: 5;
+    width: 68px;
+    height: 58px;
+}

@@ -102,7 +102,8 @@ function InitPreview() {
             strImg0 = "http://gifmaker.me/files/download/funny/" + strFolderFunny62 + "/" + strFolder + "/" + arrFile[i];
 
         if (!bUseWHString)
-            strHTML += '<div id="' + strDivName + '" class="preview" style="width:' + strWidth + ';height:' + strHeight + ' ;">' + '<img id="' + strImgName + '" style="margin:0;padding:0;border:0px;width:' + strWidth + ';height:' + strHeight + ';">' + '</div>';
+            //strHTML += '<div id="' + strDivName + '" class="preview" style="width:' + strWidth + ';height:' + strHeight + ' ;">' + '<img id="' + strImgName + '" style="margin:0;padding:0;border:0px;width:' + strWidth + ';height:' + strHeight + ';">' + '</div>';
+            strHTML += '<div id="' + strDivName + '" class="engine"' + '<img id="' + strImgName + '" style="margin:0;padding:0;border:0px;width:' + strWidth + ';height:' + strHeight + ';">' + '</div>';
         else {
             var nPicW = arrWString[i];
             var nPicH = arrHString[i];
@@ -153,7 +154,8 @@ function InitPreview() {
                 var strPaddingH = nPaddingH.toString();
                 var strPadding = "padding:" + strPaddingH + "px " + strPaddingW + "px " + strPaddingH + "px " + strPaddingW + "px;";
 
-                strHTML += '<div id="' + strDivName + '" style="position:absolute;float:left;' + strPadding + 'width:' + strDivW + ';height:' + strDivH + ' ;">' + '<img id="' + strImgName + '" style="margin:0;padding:0;border:0px;width:' + strWidthN + ';height:' + strHeightN + ';">' + '</div>';
+                strHTML += '<div id="' + strDivName + '" style="position:absolute;top:300px;left:300px;' + strPadding + 'width:' + strDivW + ';height:' + strDivH + ' ;">' + '<img id="' + strImgName + '" style="margin:0;padding:0;border:0px;width:' + strWidthN + ';height:' + strHeightN + ';">' + '</div>';
+                //strHTML += '<div id="' + strDivName + '" class="engine"' + '<img id="' + strImgName + '" style="margin:0;padding:0;border:0px;width:' + strWidthN + ';height:' + strHeightN + ';">' + '</div>';
 
             }
         }
