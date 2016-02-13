@@ -281,17 +281,29 @@ textarea {
 }
 .ggas{
     position: absolute;
-    top: 235px;
-    left: 405px;
+    top: 435px;
+    left: 605px;
     visibility: hidden;
+    z-index: 1;
+}
+.airarrows{
+    position: absolute;
+    top: 155px;
+    left: 425px;
+    visibility: hidden;
+    width: 136px;
+    height: 168px;
     z-index: 1;
 }
 .liquid{
     position: absolute;
-    top: 360px;
-    left: 655px;
+    top: 560px;
+    left: 855px;
     visibility: hidden;
     z-index: 5;
     width: 68px;
     height: 58px;
+}
+iframe[seamless] {
+    border: none;
 }

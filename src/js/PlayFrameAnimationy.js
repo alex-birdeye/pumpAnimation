@@ -95,7 +95,7 @@ function InitPreview() {
 
         if (nHomeFolder == 1)
             //strImg0 = "http://gifmaker.me/files/download/home/" + strYMD + "/" + strHour + "/" + strFolder + "/" + arrFile[i];
-            strImg0 = "img/Engine/" +arrFile[i];
+            strImg0 = "img/EngineWithGreenThing/" +arrFile[i];
         else if (nHomeFolder == 8)
             strImg0 = "http://148.251.91.98/000/" + strYMD + "/" + strHour + "/" + strFolder + "/" + arrFile[i];
         else
@@ -154,7 +154,7 @@ function InitPreview() {
                 var strPaddingH = nPaddingH.toString();
                 var strPadding = "padding:" + strPaddingH + "px " + strPaddingW + "px " + strPaddingH + "px " + strPaddingW + "px;";
 
-                strHTML += '<div id="' + strDivName + '" style="position:absolute;top:300px;left:300px;' + strPadding + 'width:' + strDivW + ';height:' + strDivH + ' ;">' + '<img id="' + strImgName + '" style="margin:0;padding:0;border:0px;width:' + strWidthN + ';height:' + strHeightN + ';">' + '</div>';
+                strHTML += '<div id="' + strDivName + '" style="position:absolute;top:478px;left:445px;z-index: 1;' + strPadding + 'width:' + strDivW + ';height:' + strDivH + ' ;">' + '<img id="' + strImgName + '" style="margin:0;padding:0;border:0px;width:' + strWidthN + ';height:' + strHeightN + ';">' + '</div>';
                 //strHTML += '<div id="' + strDivName + '" class="engine"' + '<img id="' + strImgName + '" style="margin:0;padding:0;border:0px;width:' + strWidthN + ';height:' + strHeightN + ';">' + '</div>';
 
             }
