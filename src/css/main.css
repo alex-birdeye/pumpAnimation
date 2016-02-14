@@ -304,6 +304,33 @@ textarea {
     width: 68px;
     height: 58px;
 }
+.oilpipebig{
+    position: absolute;
+    top: 212px;
+    left: 293px;
+    visibility: hidden;
+    z-index: 5;
+    width: 68px;
+    height: 58px;
+}
+.oilpipefromsep{
+    position: absolute;
+    top: 553px;
+    left: 423px;
+    visibility: hidden;
+    z-index: 5;
+    width: 68px;
+    height: 58px;
+}
+.oilpipetoengine{
+    position: absolute;
+    top: 515px;
+    left: 367px;
+    visibility: hidden;
+    z-index: 5;
+    width: 68px;
+    height: 58px;
+}
 iframe[seamless] {
     border: none;
 }
