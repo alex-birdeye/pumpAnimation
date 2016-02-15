@@ -331,6 +331,51 @@ textarea {
     width: 68px;
     height: 58px;
 }
+.oilpipefromadaptertoadapter{
+    position: absolute;
+    top: 619px;
+    left: 431px;
+    visibility: hidden;
+    z-index: 5;
+    width: 68px;
+    height: 58px;
+}
+.oilpipefromadaptertoengine{
+    position: absolute;
+    top: 611px;
+    left: 427px;
+    visibility: hidden;
+    z-index: 5;
+    width: 68px;
+    height: 58px;
+}
+.oilpipefromadaptertoengine img{
+    margin:0;padding:0;border:0px;width:72px;height:13px;
+}
+.oilpipefromadaptertcooler{
+    position: absolute;
+    top: 615px;
+    left: 387px;
+    visibility: hidden;
+    z-index: 5;
+    width: 68px;
+    height: 58px;
+}
+.oilpipefromadaptertcooler img{
+    margin:0;padding:0;border:0px;width:46px;height:45px;
+}
+.oilpipefrombypasstocooler{
+    position: absolute;
+    top: 515px;
+    left: 335px;
+    visibility: hidden;
+    z-index: 5;
+    width: 68px;
+    height: 58px;
+}
+.oilpipefrombypasstocooler img{
+    margin:0;padding:0;border:0px;width:47px;height:88px;
+}
 iframe[seamless] {
     border: none;
 }
