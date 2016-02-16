@@ -376,6 +376,42 @@ textarea {
 .oilpipefrombypasstocooler img{
     margin:0;padding:0;border:0px;width:47px;height:88px;
 }
+.water{
+    position: absolute;
+    top: 584px;
+    left: 251px;
+    visibility: hidden;
+    z-index: 5;
+    width: 158px;
+    height: 131px;
+}
+.water img{
+    margin:0;padding:0;border:0px;width:158px;height:131px;
+}
+.smallgreenpipe{
+    position: absolute;
+    top: 424px;
+    left: 588px;
+    visibility: hidden;
+    z-index: 5;
+    width: 158px;
+    height: 131px;
+}
+.smallgreenpipe img{
+    margin:0;padding:0;border:0px;width:287px;height:123px;
+}
+.airvalvespring{
+    position: absolute;
+    top: 382px;
+    left: 513px;
+    visibility: hidden;
+    z-index: 5;
+    width: 158px;
+    height: 131px;
+}
+.airvalvespring img{
+    margin:0;padding:0;border:0px;width:135px;height:58px;
+}
 iframe[seamless] {
     border: none;
 }
