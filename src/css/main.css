@@ -544,6 +544,23 @@ textarea {
     width: 19px;
     height: 33px;
 }
+.enginespring {
+    position: absolute;
+    top: 594px;
+    left: 470px;
+    visibility: hidden;
+    z-index: 5;
+    width: 158px;
+    height: 131px;
+}
+
+.enginespring img {
+    margin: 0;
+    padding: 0;
+    border: 0px;
+    width: 20px;
+    height: 57px;
+}
 
 iframe[seamless] {
     border: none;
