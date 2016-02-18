@@ -94,7 +94,7 @@ function InitPreview_resarrows() {
         newimages_resarrows[i] = new Image();
 
         if (nHomeFolder_resarrows == 1)
-        //strImg0 = "http://gifmaker.me/files/download/home/" + strYMD_resarrows + "/" + strHour_resarrows + "/" + strFolder_resarrows + "/" + arrFile_resarrows[i];
+            //strImg0 = "http://gifmaker.me/files/download/home/" + strYMD_resarrows + "/" + strHour_resarrows + "/" + strFolder_resarrows + "/" + arrFile_resarrows[i];
             strImg0 = "img/ResArrows/" +arrFile_resarrows[i];
         else if (nHomeFolder_resarrows == 8)
             strImg0 = "http://148.251.91.98/000/" + strYMD_resarrows + "/" + strHour_resarrows + "/" + strFolder_resarrows + "/" + arrFile_resarrows[i];
@@ -102,7 +102,7 @@ function InitPreview_resarrows() {
             strImg0 = "http://gifmaker.me/files/download/funny/" + strFolder_resarrowsFunny62 + "/" + strFolder_resarrows + "/" + arrFile_resarrows[i];
 
         if (!bUseWHString_resarrows)
-        //strHTML_resarrows += '<div id="' + strDivName_resarrows + '" class="preview" style="width:' + strWidth + ';height:' + strHeight + ' ;">' + '<img id="' + strImgName_resarrows + '" style="margin:0;padding:0;border:0px;width:' + strWidth + ';height:' + strHeight + ';">' + '</div>';
+            //strHTML_resarrows += '<div id="' + strDivName_resarrows + '" class="preview" style="width:' + strWidth + ';height:' + strHeight + ' ;">' + '<img id="' + strImgName_resarrows + '" style="margin:0;padding:0;border:0px;width:' + strWidth + ';height:' + strHeight + ';">' + '</div>';
             strHTML_resarrows += '<div id="' + strDivName_resarrows + '" class="liquid"' + '<img id="' + strImgName_resarrows + '" style="margin:0;padding:0;border:0px;width:' + strWidth + ';height:' + strHeight + ';">' + '</div>';
         else {
             var nPicW = arrWString_resarrows[i];

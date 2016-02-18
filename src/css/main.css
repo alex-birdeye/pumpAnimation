@@ -460,8 +460,8 @@ textarea {
 }
 .resarrows {
     position: absolute;
-    top: 398px;
-    left: 497px;
+    top: 470px;
+    left: 857px;
     visibility: hidden;
     z-index: 5;
     width: 158px;
@@ -474,6 +474,41 @@ textarea {
     border: 0px;
     width: 60px;
     height: 92px;
+}
+.solenoidvalve {
+    position: absolute;
+    top: 464px;
+    left: 587px;
+    visibility: hidden;
+    z-index: 5;
+    width: 158px;
+    height: 131px;
+}
+
+.solenoidvalve img {
+    margin: 0;
+    padding: 0;
+    border: 0px;
+    width: 65px;
+    height: 20px;
+}
+
+.solenoidvalveblowdown {
+    position: absolute;
+    top: 384px;
+    left: 710px;
+    visibility: hidden;
+    z-index: 5;
+    width: 158px;
+    height: 131px;
+}
+
+.solenoidvalveblowdown img {
+    margin: 0;
+    padding: 0;
+    border: 0px;
+    width: 20px;
+    height: 65px;
 }
 
 iframe[seamless] {
