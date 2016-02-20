@@ -49,6 +49,19 @@ function StopAnimate_oilpipebig() {
     clearTimeout(timerPreview_oilpipebig);
     timerPreview_oilpipebig = 0;
 }
+
+var oilpipebigState = true;
+function StartStopAnimate_oilpipebig() {
+    oilpipebigState = !oilpipebigState;
+    if(oilpipebigState){
+        document.getElementById("preview_box_oilpipebig").style.opacity = "1";
+        Preview_oilpipebig()
+    } else{
+        StopAnimate_oilpipebig();
+        document.getElementById("preview_box_oilpipebig").style.opacity = "0.5";
+    }
+}
+
 /*
  function SetFolderName( strDir )
  {

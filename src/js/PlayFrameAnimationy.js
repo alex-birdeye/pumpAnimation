@@ -49,6 +49,17 @@ function StopAnimate() {
     clearTimeout(timerPreview);
     timerPreview = 0;
 }
+
+var engineState = true;
+function StartStopAnimate_engine() {
+    engineState = !engineState;
+    if(engineState){
+        Preview()
+    } else{
+        StopAnimate();
+    }
+}
+
 /*
  function SetFolderName( strDir )
  {

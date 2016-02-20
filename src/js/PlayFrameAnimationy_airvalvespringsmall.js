@@ -49,6 +49,17 @@ function StopAnimate_airvalvespringsmall() {
     clearTimeout(timerPreview_airvalvespringsmall);
     timerPreview_airvalvespringsmall = 0;
 }
+
+var airvalvespringsmallState = true;
+function StartStopAnimate_airvalvespringsmall() {
+    airvalvespringsmallState = !airvalvespringsmallState;
+    if(airvalvespringsmallState){
+        Preview_airvalvespringsmall()
+    } else{
+        StopAnimate_airvalvespringsmall();
+    }
+}
+
 /*
  function SetFolderName( strDir )
  {

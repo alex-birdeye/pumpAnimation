@@ -49,6 +49,17 @@ function StopAnimate_solenoidvalveblowdown() {
     clearTimeout(timerPreview_solenoidvalveblowdown);
     timerPreview_solenoidvalveblowdown = 0;
 }
+
+var solenoidvalveblowdownState = true;
+function StartStopAnimate_solenoidvalveblowdown() {
+    solenoidvalveblowdownState = !solenoidvalveblowdownState;
+    if(solenoidvalveblowdownState){
+        Preview_solenoidvalveblowdown()
+    } else{
+        StopAnimate_solenoidvalveblowdown();
+    }
+}
+
 /*
  function SetFolderName( strDir )
  {

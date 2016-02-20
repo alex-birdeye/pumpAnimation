@@ -49,6 +49,19 @@ function StopAnimate_airarrows() {
     clearTimeout(timerPreview_airarrows);
     timerPreview_airarrows = 0;
 }
+
+var airarrowsState = true;
+function StartStopAnimate_airarrows() {
+    airarrowsState = !airarrowsState;
+    if(airarrowsState){
+        document.getElementById("preview_box_airarrows").style.display = "block";
+        Preview_airarrows()
+    } else{
+        StopAnimate_airarrows();
+        document.getElementById("preview_box_airarrows").style.display = "none";
+    }
+}
+
 /*
  function SetFolderName( strDir )
  {

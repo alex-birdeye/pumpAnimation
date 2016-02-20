@@ -28,6 +28,7 @@ function Animate_airvalvespring() {
     if (nIDNum_airvalvespring <= 0)return;
 
     var strDivName_airvalvespring = "";
+    //console.log('nIndexPreviewLast_airvalvespring = ' + nIndexPreviewLast_airvalvespring);
     if (nIndexPreviewLast_airvalvespring != -1) {
         strDivName_airvalvespring = "p_airvalvespring" + nIndexPreviewLast_airvalvespring.toString();
         document.getElementById(strDivName_airvalvespring).style.visibility = 'hidden';
@@ -40,15 +41,33 @@ function Animate_airvalvespring() {
     nIndexPreviewLast_airvalvespring = nIndex;
 
     nIndexPreview_airvalvespring++;
-    if (nIndexPreview_airvalvespring >= nIDNum_airvalvespring) nIndexPreview_airvalvespring = 0;
+    if (nIndexPreview_airvalvespring >= nIDNum_airvalvespring) {
+        nIndexPreview_airvalvespring = 0;
+        StopAnimate_airvalvespring();
+    } else {
+        timerPreview_airvalvespring = setTimeout("Animate_airvalvespring()", nSpeed_airvalvespring);
+    }
 
-    timerPreview_airvalvespring = setTimeout("Animate_airvalvespring()", nSpeed_airvalvespring);
 }
 
 function StopAnimate_airvalvespring() {
     clearTimeout(timerPreview_airvalvespring);
     timerPreview_airvalvespring = 0;
 }
+
+var airvalvespringState = false;
+function StartStopAnimate_airvalvespring() {
+    airvalvespringState = !airvalvespringState;
+    if (airvalvespringState) {
+        ReadOrder_airvalvespring(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+        Preview_airvalvespring()
+    } else {
+        ReadOrder_airvalvespring(10, 9, 8, 7, 6, 5, 4, 3, 2, 1);
+        Preview_airvalvespring()
+        //StopAnimate_airvalvespring();
+    }
+}
+
 /*
  function SetFolderName( strDir )
  {
@@ -94,15 +113,15 @@ function InitPreview_airvalvespring() {
         newimages_airvalvespring[i] = new Image();
 
         if (nHomeFolder_airvalvespring == 1)
-            //strImg0 = "http://gifmaker.me/files/download/home/" + strYMD_airvalvespring + "/" + strHour_airvalvespring + "/" + strFolder_airvalvespring + "/" + arrFile_airvalvespring[i];
-            strImg0 = "img/AirValveSpring/" +arrFile_airvalvespring[i];
+        //strImg0 = "http://gifmaker.me/files/download/home/" + strYMD_airvalvespring + "/" + strHour_airvalvespring + "/" + strFolder_airvalvespring + "/" + arrFile_airvalvespring[i];
+            strImg0 = "img/AirValveSpring/" + arrFile_airvalvespring[i];
         else if (nHomeFolder_airvalvespring == 8)
             strImg0 = "http://148.251.91.98/000/" + strYMD_airvalvespring + "/" + strHour_airvalvespring + "/" + strFolder_airvalvespring + "/" + arrFile_airvalvespring[i];
         else
             strImg0 = "http://gifmaker.me/files/download/funny/" + strFolder_airvalvespringFunny62 + "/" + strFolder_airvalvespring + "/" + arrFile_airvalvespring[i];
 
         if (!bUseWHString_airvalvespring)
-            //strHTML_airvalvespring += '<div id="' + strDivName_airvalvespring + '" class="preview" style="width:' + strWidth + ';height:' + strHeight + ' ;">' + '<img id="' + strImgName_airvalvespring + '" style="margin:0;padding:0;border:0px;width:' + strWidth + ';height:' + strHeight + ';">' + '</div>';
+        //strHTML_airvalvespring += '<div id="' + strDivName_airvalvespring + '" class="preview" style="width:' + strWidth + ';height:' + strHeight + ' ;">' + '<img id="' + strImgName_airvalvespring + '" style="margin:0;padding:0;border:0px;width:' + strWidth + ';height:' + strHeight + ';">' + '</div>';
             strHTML_airvalvespring += '<div id="' + strDivName_airvalvespring + '" class="liquid"' + '<img id="' + strImgName_airvalvespring + '" style="margin:0;padding:0;border:0px;width:' + strWidth + ';height:' + strHeight + ';">' + '</div>';
         else {
             var nPicW = arrWString_airvalvespring[i];
@@ -197,7 +216,9 @@ function OnLoadAllPics_airvalvespring() {
 
     $("preview_box_airvalvespring").style.visibility = "visible";
 
-    Preview_airvalvespring();
+    document.getElementById("p_airvalvespring0").style.visibility = 'visible';
+    if (airvalvespringState)
+        Preview_airvalvespring();
 }
 
 function Preview_airvalvespring() {
@@ -212,7 +233,6 @@ function ResetImgNumber_airvalvespring(n) {
 
 function DisplayImages_airvalvespring() {
     InitPreview_airvalvespring();
-
 }
 
 function ReadFileName_airvalvespring(strFileNameList) {

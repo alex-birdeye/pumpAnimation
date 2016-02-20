@@ -49,6 +49,17 @@ function StopAnimate_enginespring() {
     clearTimeout(timerPreview_enginespring);
     timerPreview_enginespring = 0;
 }
+
+var enginespringState = true;
+function StartStopAnimate_enginespring() {
+    enginespringState = !enginespringState;
+    if(enginespringState){
+        Preview_enginespring()
+    } else{
+        StopAnimate_enginespring();
+    }
+}
+
 /*
  function SetFolderName( strDir )
  {

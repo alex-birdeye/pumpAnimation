@@ -49,6 +49,17 @@ function StopAnimate_liq() {
     clearTimeout(timerPreview_liq);
     timerPreview_liq = 0;
 }
+
+var liqState = true;
+function StartStopAnimate_liquid() {
+    liqState = !liqState;
+    if(liqState){
+        Preview_liq()
+    } else{
+        StopAnimate_liq();
+    }
+}
+
 /*
  function SetFolderName( strDir )
  {

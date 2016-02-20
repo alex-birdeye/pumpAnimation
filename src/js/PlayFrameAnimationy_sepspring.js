@@ -40,15 +40,31 @@ function Animate_sepspring() {
     nIndexPreviewLast_sepspring = nIndex;
 
     nIndexPreview_sepspring++;
-    if (nIndexPreview_sepspring >= nIDNum_sepspring) nIndexPreview_sepspring = 0;
-
-    timerPreview_sepspring = setTimeout("Animate_sepspring()", nSpeed_sepspring);
+    if (nIndexPreview_sepspring >= nIDNum_sepspring) {
+        nIndexPreview_sepspring = 0;
+        StopAnimate_sepspring();
+    } else {
+        timerPreview_sepspring = setTimeout("Animate_sepspring()", nSpeed_sepspring);
+    }
 }
 
 function StopAnimate_sepspring() {
     clearTimeout(timerPreview_sepspring);
     timerPreview_sepspring = 0;
 }
+
+var sepspringState = false;
+function StartStopAnimate_sepspring() {
+    sepspringState = !sepspringState;
+    if(sepspringState){
+        ReadOrder_sepspring(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+        Preview_sepspring()
+    } else{
+        ReadOrder_sepspring(10, 9, 8, 7, 6, 5, 4, 3, 2, 1);
+        Preview_sepspring()
+    }
+}
+
 /*
  function SetFolderName( strDir )
  {
@@ -196,8 +212,9 @@ function OnLoadAllPics_sepspring() {
     $("preview_box_sepspring").style.height = strHeight;
 
     $("preview_box_sepspring").style.visibility = "visible";
-
-    Preview_sepspring();
+    document.getElementById("p_sepspring0").style.visibility = 'visible';
+    if (sepspringState)
+        Preview_sepspring();
 }
 
 function Preview_sepspring() {
@@ -212,7 +229,6 @@ function ResetImgNumber_sepspring(n) {
 
 function DisplayImages_sepspring() {
     InitPreview_sepspring();
-
 }
 
 function ReadFileName_sepspring(strFileNameList) {

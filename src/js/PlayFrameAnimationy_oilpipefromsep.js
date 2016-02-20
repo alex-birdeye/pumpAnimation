@@ -49,6 +49,17 @@ function StopAnimate_oilpipefromsep() {
     clearTimeout(timerPreview_oilpipefromsep);
     timerPreview_oilpipefromsep = 0;
 }
+
+var oilpipefromsepState = true;
+function StartStopAnimate_oilpipefromsep() {
+    oilpipefromsepState = !oilpipefromsepState;
+    if(oilpipefromsepState){
+        Preview_oilpipefromsep()
+    } else{
+        StopAnimate_oilpipefromsep();
+    }
+}
+
 /*
  function SetFolderName( strDir )
  {

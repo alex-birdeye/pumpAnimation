@@ -49,6 +49,19 @@ function StopAnimate_oilpipefromadaptertoengine() {
     clearTimeout(timerPreview_oilpipefromadaptertoengine);
     timerPreview_oilpipefromadaptertoengine = 0;
 }
+
+var oilpipefromadaptertoengineState = true;
+function StartStopAnimate_oilpipefromadaptertoengine() {
+    oilpipefromadaptertoengineState = !oilpipefromadaptertoengineState;
+    if(oilpipefromadaptertoengineState){
+        document.getElementById("preview_box_oilpipefromadaptertoengine").style.opacity = "1";
+        Preview_oilpipefromadaptertoengine()
+    } else{
+        StopAnimate_oilpipefromadaptertoengine();
+        document.getElementById("preview_box_oilpipefromadaptertoengine").style.opacity = "0.5";
+    }
+}
+
 /*
  function SetFolderName( strDir )
  {

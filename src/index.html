@@ -7495,8 +7495,22 @@
      id="p_yellowvalvebg3"><img style="margin:0;padding:0;border:0px;width:52px;height:181px;" id="pic_yellowvalvebg3"
                        src="img/3.png">
 </div>
+<div style="position: absolute; top:212px; left:748px;"
+     id="p_violetarrowsdisabled3"><img style="margin:0;padding:0;border:0px;width:251px;height:183px;" id="pic_violetarrowsdisabled3"
+                       src="img/577.png">
+</div>
 
-<div style="position: absolute; top: 164px; left: 700px;z-index: -1;">
+<div style="position: absolute; top:425px; left:572px;"
+     id="p_smallgreenpipedisabled3"><img style="margin:0;padding:0;border:0px;width:303px;height:140px;" id="pic_smallgreenpipedisabled3"
+                       src="img/568.png">
+</div>
+
+<div style="position: absolute; top:390px; left:599px;"
+     id="p_ggasdis"><img style="margin:0;padding:0;border:0px;width:325px;height:195px;" id="pic_ggasdis"
+                       src="img/962.png">
+</div>
+
+<div id="violetarrows" style="position: absolute; top: 164px; left: 700px;">
     <iframe style="width: 350px;height: 350px;" src="canvas/frames.html" seamless></iframe>
 </div>
 
@@ -7507,6 +7521,33 @@
     <!--<iframe style="width: 350px;height: 350px;" src="canvas/separator.html" seamless></iframe>-->
 <!--</div>-->
 
+<div style="position: absolute;top: 10px; left: 10px">
+    <button class="btn btn-default" onclick="StartStopAnimate_engine()">Start/Stop engine</button>
+    <button class="btn btn-default" onclick="StartStopAnimate_liquid()">Start/Stop liquid</button>
+    <br>
+    <button class="btn btn-default" onclick="StartStopAnimate_ggas()">Start/Stop green gas</button>
+    <button class="btn btn-default" onclick="StartStopAnimate_oilpipebig()">Start/Stop oilpipebig</button>
+    <br>
+    <button class="btn btn-default" onclick="StartStopAnimate_airvalvespring()">Start/Stop airvalvespring</button>
+    <button class="btn btn-default" onclick="StartStopAnimate_smallgreenpipe()">Start/Stop smallgreenpipe</button>
+    <br>
+    <button class="btn btn-default" onclick="StartStopAnimate_resarrows()">Start/Stop sep arrows</button>
+    <button class="btn btn-default" onclick="StartStopAnimate_solenoidvalve()">Start/Stop solenoidvalve</button>
+    <br>
+    <button class="btn btn-default" onclick="StartStopAnimate_solenoidvalveblowdown()">Start/Stop solenoidvalveblowdown</button>
+    <button class="btn btn-default" onclick="StartStopAnimate_oilpipefromsep()">Start/Stop oilpipefromsep</button>
+    <br>
+    <button class="btn btn-default" onclick="StartStopAnimate_oilpipefromadaptertoengine()">Start/Stop oilpipefromadaptertoengine</button>
+    <button class="btn btn-default" onclick="StartStopAnimate_airarrows()">Start/Stop airarrows</button>
+    <br>
+    <button class="btn btn-default" onclick="StartStopAnimate_airvalvespringsmall()">Start/Stop airvalvespringsmall</button>
+    <button class="btn btn-default" onclick="StartStopAnimate_sepspring()">Start/Stop sepspring</button>
+    <br>
+    <button class="btn btn-default" onclick="StartStopAnimate_enginespring()">Start/Stop enginespring</button>
+    <button class="btn btn-default" onclick="StartStopAnimate_violetarrows()">Start/Stop violetarrows</button>
+</div>
+
+<script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="js/PlayFrameAnimationy.js"></script>
 <script type="text/javascript" src="js/PlayFrameAnimationy_liq.js"></script>
 <script type="text/javascript" src="js/PlayFrameAnimationy_ggas.js"></script>
@@ -7625,7 +7666,8 @@
     SetHomeFolder_airvalvespring(1);
     SetFolderName_airvalvespring("20160208", "01", "G2LfvkiRW0JEzqHc6OLaI7");
     ReadFileName_airvalvespring("1.png", "2.png", "3.png", "4.png", "5.png", "6.png", "7.png", "8.png", "9.png", "10.png");
-    ReadOrder_airvalvespring(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+//    ReadOrder_airvalvespring(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+    ReadOrder_airvalvespring(1);
     ReadWHS_airvalvespring(500, 300, 60);
     ReadWHString_airvalvespring(68,58,68,58,68,58,68,58,68,58,68,58,68,58,68,58,68,58,68,58);
     DisplayImages_airvalvespring();
@@ -7688,7 +7730,7 @@
     SetHomeFolder_sepspring(1);
     SetFolderName_sepspring("20160208", "01", "G2LfvkiRW0JEzqHc6OLaI7");
     ReadFileName_sepspring("1.png", "2.png", "3.png", "4.png", "5.png", "6.png", "7.png", "8.png", "9.png", "10.png");
-    ReadOrder_sepspring(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+//    ReadOrder_sepspring(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
     ReadWHS_sepspring(500, 300, 30);
     ReadWHString_sepspring(68,58,68,58,68,58,68,58,68,58,68,58,68,58,68,58,68,58,68,58);
     DisplayImages_sepspring();
@@ -7733,6 +7775,6 @@
     })();
 </script>
 <noscript><p><img src="//ezmd5.com/log/piwik.php?idsite=11" style="border:0;" alt=""/></p></noscript>
-
+<!--<script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>-->
 </body>
 </html>

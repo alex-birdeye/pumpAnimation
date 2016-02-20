@@ -49,6 +49,19 @@ function StopAnimate_ggas() {
     clearTimeout(timerPreview_ggas);
     timerPreview_ggas = 0;
 }
+
+var ggasState = true;
+function StartStopAnimate_ggas() {
+    ggasState = !ggasState;
+    if(ggasState){
+        document.getElementById("preview_box_ggas").style.display = "block";
+        Preview_ggas()
+    } else{
+        StopAnimate_ggas();
+        document.getElementById("preview_box_ggas").style.display = "none";
+    }
+}
+
 /*
  function SetFolderName( strDir )
  {
