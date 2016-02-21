@@ -50,7 +50,7 @@ function StopAnimate_resarrows() {
     timerPreview_resarrows = 0;
 }
 
-var resarrowsState = true;
+var resarrowsState = false;
 function StartStopAnimate_resarrows() {
     resarrowsState = !resarrowsState;
     if(resarrowsState){
@@ -210,6 +210,7 @@ function OnLoadAllPics_resarrows() {
 
     $("preview_box_resarrows").style.visibility = "visible";
 
+    if (resarrowsState)
     Preview_resarrows();
 }
 

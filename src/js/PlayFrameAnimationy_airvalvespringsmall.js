@@ -40,9 +40,12 @@ function Animate_airvalvespringsmall() {
     nIndexPreviewLast_airvalvespringsmall = nIndex;
 
     nIndexPreview_airvalvespringsmall++;
-    if (nIndexPreview_airvalvespringsmall >= nIDNum_airvalvespringsmall) nIndexPreview_airvalvespringsmall = 0;
-
-    timerPreview_airvalvespringsmall = setTimeout("Animate_airvalvespringsmall()", nSpeed_airvalvespringsmall);
+    if (nIndexPreview_airvalvespringsmall >= nIDNum_airvalvespringsmall) {
+        nIndexPreview_airvalvespringsmall = 0;
+        StopAnimate_airvalvespringsmall();
+    } else {
+        timerPreview_airvalvespringsmall = setTimeout("Animate_airvalvespringsmall()", nSpeed_airvalvespringsmall);
+    }
 }
 
 function StopAnimate_airvalvespringsmall() {
@@ -50,13 +53,15 @@ function StopAnimate_airvalvespringsmall() {
     timerPreview_airvalvespringsmall = 0;
 }
 
-var airvalvespringsmallState = true;
+var airvalvespringsmallState = false;
 function StartStopAnimate_airvalvespringsmall() {
     airvalvespringsmallState = !airvalvespringsmallState;
     if(airvalvespringsmallState){
+        ReadOrder_airvalvespringsmall(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
         Preview_airvalvespringsmall()
     } else{
-        StopAnimate_airvalvespringsmall();
+        ReadOrder_airvalvespringsmall(8, 7, 6, 5, 4, 3, 2, 1);
+        Preview_airvalvespringsmall()
     }
 }
 
@@ -105,7 +110,7 @@ function InitPreview_airvalvespringsmall() {
         newimages_airvalvespringsmall[i] = new Image();
 
         if (nHomeFolder_airvalvespringsmall == 1)
-            //strImg0 = "http://gifmaker.me/files/download/home/" + strYMD_airvalvespringsmall + "/" + strHour_airvalvespringsmall + "/" + strFolder_airvalvespringsmall + "/" + arrFile_airvalvespringsmall[i];
+        //strImg0 = "http://gifmaker.me/files/download/home/" + strYMD_airvalvespringsmall + "/" + strHour_airvalvespringsmall + "/" + strFolder_airvalvespringsmall + "/" + arrFile_airvalvespringsmall[i];
             strImg0 = "img/AirValveSpringSmall/" +arrFile_airvalvespringsmall[i];
         else if (nHomeFolder_airvalvespringsmall == 8)
             strImg0 = "http://148.251.91.98/000/" + strYMD_airvalvespringsmall + "/" + strHour_airvalvespringsmall + "/" + strFolder_airvalvespringsmall + "/" + arrFile_airvalvespringsmall[i];
@@ -113,7 +118,7 @@ function InitPreview_airvalvespringsmall() {
             strImg0 = "http://gifmaker.me/files/download/funny/" + strFolder_airvalvespringsmallFunny62 + "/" + strFolder_airvalvespringsmall + "/" + arrFile_airvalvespringsmall[i];
 
         if (!bUseWHString_airvalvespringsmall)
-            //strHTML_airvalvespringsmall += '<div id="' + strDivName_airvalvespringsmall + '" class="preview" style="width:' + strWidth + ';height:' + strHeight + ' ;">' + '<img id="' + strImgName_airvalvespringsmall + '" style="margin:0;padding:0;border:0px;width:' + strWidth + ';height:' + strHeight + ';">' + '</div>';
+        //strHTML_airvalvespringsmall += '<div id="' + strDivName_airvalvespringsmall + '" class="preview" style="width:' + strWidth + ';height:' + strHeight + ' ;">' + '<img id="' + strImgName_airvalvespringsmall + '" style="margin:0;padding:0;border:0px;width:' + strWidth + ';height:' + strHeight + ';">' + '</div>';
             strHTML_airvalvespringsmall += '<div id="' + strDivName_airvalvespringsmall + '" class="liquid"' + '<img id="' + strImgName_airvalvespringsmall + '" style="margin:0;padding:0;border:0px;width:' + strWidth + ';height:' + strHeight + ';">' + '</div>';
         else {
             var nPicW = arrWString_airvalvespringsmall[i];
@@ -207,8 +212,9 @@ function OnLoadAllPics_airvalvespringsmall() {
     $("preview_box_airvalvespringsmall").style.height = strHeight;
 
     $("preview_box_airvalvespringsmall").style.visibility = "visible";
-
-    Preview_airvalvespringsmall();
+    document.getElementById("p_airvalvespringsmall0").style.visibility = 'visible';
+    if (airvalvespringsmallState)
+        Preview_airvalvespringsmall();
 }
 
 function Preview_airvalvespringsmall() {
@@ -223,7 +229,6 @@ function ResetImgNumber_airvalvespringsmall(n) {
 
 function DisplayImages_airvalvespringsmall() {
     InitPreview_airvalvespringsmall();
-
 }
 
 function ReadFileName_airvalvespringsmall(strFileNameList) {

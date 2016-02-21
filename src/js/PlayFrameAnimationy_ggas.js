@@ -50,7 +50,7 @@ function StopAnimate_ggas() {
     timerPreview_ggas = 0;
 }
 
-var ggasState = true;
+var ggasState = false;
 function StartStopAnimate_ggas() {
     ggasState = !ggasState;
     if(ggasState){
@@ -210,6 +210,7 @@ function OnLoadAllPics_ggas() {
 
     $("preview_box_ggas").style.visibility = "visible";
 
+    if (ggasState)
     Preview_ggas();
 }
 

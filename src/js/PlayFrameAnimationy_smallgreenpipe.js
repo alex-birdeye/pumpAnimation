@@ -50,7 +50,7 @@ function StopAnimate_smallgreenpipe() {
     timerPreview_smallgreenpipe = 0;
 }
 
-var smallgreenpipeState = true;
+var smallgreenpipeState = false;
 function StartStopAnimate_smallgreenpipe() {
     smallgreenpipeState = !smallgreenpipeState;
     if(smallgreenpipeState){
@@ -210,6 +210,7 @@ function OnLoadAllPics_smallgreenpipe() {
 
     $("preview_box_smallgreenpipe").style.visibility = "visible";
 
+    if (smallgreenpipeState)
     Preview_smallgreenpipe();
 }
 

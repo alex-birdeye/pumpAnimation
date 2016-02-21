@@ -50,7 +50,7 @@ function StopAnimate_oilpipefromsep() {
     timerPreview_oilpipefromsep = 0;
 }
 
-var oilpipefromsepState = true;
+var oilpipefromsepState = false;
 function StartStopAnimate_oilpipefromsep() {
     oilpipefromsepState = !oilpipefromsepState;
     if(oilpipefromsepState){
@@ -208,6 +208,8 @@ function OnLoadAllPics_oilpipefromsep() {
 
     $("preview_box_oilpipefromsep").style.visibility = "visible";
 
+    document.getElementById("p_oilpipefromsep0").style.visibility = 'visible';
+    if (oilpipefromsepState)
     Preview_oilpipefromsep();
 }
 

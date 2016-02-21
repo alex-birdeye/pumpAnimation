@@ -40,9 +40,12 @@ function Animate_enginespring() {
     nIndexPreviewLast_enginespring = nIndex;
 
     nIndexPreview_enginespring++;
-    if (nIndexPreview_enginespring >= nIDNum_enginespring) nIndexPreview_enginespring = 0;
-
-    timerPreview_enginespring = setTimeout("Animate_enginespring()", nSpeed_enginespring);
+    if (nIndexPreview_enginespring >= nIDNum_enginespring) {
+        nIndexPreview_enginespring = 0;
+        StopAnimate_enginespring();
+    } else {
+        timerPreview_enginespring = setTimeout("Animate_enginespring()", nSpeed_enginespring);
+    }
 }
 
 function StopAnimate_enginespring() {
@@ -50,13 +53,15 @@ function StopAnimate_enginespring() {
     timerPreview_enginespring = 0;
 }
 
-var enginespringState = true;
+var enginespringState = false;
 function StartStopAnimate_enginespring() {
     enginespringState = !enginespringState;
     if(enginespringState){
+        ReadOrder_enginespring(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
         Preview_enginespring()
     } else{
-        StopAnimate_enginespring();
+        ReadOrder_enginespring(9, 8, 7, 6, 5, 4, 3, 2, 1);
+        Preview_enginespring()
     }
 }
 
@@ -105,7 +110,7 @@ function InitPreview_enginespring() {
         newimages_enginespring[i] = new Image();
 
         if (nHomeFolder_enginespring == 1)
-            //strImg0 = "http://gifmaker.me/files/download/home/" + strYMD_enginespring + "/" + strHour_enginespring + "/" + strFolder_enginespring + "/" + arrFile_enginespring[i];
+        //strImg0 = "http://gifmaker.me/files/download/home/" + strYMD_enginespring + "/" + strHour_enginespring + "/" + strFolder_enginespring + "/" + arrFile_enginespring[i];
             strImg0 = "img/EngineSpring/" +arrFile_enginespring[i];
         else if (nHomeFolder_enginespring == 8)
             strImg0 = "http://148.251.91.98/000/" + strYMD_enginespring + "/" + strHour_enginespring + "/" + strFolder_enginespring + "/" + arrFile_enginespring[i];
@@ -113,7 +118,7 @@ function InitPreview_enginespring() {
             strImg0 = "http://gifmaker.me/files/download/funny/" + strFolder_enginespringFunny62 + "/" + strFolder_enginespring + "/" + arrFile_enginespring[i];
 
         if (!bUseWHString_enginespring)
-            //strHTML_enginespring += '<div id="' + strDivName_enginespring + '" class="preview" style="width:' + strWidth + ';height:' + strHeight + ' ;">' + '<img id="' + strImgName_enginespring + '" style="margin:0;padding:0;border:0px;width:' + strWidth + ';height:' + strHeight + ';">' + '</div>';
+        //strHTML_enginespring += '<div id="' + strDivName_enginespring + '" class="preview" style="width:' + strWidth + ';height:' + strHeight + ' ;">' + '<img id="' + strImgName_enginespring + '" style="margin:0;padding:0;border:0px;width:' + strWidth + ';height:' + strHeight + ';">' + '</div>';
             strHTML_enginespring += '<div id="' + strDivName_enginespring + '" class="liquid"' + '<img id="' + strImgName_enginespring + '" style="margin:0;padding:0;border:0px;width:' + strWidth + ';height:' + strHeight + ';">' + '</div>';
         else {
             var nPicW = arrWString_enginespring[i];
@@ -207,8 +212,9 @@ function OnLoadAllPics_enginespring() {
     $("preview_box_enginespring").style.height = strHeight;
 
     $("preview_box_enginespring").style.visibility = "visible";
-
-    Preview_enginespring();
+    document.getElementById("p_enginespring0").style.visibility = 'visible';
+    if (enginespringState)
+        Preview_enginespring();
 }
 
 function Preview_enginespring() {
@@ -223,7 +229,6 @@ function ResetImgNumber_enginespring(n) {
 
 function DisplayImages_enginespring() {
     InitPreview_enginespring();
-
 }
 
 function ReadFileName_enginespring(strFileNameList) {

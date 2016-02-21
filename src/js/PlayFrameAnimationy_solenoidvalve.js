@@ -40,9 +40,12 @@ function Animate_solenoidvalve() {
     nIndexPreviewLast_solenoidvalve = nIndex;
 
     nIndexPreview_solenoidvalve++;
-    if (nIndexPreview_solenoidvalve >= nIDNum_solenoidvalve) nIndexPreview_solenoidvalve = 0;
-
-    timerPreview_solenoidvalve = setTimeout("Animate_solenoidvalve()", nSpeed_solenoidvalve);
+    if (nIndexPreview_solenoidvalve >= nIDNum_solenoidvalve) {
+        nIndexPreview_solenoidvalve = 0;
+        StopAnimate_solenoidvalve();
+    } else {
+        timerPreview_solenoidvalve = setTimeout("Animate_solenoidvalve()", nSpeed_solenoidvalve);
+    }
 }
 
 function StopAnimate_solenoidvalve() {
@@ -50,13 +53,15 @@ function StopAnimate_solenoidvalve() {
     timerPreview_solenoidvalve = 0;
 }
 
-var solenoidvalveState = true;
+var solenoidvalveState = false;
 function StartStopAnimate_solenoidvalve() {
     solenoidvalveState = !solenoidvalveState;
     if(solenoidvalveState){
+        ReadOrder_solenoidvalve(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
         Preview_solenoidvalve()
     } else{
-        StopAnimate_solenoidvalve();
+        ReadOrder_solenoidvalve(10, 9, 8, 7, 6, 5, 4, 3, 2, 1);
+        Preview_solenoidvalve()
     }
 }
 
@@ -105,7 +110,7 @@ function InitPreview_solenoidvalve() {
         newimages_solenoidvalve[i] = new Image();
 
         if (nHomeFolder_solenoidvalve == 1)
-            //strImg0 = "http://gifmaker.me/files/download/home/" + strYMD_solenoidvalve + "/" + strHour_solenoidvalve + "/" + strFolder_solenoidvalve + "/" + arrFile_solenoidvalve[i];
+        //strImg0 = "http://gifmaker.me/files/download/home/" + strYMD_solenoidvalve + "/" + strHour_solenoidvalve + "/" + strFolder_solenoidvalve + "/" + arrFile_solenoidvalve[i];
             strImg0 = "img/SolenoidValve/" +arrFile_solenoidvalve[i];
         else if (nHomeFolder_solenoidvalve == 8)
             strImg0 = "http://148.251.91.98/000/" + strYMD_solenoidvalve + "/" + strHour_solenoidvalve + "/" + strFolder_solenoidvalve + "/" + arrFile_solenoidvalve[i];
@@ -113,7 +118,7 @@ function InitPreview_solenoidvalve() {
             strImg0 = "http://gifmaker.me/files/download/funny/" + strFolder_solenoidvalveFunny62 + "/" + strFolder_solenoidvalve + "/" + arrFile_solenoidvalve[i];
 
         if (!bUseWHString_solenoidvalve)
-            //strHTML_solenoidvalve += '<div id="' + strDivName_solenoidvalve + '" class="preview" style="width:' + strWidth + ';height:' + strHeight + ' ;">' + '<img id="' + strImgName_solenoidvalve + '" style="margin:0;padding:0;border:0px;width:' + strWidth + ';height:' + strHeight + ';">' + '</div>';
+        //strHTML_solenoidvalve += '<div id="' + strDivName_solenoidvalve + '" class="preview" style="width:' + strWidth + ';height:' + strHeight + ' ;">' + '<img id="' + strImgName_solenoidvalve + '" style="margin:0;padding:0;border:0px;width:' + strWidth + ';height:' + strHeight + ';">' + '</div>';
             strHTML_solenoidvalve += '<div id="' + strDivName_solenoidvalve + '" class="liquid"' + '<img id="' + strImgName_solenoidvalve + '" style="margin:0;padding:0;border:0px;width:' + strWidth + ';height:' + strHeight + ';">' + '</div>';
         else {
             var nPicW = arrWString_solenoidvalve[i];
@@ -207,8 +212,9 @@ function OnLoadAllPics_solenoidvalve() {
     $("preview_box_solenoidvalve").style.height = strHeight;
 
     $("preview_box_solenoidvalve").style.visibility = "visible";
-
-    Preview_solenoidvalve();
+    document.getElementById("p_solenoidvalve0").style.visibility = 'visible';
+    if (solenoidvalveState)
+        Preview_solenoidvalve();
 }
 
 function Preview_solenoidvalve() {
@@ -223,7 +229,6 @@ function ResetImgNumber_solenoidvalve(n) {
 
 function DisplayImages_solenoidvalve() {
     InitPreview_solenoidvalve();
-
 }
 
 function ReadFileName_solenoidvalve(strFileNameList) {

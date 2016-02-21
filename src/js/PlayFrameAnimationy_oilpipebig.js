@@ -50,7 +50,7 @@ function StopAnimate_oilpipebig() {
     timerPreview_oilpipebig = 0;
 }
 
-var oilpipebigState = true;
+var oilpipebigState = false;
 function StartStopAnimate_oilpipebig() {
     oilpipebigState = !oilpipebigState;
     if(oilpipebigState){
@@ -210,6 +210,9 @@ function OnLoadAllPics_oilpipebig() {
 
     $("preview_box_oilpipebig").style.visibility = "visible";
 
+    document.getElementById("p_oilpipebig0").style.visibility = 'visible';
+    document.getElementById("p_oilpipebig0").style.opacity = '0.5';
+    if (oilpipebigState)
     Preview_oilpipebig();
 }
 

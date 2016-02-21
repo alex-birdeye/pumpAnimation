@@ -1,4 +1,4 @@
-var violetarrowsState = true;
+var violetarrowsState = false;
 function StartStopAnimate_violetarrows() {
     violetarrowsState = !violetarrowsState;
     if(violetarrowsState){

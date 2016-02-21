@@ -50,7 +50,7 @@ function StopAnimate_airarrows() {
     timerPreview_airarrows = 0;
 }
 
-var airarrowsState = true;
+var airarrowsState = false;
 function StartStopAnimate_airarrows() {
     airarrowsState = !airarrowsState;
     if(airarrowsState){
@@ -210,6 +210,7 @@ function OnLoadAllPics_airarrows() {
 
     $("preview_box_airarrows").style.visibility = "visible";
 
+    if (airarrowsState)
     Preview_airarrows();
 }
 

@@ -40,9 +40,12 @@ function Animate_solenoidvalveblowdown() {
     nIndexPreviewLast_solenoidvalveblowdown = nIndex;
 
     nIndexPreview_solenoidvalveblowdown++;
-    if (nIndexPreview_solenoidvalveblowdown >= nIDNum_solenoidvalveblowdown) nIndexPreview_solenoidvalveblowdown = 0;
-
-    timerPreview_solenoidvalveblowdown = setTimeout("Animate_solenoidvalveblowdown()", nSpeed_solenoidvalveblowdown);
+    if (nIndexPreview_solenoidvalveblowdown >= nIDNum_solenoidvalveblowdown) {
+        nIndexPreview_solenoidvalveblowdown = 0;
+        StopAnimate_solenoidvalveblowdown();
+    } else {
+        timerPreview_solenoidvalveblowdown = setTimeout("Animate_solenoidvalveblowdown()", nSpeed_solenoidvalveblowdown);
+    }
 }
 
 function StopAnimate_solenoidvalveblowdown() {
@@ -50,13 +53,15 @@ function StopAnimate_solenoidvalveblowdown() {
     timerPreview_solenoidvalveblowdown = 0;
 }
 
-var solenoidvalveblowdownState = true;
+var solenoidvalveblowdownState = false;
 function StartStopAnimate_solenoidvalveblowdown() {
     solenoidvalveblowdownState = !solenoidvalveblowdownState;
     if(solenoidvalveblowdownState){
+        ReadOrder_solenoidvalveblowdown(10, 9, 8, 7, 6, 5, 4, 3, 2, 1);
         Preview_solenoidvalveblowdown()
     } else{
-        StopAnimate_solenoidvalveblowdown();
+        ReadOrder_solenoidvalveblowdown(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+        Preview_solenoidvalveblowdown()
     }
 }
 
@@ -105,7 +110,7 @@ function InitPreview_solenoidvalveblowdown() {
         newimages_solenoidvalveblowdown[i] = new Image();
 
         if (nHomeFolder_solenoidvalveblowdown == 1)
-            //strImg0 = "http://gifmaker.me/files/download/home/" + strYMD_solenoidvalveblowdown + "/" + strHour_solenoidvalveblowdown + "/" + strFolder_solenoidvalveblowdown + "/" + arrFile_solenoidvalveblowdown[i];
+        //strImg0 = "http://gifmaker.me/files/download/home/" + strYMD_solenoidvalveblowdown + "/" + strHour_solenoidvalveblowdown + "/" + strFolder_solenoidvalveblowdown + "/" + arrFile_solenoidvalveblowdown[i];
             strImg0 = "img/SolenoidValveBlowDown/" +arrFile_solenoidvalveblowdown[i];
         else if (nHomeFolder_solenoidvalveblowdown == 8)
             strImg0 = "http://148.251.91.98/000/" + strYMD_solenoidvalveblowdown + "/" + strHour_solenoidvalveblowdown + "/" + strFolder_solenoidvalveblowdown + "/" + arrFile_solenoidvalveblowdown[i];
@@ -113,7 +118,7 @@ function InitPreview_solenoidvalveblowdown() {
             strImg0 = "http://gifmaker.me/files/download/funny/" + strFolder_solenoidvalveblowdownFunny62 + "/" + strFolder_solenoidvalveblowdown + "/" + arrFile_solenoidvalveblowdown[i];
 
         if (!bUseWHString_solenoidvalveblowdown)
-            //strHTML_solenoidvalveblowdown += '<div id="' + strDivName_solenoidvalveblowdown + '" class="preview" style="width:' + strWidth + ';height:' + strHeight + ' ;">' + '<img id="' + strImgName_solenoidvalveblowdown + '" style="margin:0;padding:0;border:0px;width:' + strWidth + ';height:' + strHeight + ';">' + '</div>';
+        //strHTML_solenoidvalveblowdown += '<div id="' + strDivName_solenoidvalveblowdown + '" class="preview" style="width:' + strWidth + ';height:' + strHeight + ' ;">' + '<img id="' + strImgName_solenoidvalveblowdown + '" style="margin:0;padding:0;border:0px;width:' + strWidth + ';height:' + strHeight + ';">' + '</div>';
             strHTML_solenoidvalveblowdown += '<div id="' + strDivName_solenoidvalveblowdown + '" class="liquid"' + '<img id="' + strImgName_solenoidvalveblowdown + '" style="margin:0;padding:0;border:0px;width:' + strWidth + ';height:' + strHeight + ';">' + '</div>';
         else {
             var nPicW = arrWString_solenoidvalveblowdown[i];
@@ -207,8 +212,9 @@ function OnLoadAllPics_solenoidvalveblowdown() {
     $("preview_box_solenoidvalveblowdown").style.height = strHeight;
 
     $("preview_box_solenoidvalveblowdown").style.visibility = "visible";
-
-    Preview_solenoidvalveblowdown();
+    document.getElementById("p_solenoidvalveblowdown9").style.visibility = 'visible';
+    if (solenoidvalveblowdownState)
+        Preview_solenoidvalveblowdown();
 }
 
 function Preview_solenoidvalveblowdown() {
@@ -223,7 +229,6 @@ function ResetImgNumber_solenoidvalveblowdown(n) {
 
 function DisplayImages_solenoidvalveblowdown() {
     InitPreview_solenoidvalveblowdown();
-
 }
 
 function ReadFileName_solenoidvalveblowdown(strFileNameList) {

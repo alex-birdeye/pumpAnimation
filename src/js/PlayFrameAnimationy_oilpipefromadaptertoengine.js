@@ -50,7 +50,7 @@ function StopAnimate_oilpipefromadaptertoengine() {
     timerPreview_oilpipefromadaptertoengine = 0;
 }
 
-var oilpipefromadaptertoengineState = true;
+var oilpipefromadaptertoengineState = false;
 function StartStopAnimate_oilpipefromadaptertoengine() {
     oilpipefromadaptertoengineState = !oilpipefromadaptertoengineState;
     if(oilpipefromadaptertoengineState){
@@ -210,6 +210,9 @@ function OnLoadAllPics_oilpipefromadaptertoengine() {
 
     $("preview_box_oilpipefromadaptertoengine").style.visibility = "visible";
 
+    document.getElementById("p_oilpipefromadaptertoengine0").style.visibility = 'visible';
+    document.getElementById("p_oilpipefromadaptertoengine0").style.opacity = '0.5';
+    if (oilpipefromadaptertoengineState)
     Preview_oilpipefromadaptertoengine();
 }
 

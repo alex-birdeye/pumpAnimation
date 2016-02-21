@@ -50,7 +50,7 @@ function StopAnimate() {
     timerPreview = 0;
 }
 
-var engineState = true;
+var engineState = false;
 function StartStopAnimate_engine() {
     engineState = !engineState;
     if(engineState){
@@ -210,6 +210,8 @@ function OnLoadAllPics() {
 
     $("preview_box").style.visibility = "visible";
 
+    document.getElementById("p0").style.visibility = 'visible';
+    if (engineState)
     Preview();
 }
 

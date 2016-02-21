@@ -50,7 +50,7 @@ function StopAnimate_liq() {
     timerPreview_liq = 0;
 }
 
-var liqState = true;
+var liqState = false;
 function StartStopAnimate_liquid() {
     liqState = !liqState;
     if(liqState){
@@ -208,6 +208,8 @@ function OnLoadAllPics_liq() {
 
     $("preview_box_liq").style.visibility = "visible";
 
+    document.getElementById("p_liq0").style.visibility = 'visible';
+    if (liqState)
     Preview_liq();
 }
 
