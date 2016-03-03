@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
-
+    <script src="js/jquery.min.js"></script>
 </head>
 <body style="height: 700px;">
 <!--[if lt IE 8]>
@@ -8329,49 +8329,10 @@
      id="p_violetarrows1"><img style="margin:0;padding:0;border:0px;width:655px;height:40px;" id="pic_violetarrows1"
                        src="img/566.png">
 </div>
-<!--<div style="position: absolute; top:495px; left:326px;z-index: 6;"-->
-     <!--id="p_bypassvalve1"><img style="margin:0;padding:0;border:0px;width:54px;height:55px;" id="pic_bypassvalve1"-->
-                       <!--src="img/1195.png">-->
-<!--</div>-->
 <div style="position: absolute; top:694px; left:346px;z-index: 6;"
      id="p_pipeadapter1"><img style="margin:0;padding:0;border:0px;width:17px;height:15px;" id="pic_pipeadapter"
                        src="img/692.png">
 </div>
-<!--<div style="position: absolute; top:613px; left:430px;z-index: 6;"-->
-     <!--id="p_pipeadapterrot1"><img style="margin:0;padding:0;border:0px;width:17px;height:15px;" id="pic_pipeadapterrot"-->
-                       <!--src="img/692rot.png">-->
-<!--</div>-->
-<!--<div style="position: absolute; top:520px; left:317px;"-->
-     <!--id="p_cooler1"><img style="margin:0;padding:0;border:0px;width:134px;height:200px;" id="pic_cooler"-->
-                       <!--src="img/585.png">-->
-<!--</div>-->
-
-
-<!--<div style="position: absolute; top:366px; left:486px;"-->
-     <!--id="p_violetpipe1"><img style="margin:0;padding:0;border:0px;width:235px;height:81px;" id="pic_violetpipe1"-->
-                       <!--src="img/347.svg">-->
-<!--</div>-->
-<!--<div style="position: absolute; top:409px; left:634px;"-->
-     <!--id="p_violetpipe2"><img style="margin:0;padding:0;border:0px;width:252px;height:81px;" id="pic_violetpipe2"-->
-                       <!--src="img/956.svg">-->
-<!--</div>-->
-
-<!--<div style="position: absolute; top:451px; left:578px;"-->
-     <!--id="p_violetpipe3"><img style="margin:0;padding:0;border:0px;width:45px;height:20px;" id="pic_violetpipe3"-->
-                       <!--src="img/339.svg">-->
-<!--</div>-->
-
-
-<!--<div style="position: absolute; top:451px; left:578px;margin:0;padding:0;border:0px;width:45px;height:20px;"-->
-     <!--id="p_violetpipe3">-->
-    <!--<svg>-->
-        <!--<g transform="matrix(1, 0, 0, 1, -130.0, -334.9)">-->
-            <!--<path class="violetpipe3" d="M141.5 346.4 L141.85 368.75 Q143.35 381.8 147.65 391.85 162.0 425.4 202.25 425.4 L388.6 425.4 Q417.7 425.05 429.6 431.9 445.4 440.95 452.1 453.25 458.5 465.05 458.3 483.35" fill="none" stroke="#000000" stroke-linecap="butt" stroke-linejoin="round" stroke-width="23.05">-->
-                <!--&lt;!&ndash;<animate attributeName="stroke" dur="2s" repeatCount="indefinite" values="#000000;#7d00c6"/>&ndash;&gt;-->
-            <!--</path>-->
-        <!--</g>-->
-    <!--</svg>-->
-<!--</div>-->
 
 <div style="position: absolute; top:478px; left:571px;"
      id="p_yellowpipe3"><img style="margin:0;padding:0;border:0px;width:50px;height:15px;" id="pic_yellowpipe3"
@@ -8400,6 +8361,10 @@
     <iframe style="width: 350px;height: 350px;" src="canvas/frames.html" seamless></iframe>
 </div>
 
+
+
+
+
 <!--<div style="position: absolute; top: 188px; left: 300px;z-index: -1;">-->
     <!--<iframe style="width: 600px;height: 600px;" src="canvas/oilpipebig.html" seamless></iframe>-->
 <!--</div>-->
@@ -8409,37 +8374,37 @@
 
 <div style="position: absolute;top: 10px; left: 10px">
     <button class="btn btn-default" onclick="StartStopAnimate_engine()">Start/Stop engine</button>
-    <button class="btn btn-default" onclick="StartStopAnimate_liquid()">Start/Stop liquid</button>
-    <br>
-    <button class="btn btn-default" onclick="StartStopAnimate_ggas()">Start/Stop green gas</button>
-    <button class="btn btn-default" onclick="StartStopAnimate_oilpipebig()">Start/Stop oilpipebig</button>
-    <br>
-    <button class="btn btn-default" onclick="StartStopAnimate_airvalvespring()">Start/Stop airvalvespring</button>
-    <button class="btn btn-default" onclick="StartStopAnimate_smallgreenpipe()">Start/Stop smallgreenpipe</button>
-    <br>
-    <button class="btn btn-default" onclick="StartStopAnimate_resarrows()">Start/Stop sep arrows</button>
-    <button class="btn btn-default" onclick="StartStopAnimate_solenoidvalve()">Start/Stop solenoidvalve</button>
-    <br>
-    <button class="btn btn-default" onclick="StartStopAnimate_solenoidvalveblowdown()">Start/Stop solenoidvalveblowdown</button>
-    <button class="btn btn-default" onclick="StartStopAnimate_oilpipefromsep()">Start/Stop oilpipefromsep</button>
-    <br>
-    <button class="btn btn-default" onclick="StartStopAnimate_oilpipefromadaptertoengine()">Start/Stop oilpipefromadaptertoengine</button>
-    <button class="btn btn-default" onclick="StartStopAnimate_airarrows()">Start/Stop airarrows</button>
-    <br>
-    <button class="btn btn-default" onclick="StartStopAnimate_airvalvespringsmall()">Start/Stop airvalvespringsmall</button>
-    <button class="btn btn-default" onclick="StartStopAnimate_sepspring()">Start/Stop sepspring</button>
-    <br>
-    <button class="btn btn-default" onclick="StartStopAnimate_enginespring()">Start/Stop enginespring</button>
+    <!--<button class="btn btn-default" onclick="StartStopAnimate_liquid()">Start/Stop liquid</button>-->
+    <!--<br>-->
+    <!--<button class="btn btn-default" onclick="StartStopAnimate_ggas()">Start/Stop green gas</button>-->
+    <!--<button class="btn btn-default" onclick="StartStopAnimate_oilpipebig()">Start/Stop oilpipebig</button>-->
+    <!--<br>-->
+    <!--<button class="btn btn-default" onclick="StartStopAnimate_airvalvespring()">Start/Stop airvalvespring</button>-->
+    <!--<button class="btn btn-default" onclick="StartStopAnimate_smallgreenpipe()">Start/Stop smallgreenpipe</button>-->
+    <!--<br>-->
+    <!--<button class="btn btn-default" onclick="StartStopAnimate_resarrows()">Start/Stop sep arrows</button>-->
+    <!--<button class="btn btn-default" onclick="StartStopAnimate_solenoidvalve()">Start/Stop solenoidvalve</button>-->
+    <!--<br>-->
+    <!--<button class="btn btn-default" onclick="StartStopAnimate_solenoidvalveblowdown()">Start/Stop solenoidvalveblowdown</button>-->
+    <!--<button class="btn btn-default" onclick="StartStopAnimate_oilpipefromsep()">Start/Stop oilpipefromsep</button>-->
+    <!--<br>-->
+    <!--<button class="btn btn-default" onclick="StartStopAnimate_oilpipefromadaptertoengine()">Start/Stop oilpipefromadaptertoengine</button>-->
+    <!--<button class="btn btn-default" onclick="StartStopAnimate_airarrows()">Start/Stop airarrows</button>-->
+    <!--<br>-->
+    <!--<button class="btn btn-default" onclick="StartStopAnimate_airvalvespringsmall()">Start/Stop airvalvespringsmall</button>-->
+    <!--<button class="btn btn-default" onclick="StartStopAnimate_sepspring()">Start/Stop sepspring</button>-->
+    <!--<br>-->
+    <!--<button class="btn btn-default" onclick="StartStopAnimate_enginespring()">Start/Stop enginespring</button>-->
     <button class="btn btn-default" onclick="StartStopAnimate_violetarrows()">Start/Stop violetarrows</button>
-    <br>
-    <button class="btn btn-default" onclick="StartStopAnimate_violetarrowssmall()">Start/Stop violetarrowssmall</button>
-    <button class="btn btn-default" onclick="StartStopAnimate_violetarrowssmall2_()">Start/Stop violetarrowssmall2</button>
-    <br>
-    <button class="btn btn-default" onclick="StartStopAnimate_violetarrowssmall3_()">Start/Stop violetarrowssmall3</button>
-    <button class="btn btn-default" onclick="StartStopAnimate_violetpipe2_()">Start/Stop violetpipe2_</button>
-    <br>
-    <button class="btn btn-default" onclick="StartStopAnimate_violetpipe1_()">Start/Stop violetpipe1_</button>
-    <button class="btn btn-default" onclick="StartStopAnimate_violetpipe3_()">Start/Stop violetpipe3_</button>
+    <!--<br>-->
+    <!--<button class="btn btn-default" onclick="StartStopAnimate_violetarrowssmall()">Start/Stop violetarrowssmall</button>-->
+    <!--<button class="btn btn-default" onclick="StartStopAnimate_violetarrowssmall2_()">Start/Stop violetarrowssmall2</button>-->
+    <!--<br>-->
+    <!--<button class="btn btn-default" onclick="StartStopAnimate_violetarrowssmall3_()">Start/Stop violetarrowssmall3</button>-->
+    <!--<button class="btn btn-default" onclick="StartStopAnimate_violetpipe2_()">Start/Stop violetpipe2_</button>-->
+    <!--<br>-->
+    <!--<button class="btn btn-default" onclick="StartStopAnimate_violetpipe1_()">Start/Stop violetpipe1_</button>-->
+    <!--<button class="btn btn-default" onclick="StartStopAnimate_violetpipe3_()">Start/Stop violetpipe3_</button>-->
 </div>
 
 <script type="text/javascript" src="js/main.js"></script>

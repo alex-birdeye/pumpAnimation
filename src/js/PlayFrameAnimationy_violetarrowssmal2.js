@@ -25,6 +25,7 @@ var nHomeFolder_violetarrowssmall2_ = 1;
 var newimages_violetarrowssmall2_ = [];
 
 function Animate_violetarrowssmall2_() {
+    document.getElementById("preview_box_violetarrowssmall2_").style.display = "block";
     if (nIDNum_violetarrowssmall2_ <= 0)return;
 
     var strDivName_violetarrowssmall2_ = "";
@@ -50,6 +51,7 @@ function Animate_violetarrowssmall2_() {
 }
 
 function StopAnimate_violetarrowssmall2_() {
+    document.getElementById("preview_box_violetarrowssmall2_").style.display = "none";
     clearTimeout(timerPreview_violetarrowssmall2_);
     timerPreview_violetarrowssmall2_ = 0;
 }

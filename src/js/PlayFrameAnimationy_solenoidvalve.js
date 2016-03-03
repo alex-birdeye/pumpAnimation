@@ -53,17 +53,27 @@ function StopAnimate_solenoidvalve() {
     timerPreview_solenoidvalve = 0;
 }
 
-var solenoidvalveState = false;
-function StartStopAnimate_solenoidvalve() {
-    solenoidvalveState = !solenoidvalveState;
-    if(solenoidvalveState){
+var isOpened = false;
+function openSolenoidValve(){
+    if(!isOpened){
         ReadOrder_solenoidvalve(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
-        Preview_solenoidvalve()
-    } else{
-        ReadOrder_solenoidvalve(10, 9, 8, 7, 6, 5, 4, 3, 2, 1);
-        Preview_solenoidvalve()
+        Preview_solenoidvalve();
+        isOpened = !isOpened;
     }
 }
+function closeSolenoidValve(){
+    if(isOpened){
+        ReadOrder_solenoidvalve(10, 9, 8, 7, 6, 5, 4, 3, 2, 1);
+        Preview_solenoidvalve();
+        isOpened = !isOpened;
+    }
+}
+//function StartStopAnimate_solenoidvalve() {
+//    solenoidvalveState = !solenoidvalveState;
+//    if(solenoidvalveState){
+//    } else{
+//    }
+//}
 
 /*
  function SetFolderName( strDir )

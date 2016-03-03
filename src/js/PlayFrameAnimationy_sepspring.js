@@ -53,17 +53,29 @@ function StopAnimate_sepspring() {
     timerPreview_sepspring = 0;
 }
 
-var sepspringState = false;
-function StartStopAnimate_sepspring() {
-    sepspringState = !sepspringState;
-    if(sepspringState){
+var isSepSpringOpened = false;
+function openSepSpring(){
+    if(!isSepSpringOpened){
         ReadOrder_sepspring(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
-        Preview_sepspring()
-    } else{
-        ReadOrder_sepspring(10, 9, 8, 7, 6, 5, 4, 3, 2, 1);
-        Preview_sepspring()
+        Preview_sepspring();
+        isSepSpringOpened = !isSepSpringOpened;
     }
 }
+function closeSepSpring(){
+    if(isSepSpringOpened){
+        ReadOrder_sepspring(10, 9, 8, 7, 6, 5, 4, 3, 2, 1);
+        Preview_sepspring();
+        isSepSpringOpened = !isSepSpringOpened;
+    }
+}
+
+//var sepspringState = false;
+//function StartStopAnimate_sepspring() {
+//    sepspringState = !sepspringState;
+//    if(sepspringState){
+//    } else{
+//    }
+//}
 
 /*
  function SetFolderName( strDir )

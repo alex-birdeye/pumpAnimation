@@ -50,14 +50,20 @@ function StopAnimate() {
     timerPreview = 0;
 }
 
-var engineState = false;
-function StartStopAnimate_engine() {
-    engineState = !engineState;
-    if(engineState){
-        Preview()
-    } else{
-        StopAnimate();
-    }
+//var engineState = false;
+//function StartStopAnimate_engine() {
+//    engineState = !engineState;
+//    if(engineState){
+//        Preview()
+//    } else{
+//        StopAnimate();
+//    }
+//}
+function startEngine(){
+    Preview();
+}
+function stopEngine(){
+    StopAnimate();
 }
 
 /*

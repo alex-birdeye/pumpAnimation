@@ -51,11 +51,16 @@ function StopAnimate_oilpipefromadaptertoengine() {
 }
 
 var oilpipefromadaptertoengineState = false;
+function startOilPipeFromAdapterToEnngine(){
+        Preview_oilpipefromadaptertoengine()
+}
+function stopOilPipeFromAdapterToEngine(){
+
+}
 function StartStopAnimate_oilpipefromadaptertoengine() {
     oilpipefromadaptertoengineState = !oilpipefromadaptertoengineState;
     if(oilpipefromadaptertoengineState){
         document.getElementById("preview_box_oilpipefromadaptertoengine").style.opacity = "1";
-        Preview_oilpipefromadaptertoengine()
     } else{
         StopAnimate_oilpipefromadaptertoengine();
         document.getElementById("preview_box_oilpipefromadaptertoengine").style.opacity = "0.5";

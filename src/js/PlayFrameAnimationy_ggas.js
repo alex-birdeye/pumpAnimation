@@ -25,6 +25,7 @@ var nHomeFolder_ggas = 1;
 var newimages_ggas = [];
 
 function Animate_ggas() {
+    document.getElementById("preview_box_ggas").style.display = "block";
     if (nIDNum_ggas <= 0)return;
 
     var strDivName_ggas = "";
@@ -46,6 +47,7 @@ function Animate_ggas() {
 }
 
 function StopAnimate_ggas() {
+    document.getElementById("preview_box_ggas").style.display = "none";
     clearTimeout(timerPreview_ggas);
     timerPreview_ggas = 0;
 }

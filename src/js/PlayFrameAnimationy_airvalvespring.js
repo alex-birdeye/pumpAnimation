@@ -55,18 +55,30 @@ function StopAnimate_airvalvespring() {
     timerPreview_airvalvespring = 0;
 }
 
-var airvalvespringState = false;
-function StartStopAnimate_airvalvespring() {
-    airvalvespringState = !airvalvespringState;
-    if (airvalvespringState) {
+
+var isAirValveOpened = false;
+function openAirValve() {
+    if(!isAirValveOpened){
         ReadOrder_airvalvespring(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
-        Preview_airvalvespring()
-    } else {
-        ReadOrder_airvalvespring(10, 9, 8, 7, 6, 5, 4, 3, 2, 1);
-        Preview_airvalvespring()
-        //StopAnimate_airvalvespring();
+        Preview_airvalvespring();
+        isAirValveOpened = !isAirValveOpened;
     }
 }
+function closeAirValve(){
+    if(isAirValveOpened){
+        ReadOrder_airvalvespring(10, 9, 8, 7, 6, 5, 4, 3, 2, 1);
+        Preview_airvalvespring();
+        isAirValveOpened = !isAirValveOpened;
+    }
+}
+//var airvalvespringState = false;
+//function StartStopAnimate_airvalvespring() {
+//    airvalvespringState = !airvalvespringState;
+//    if (airvalvespringState) {
+//    } else {
+//        //StopAnimate_airvalvespring();
+//    }
+//}
 
 /*
  function SetFolderName( strDir )

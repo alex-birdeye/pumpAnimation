@@ -53,17 +53,29 @@ function StopAnimate_solenoidvalveblowdown() {
     timerPreview_solenoidvalveblowdown = 0;
 }
 
-var solenoidvalveblowdownState = false;
-function StartStopAnimate_solenoidvalveblowdown() {
-    solenoidvalveblowdownState = !solenoidvalveblowdownState;
-    if(solenoidvalveblowdownState){
+var isSolenoidValveBlowDownOpened = false;
+function openSolenoidValveBlowDown(){
+    if(!isSolenoidValveBlowDownOpened){
         ReadOrder_solenoidvalveblowdown(10, 9, 8, 7, 6, 5, 4, 3, 2, 1);
-        Preview_solenoidvalveblowdown()
-    } else{
-        ReadOrder_solenoidvalveblowdown(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
-        Preview_solenoidvalveblowdown()
+        Preview_solenoidvalveblowdown();
+        isSolenoidValveBlowDownOpened = !isSolenoidValveBlowDownOpened;
     }
 }
+function closeSolenoidValveBlowDown() {
+    if (isSolenoidValveBlowDownOpened) {
+        ReadOrder_solenoidvalveblowdown(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+        Preview_solenoidvalveblowdown();
+        isSolenoidValveBlowDownOpened = !isSolenoidValveBlowDownOpened;
+    }
+}
+
+//var solenoidvalveblowdownState = false;
+//function StartStopAnimate_solenoidvalveblowdown() {
+//    solenoidvalveblowdownState = !solenoidvalveblowdownState;
+//    if(solenoidvalveblowdownState){
+//    } else{
+//    }
+//}
 
 /*
  function SetFolderName( strDir )

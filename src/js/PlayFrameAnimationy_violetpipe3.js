@@ -53,6 +53,22 @@ function StopAnimate_violetpipe3_() {
     timerPreview_violetpipe3_ = 0;
 }
 
+var isVioletPipe3Active = false;
+function startVioletPipe3(){
+    if(!isVioletPipe3Active){
+        ReadOrder_violetpipe3_(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+        Preview_violetpipe3_();
+        isVioletPipe3Active = !isVioletPipe3Active;
+    }
+}
+function stopVioletPipe3(){
+    if(isVioletPipe3Active){
+        ReadOrder_violetpipe3_(60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10, 9, 8, 7, 6, 5, 4, 3, 2, 1);
+        Preview_violetpipe3_();
+        isVioletPipe3Active = !isVioletPipe3Active;
+    }
+}
+
 var violetpipe3_State = false;
 function StartStopAnimate_violetpipe3_() {
     violetpipe3_State = !violetpipe3_State;

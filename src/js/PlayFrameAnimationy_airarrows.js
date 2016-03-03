@@ -25,6 +25,7 @@ var nHomeFolder_airarrows = 1;
 var newimages_airarrows = [];
 
 function Animate_airarrows() {
+    document.getElementById("preview_box_airarrows").style.display = "block";
     if (nIDNum_airarrows <= 0)return;
 
     var strDivName_airarrows = "";
@@ -46,6 +47,7 @@ function Animate_airarrows() {
 }
 
 function StopAnimate_airarrows() {
+    document.getElementById("preview_box_airarrows").style.display = "none";
     clearTimeout(timerPreview_airarrows);
     timerPreview_airarrows = 0;
 }

@@ -53,17 +53,28 @@ function StopAnimate_violetpipe1_() {
     timerPreview_violetpipe1_ = 0;
 }
 
-var violetpipe1_State = false;
-function StartStopAnimate_violetpipe1_() {
-    violetpipe1_State = !violetpipe1_State;
-    if(violetpipe1_State){
+var isVioletPipe1Active = false;
+function startVioletPipe1(){
+    if(!isVioletPipe1Active){
         ReadOrder_violetpipe1_(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
-        Preview_violetpipe1_()
-    } else{
-        ReadOrder_violetpipe1_(60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10, 9, 8, 7, 6, 5, 4, 3, 2, 1);
-        Preview_violetpipe1_()
+        Preview_violetpipe1_();
+        isVioletPipe1Active = !isVioletPipe1Active;
     }
 }
+function stopVioletPipe1(){
+    if(isVioletPipe1Active){
+        ReadOrder_violetpipe1_(60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10, 9, 8, 7, 6, 5, 4, 3, 2, 1);
+        Preview_violetpipe1_();
+        isVioletPipe1Active = !isVioletPipe1Active;
+    }
+}
+//var violetpipe1_State = false;
+//function StartStopAnimate_violetpipe1_() {
+//    violetpipe1_State = !violetpipe1_State;
+//    if(violetpipe1_State){
+//    } else{
+//    }
+//}
 
 /*
  function SetFolderName( strDir )

@@ -51,14 +51,18 @@ function StopAnimate_oilpipefromsep() {
 }
 
 var oilpipefromsepState = false;
-function StartStopAnimate_oilpipefromsep() {
-    oilpipefromsepState = !oilpipefromsepState;
-    if(oilpipefromsepState){
+function startOilPipeFromSep(){
         Preview_oilpipefromsep()
-    } else{
-        StopAnimate_oilpipefromsep();
-    }
 }
+function stopOilPipeFromSep(){
+        StopAnimate_oilpipefromsep();
+}
+//function StartStopAnimate_oilpipefromsep() {
+//    oilpipefromsepState = !oilpipefromsepState;
+//    if(oilpipefromsepState){
+//    } else{
+//    }
+//}
 
 /*
  function SetFolderName( strDir )

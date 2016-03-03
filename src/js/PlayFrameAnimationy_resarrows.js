@@ -25,6 +25,7 @@ var nHomeFolder_resarrows = 1;
 var newimages_resarrows = [];
 
 function Animate_resarrows() {
+    document.getElementById("preview_box_resarrows").style.display = "block";
     if (nIDNum_resarrows <= 0)return;
 
     var strDivName_resarrows = "";
@@ -46,6 +47,7 @@ function Animate_resarrows() {
 }
 
 function StopAnimate_resarrows() {
+    document.getElementById("preview_box_resarrows").style.display = "none";
     clearTimeout(timerPreview_resarrows);
     timerPreview_resarrows = 0;
 }

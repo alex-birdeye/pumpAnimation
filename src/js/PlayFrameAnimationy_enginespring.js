@@ -53,15 +53,28 @@ function StopAnimate_enginespring() {
     timerPreview_enginespring = 0;
 }
 
+
+var isEngineSpringOpened = false;
+function openEngineSpring(){
+    if(!isEngineSpringOpened){
+        ReadOrder_enginespring(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+        Preview_enginespring();
+        isEngineSpringOpened = !isEngineSpringOpened;
+    }
+}
+function closeEngineSpring(){
+    if(isEngineSpringOpened){
+        ReadOrder_enginespring(9, 8, 7, 6, 5, 4, 3, 2, 1);
+        Preview_enginespring();
+        isEngineSpringOpened = !isEngineSpringOpened;
+    }
+}
+
 var enginespringState = false;
 function StartStopAnimate_enginespring() {
     enginespringState = !enginespringState;
     if(enginespringState){
-        ReadOrder_enginespring(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
-        Preview_enginespring()
     } else{
-        ReadOrder_enginespring(9, 8, 7, 6, 5, 4, 3, 2, 1);
-        Preview_enginespring()
     }
 }
 
