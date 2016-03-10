@@ -2,7 +2,6 @@ function log(msg) {
     console.log(msg);
 }
 
-var delta = 0;
 $(document).ready(function () {
     doPoll();
 });
@@ -24,29 +23,29 @@ function doPoll() {
                     startValue: 0,
                     endValue: 55,
                     style: {fill: '#C9C9C9', stroke: '#C9C9C9'},
-                    endWidth: 5,
+                    endWidth: 3,
                     startWidth: 1
                 },
                     {
                         startValue: 55,
                         endValue: 110,
                         style: {fill: '#FCF06A', stroke: '#FCF06A'},
-                        endWidth: 10,
-                        startWidth: 5
+                        endWidth: 5,
+                        startWidth: 3
                     },
                     {
                         startValue: 110,
                         endValue: 165,
                         style: {fill: '#FCA76A', stroke: '#FCA76A'},
-                        endWidth: 15,
-                        startWidth: 10
+                        endWidth: 8,
+                        startWidth: 5
                     },
                     {
                         startValue: 165,
-                        endValue: 220,
+                        endValue: 200,
                         style: {fill: '#FC6A6A', stroke: '#FC6A6A'},
-                        endWidth: 20,
-                        startWidth: 15
+                        endWidth: 11,
+                        startWidth: 8
                     }],
                 ticksMinor: {interval: 5, size: '5%'},
                 ticksMajor: {interval: 10, size: '9%'},
@@ -55,9 +54,14 @@ function doPoll() {
                 animationDuration: 1000
             });
             var oilPressure = data.compressors[0].oil_pressure;
-            var value = parseInt(oilPressure, 10) + delta;
+            var oilTemperature = data.compressors[0].oil_temperature;
+            jQuery('[id="temperature"] > p').html(oilTemperature + " F");
+
+            var value = parseInt(oilPressure, 10);
+            jQuery('[id="indicatorContainer"]').jqxGauge({max: 200});
+            jQuery('[id="indicatorContainer"]').jqxGauge({ caption: { value: 'PSI', position: 'bottom', visible: true }});
             jQuery('[id="indicatorContainer"]').jqxGauge('value', value);
-            delta += 5;
+            //jQuery('[id="indicatorValue"]').text(Math.round(value) + ' птн/пнх');
             setTimeout(doPoll, 1000);
         },
         error: function (XMLHttpRequest, textStatus, error) {
