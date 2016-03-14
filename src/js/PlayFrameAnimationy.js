@@ -172,7 +172,7 @@ function InitPreview() {
                 var strPadding = "padding:" + strPaddingH + "px " + strPaddingW + "px " + strPaddingH + "px " + strPaddingW + "px;";
 
                 //strHTML += '<div id="' + strDivName + '" style="position:absolute;top:478px;left:445px;z-index: 1;' + strPadding + 'width:' + strDivW + ';height:' + strDivH + ' ;">' + '<img id="' + strImgName + '" style="margin:0;padding:0;border:0px;width:' + strWidthN + ';height:' + strHeightN + ';">' + '</div>';
-                strHTML += '<div id="' + strDivName + '" style="position:absolute;top:494px;left:429px;z-index: 1;' + strPadding + 'width:' + strDivW + ';height:' + strDivH + ' ;">' + '<img id="' + strImgName + '" style="margin:0;padding:0;border:0px;width:' + strWidthN + ';height:' + strHeightN + ';">' + '</div>';
+                strHTML += '<div id="' + strDivName + '" style="position:absolute;top:494px;left:629px;z-index: 1;' + strPadding + 'width:' + strDivW + ';height:' + strDivH + ' ;">' + '<img id="' + strImgName + '" style="margin:0;padding:0;border:0px;width:' + strWidthN + ';height:' + strHeightN + ';">' + '</div>';
                 //strHTML += '<div id="' + strDivName + '" class="engine"' + '<img id="' + strImgName + '" style="margin:0;padding:0;border:0px;width:' + strWidthN + ';height:' + strHeightN + ';">' + '</div>';
 
             }
