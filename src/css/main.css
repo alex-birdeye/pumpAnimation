@@ -322,6 +322,7 @@ textarea {
     /*z-index: 1;*/
     width: 68px;
     height: 58px;
+    z-index: 10;
 }
 .oilpipefromsep img {
     margin: 0;
@@ -329,6 +330,7 @@ textarea {
     border: 0px;
     width: 495px;
     height: 164px;
+    z-index: 10;
 }
 
 .oilpipetoengine {
