@@ -256,32 +256,50 @@ textarea {
     }
 }
 
+/*.engine {*/
+    /*position: absolute;*/
+    /*top: 315px;*/
+    /*left: 629px !important;*/
+    /*visibility: hidden;*/
+/*}*/
+
 .engine {
     position: absolute;
-    top: 315px;
-    left: 629px !important;
-    visibility: hidden;
+    top: 494px;
+    left: 629px;
+    /*visibility: hidden;*/
+    visibility: visible;
+    z-index: 1;
+}
+.engine img {
+    margin: 0;
+    padding: 0;
+    border: 0px;
+    width: 243px;
+    height: 205px;
 }
 
 .ggas {
     position: absolute;
     top: 427px;
     left: 785px;
-    visibility: hidden;
+    /*visibility: hidden;*/
+    visibility: visible;
     z-index: 1;
 }
 .ggas img {
     margin: 0;
     padding: 0;
     border: 0px;
-    width: 342px;
-    height: 218px;
+    /*width: 342px;*/
+    /*height: 218px;*/
 }
 .airarrows {
     position: absolute;
     top: 171px;
     left: 609px;
-    visibility: hidden;
+    /*visibility: hidden;*/
+    visibility: visible;
     width: 136px;
     height: 168px;
     z-index: 1;
@@ -291,7 +309,8 @@ textarea {
     position: absolute;
     top: 560px;
     left: 1055px;
-    visibility: hidden;
+    /*visibility: hidden;*/
+    visibility: visible;
     z-index: 5;
     width: 68px;
     height: 58px;
@@ -308,7 +327,8 @@ textarea {
     position: absolute;
     top: 212px;
     left: 493px;
-    visibility: hidden;
+    /*visibility: hidden;*/
+    visibility: visible;
     z-index: 5;
     width: 68px;
     height: 58px;
@@ -318,11 +338,12 @@ textarea {
     position: absolute;
     top: 553px;
     left: 548px;
-    visibility: hidden;
+    visibility: visible;
     /*z-index: 1;*/
     width: 68px;
     height: 58px;
     z-index: 10;
+    margin-bottom: 100%;
 }
 .oilpipefromsep img {
     margin: 0;
@@ -357,7 +378,8 @@ textarea {
     position: absolute;
     top: 631px;
     left: 547px;
-    visibility: hidden;
+    /*visibility: hidden;*/
+    visibility: visible;
     z-index: 5;
     width: 68px;
     height: 58px;
@@ -429,7 +451,8 @@ textarea {
     position: absolute;
     top: 425px;
     left: 772px;
-    visibility: hidden;
+    /*visibility: hidden;*/
+    visibility: visible;
     z-index: 1;
     width: 158px;
     height: 135px;
@@ -464,7 +487,8 @@ textarea {
     position: absolute;
     top: 470px;
     left: 1057px;
-    visibility: hidden;
+    /*visibility: hidden;*/
+    visibility: visible;
     z-index: 5;
     width: 158px;
     height: 131px;
@@ -481,7 +505,8 @@ textarea {
     position: absolute;
     top: 464px;
     left: 787px;
-    visibility: hidden;
+    /*visibility: hidden;*/
+    visibility: visible;
     z-index: 5;
     width: 158px;
     height: 131px;
@@ -499,7 +524,8 @@ textarea {
     position: absolute;
     top: 384px;
     left: 910px;
-    visibility: hidden;
+    /*visibility: hidden;*/
+    visibility: visible;
     z-index: 5;
     width: 158px;
     height: 131px;
@@ -516,7 +542,8 @@ textarea {
     position: absolute;
     top: 368px;
     left: 722px;
-    visibility: hidden;
+    /*visibility: hidden;*/
+    visibility: visible;
     z-index: 5;
     width: 158px;
     height: 131px;
@@ -533,7 +560,8 @@ textarea {
     position: absolute;
     top: 372px;
     left: 1083px;
-    visibility: hidden;
+    /*visibility: hidden;*/
+    visibility: visible;
     z-index: 5;
     width: 158px;
     height: 131px;
@@ -550,7 +578,8 @@ textarea {
     position: absolute;
     top: 594px;
     left: 670px;
-    visibility: hidden;
+    /*visibility: hidden;*/
+    visibility: visible;
     z-index: 5;
     width: 158px;
     height: 131px;
@@ -568,7 +597,8 @@ textarea {
     position: absolute;
     top: 410px;
     left: 835px;
-    visibility: hidden;
+    /*visibility: hidden;*/
+    visibility: visible;
     z-index: 5;
     width: 158px;
     height: 131px;
@@ -586,7 +616,8 @@ textarea {
     position: absolute;
     top: 365px;
     left: 840px;
-    visibility: hidden;
+    /*visibility: hidden;*/
+    visibility: visible;
     z-index: 5;
     width: 158px;
     height: 131px;
@@ -605,7 +636,8 @@ textarea {
     position: absolute;
     top: 361px;
     left: 678px;
-    visibility: hidden;
+    /*visibility: hidden;*/
+    visibility: visible;
     z-index: 5;
     width: 158px;
     height: 131px;
@@ -624,7 +656,8 @@ textarea {
     position: absolute;
     top: 409px;
     left: 834px;
-    visibility: hidden;
+    /*visibility: hidden;*/
+    visibility: visible;
     width: 158px;
     height: 131px;
 }
@@ -641,7 +674,8 @@ textarea {
     position: absolute;
     top: 366px;
     left: 686px;
-    visibility: hidden;
+    /*visibility: hidden;*/
+    visibility: visible;
     width: 158px;
     height: 131px;
 }
@@ -658,7 +692,8 @@ textarea {
     position: absolute;
     top: 451px;
     left: 778px;
-    visibility: hidden;
+    /*visibility: hidden;*/
+    visibility: visible;
     width: 158px;
     height: 131px;
 }

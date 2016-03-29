@@ -14,9 +14,7 @@ function doPoll() {
             //log(data.compressors[0].status);
             var motorRunStatus = data.compressors[0].status.motor_run;
             var onLoadStatus = data.compressors[0].status.on_load;
-            motorRun(motorRunStatus);
-            onLoad(onLoadStatus);
-            lastState(motorRunStatus, onLoadStatus);
+
 
             jQuery('[id="indicatorContainer"]').jqxGauge({
                 ranges: [{
@@ -53,16 +51,22 @@ function doPoll() {
                 colorScheme: 'scheme03',
                 animationDuration: 1000
             });
-            var oilPressure = data.compressors[0].oil_pressure;
-            var oilTemperature = data.compressors[0].oil_temperature;
-            jQuery('[class="temperature"] > p').html("<strong>" +oilTemperature + " C</strong>");
-
-            var value = parseInt(oilPressure, 10);
             jQuery('[id="indicatorValue"] > p').html(oilPressure);
             jQuery('[id="indicatorContainer"]').jqxGauge({max: 20});
             jQuery('[id="indicatorContainer"]').jqxGauge({labels: { interval: 5}});
             jQuery('[id="indicatorContainer"]').jqxGauge({ caption: { value: 'bar', position: 'bottom', offset: [0, 10]}});
             jQuery('[id="indicatorContainer"]').jqxGauge('value', value);
+
+            motorRun(motorRunStatus);
+            onLoad(onLoadStatus);
+            lastState(motorRunStatus, onLoadStatus);
+
+            var oilPressure = data.compressors[0].oil_pressure;
+            var oilTemperature = data.compressors[0].oil_temperature;
+            jQuery('[class="temperature"] > p').html("<strong>" +oilTemperature + " C</strong>");
+
+            var value = parseInt(oilPressure, 10);
+
             setTimeout(doPoll, 1000);
         },
         error: function (XMLHttpRequest, textStatus, error) {
@@ -73,57 +77,57 @@ function doPoll() {
 
 function lastState(motorRunStatus, onLoadStatus) {
     if (!motorRunStatus && !onLoadStatus) {
-        startVioletPipe1();
-        Preview_violetarrowssmall();
-        Preview_violetarrowssmall2_();
-        Preview_violetarrowssmall3_();
+        //startVioletPipe1();
+        //Preview_violetarrowssmall();
+        //Preview_violetarrowssmall2_();
+        //Preview_violetarrowssmall3_();
     } else {
-        stopVioletPipe1();
-        StopAnimate_violetarrowssmall();
-        StopAnimate_violetarrowssmall2_();
-        StopAnimate_violetarrowssmall3_();
+        //stopVioletPipe1();
+        //StopAnimate_violetarrowssmall();
+        //StopAnimate_violetarrowssmall2_();
+        //StopAnimate_violetarrowssmall3_();
     }
 }
 
 function onLoad(status) {
     if (status) {
-        openAirValve();
-        openSepSpring();
-        Preview_airarrows();
+        //openAirValve();
+        //openSepSpring();
+        //Preview_airarrows();
         startVioletArrows();
     } else {
-        closeAirValve();
-        closeSepSpring();
-        StopAnimate_airarrows();
-        stopVioletArrows();
+        //closeAirValve();
+        //closeSepSpring();
+        //StopAnimate_airarrows();
+        //stopVioletArrows();
     }
 }
 
 function motorRun(status) {
     if (status) {
-        startEngine();
-        startOilPipeFromSep();
-        Preview_oilpipefromadaptertoengine();
-        Preview_liq();
-        Preview_ggas();
-        Preview_resarrows();
-        Preview_smallgreenpipe();
-        openSolenoidValve();
-        openSolenoidValveBlowDown();
-        startVioletPipe2();
-        startVioletPipe3();
+        //startEngine();
+        //startOilPipeFromSep();
+        //Preview_oilpipefromadaptertoengine();
+        //Preview_liq();
+        //Preview_ggas();
+        //Preview_resarrows();
+        //Preview_smallgreenpipe();
+        //openSolenoidValve();
+        //openSolenoidValveBlowDown();
+        //startVioletPipe2();
+        //startVioletPipe3();
     } else {
-        stopEngine();
-        stopOilPipeFromSep();
-        StopAnimate_oilpipefromadaptertoengine();
-        StopAnimate_liq();
-        StopAnimate_ggas();
-        StopAnimate_resarrows();
-        StopAnimate_smallgreenpipe();
-        closeSolenoidValve();
-        closeSolenoidValveBlowDown();
-        stopVioletPipe2();
-        stopVioletPipe3();
+        //stopEngine();
+        //stopOilPipeFromSep();
+        //StopAnimate_oilpipefromadaptertoengine();
+        //StopAnimate_liq();
+        //StopAnimate_ggas();
+        //StopAnimate_resarrows();
+        //StopAnimate_smallgreenpipe();
+        //closeSolenoidValve();
+        //closeSolenoidValveBlowDown();
+        //stopVioletPipe2();
+        //stopVioletPipe3();
     }
 }
 
