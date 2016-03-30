@@ -278,28 +278,43 @@ textarea {
     width: 243px;
     height: 205px;
 }
+.engine_dis {
+    position: absolute;
+    top: 494px;
+    left: 629px;
+    visibility: hidden;
+    /*visibility: visible;*/
+    z-index: 1;
+}
+.engine_dis img {
+    margin: 0;
+    padding: 0;
+    border: 0px;
+    width: 243px;
+    height: 205px;
+}
 
 .ggas {
     position: absolute;
     top: 427px;
     left: 785px;
-    /*visibility: hidden;*/
-    visibility: visible;
+    visibility: hidden;
+    /*visibility: visible;*/
     z-index: 1;
 }
 .ggas img {
     margin: 0;
     padding: 0;
     border: 0px;
-    /*width: 342px;*/
-    /*height: 218px;*/
+    width: 342px;
+    height: 218px;
 }
 .airarrows {
     position: absolute;
     top: 171px;
     left: 609px;
-    /*visibility: hidden;*/
-    visibility: visible;
+    visibility: hidden;
+    /*visibility: visible;*/
     width: 136px;
     height: 168px;
     z-index: 1;
@@ -322,8 +337,35 @@ textarea {
     width: 68px;
     height: 58px;
 }
+.liquid_dis {
+    position: absolute;
+    top: 560px;
+    left: 1055px;
+    /*visibility: hidden;*/
+    /*visibility: visible;*/
+    z-index: 5;
+    width: 68px;
+    height: 58px;
+}
+.liquid_dis img {
+    margin: 0;
+    padding: 0;
+    border: 0px;
+    width: 68px;
+    height: 58px;
+}
 
 .oilpipebig {
+    position: absolute;
+    top: 212px;
+    left: 493px;
+    visibility: hidden;
+    /*visibility: visible;*/
+    z-index: 5;
+    width: 68px;
+    height: 58px;
+}
+.oilpipebig_dis {
     position: absolute;
     top: 212px;
     left: 493px;
@@ -332,13 +374,18 @@ textarea {
     z-index: 5;
     width: 68px;
     height: 58px;
+    opacity: 0.5;
+}
+.oilpipebig_dis img{
+    width: 186px;
+    height: 505px;
 }
 
 .oilpipefromsep {
     position: absolute;
     top: 553px;
     left: 548px;
-    visibility: visible;
+    /*visibility: visible;*/
     /*z-index: 1;*/
     width: 68px;
     height: 58px;
@@ -352,6 +399,26 @@ textarea {
     width: 495px;
     height: 164px;
     z-index: 10;
+}
+.oilpipefromsep_dis {
+    position: absolute;
+    top: 553px;
+    left: 548px;
+    /*visibility: visible;*/
+    /*z-index: 1;*/
+    width: 68px;
+    height: 58px;
+    z-index: 10;
+    margin-bottom: 100%;
+}
+.oilpipefromsep_dis img {
+    margin: 0;
+    padding: 0;
+    border: 0px;
+    width: 495px;
+    height: 164px;
+    z-index: 10;
+    opacity: 0.5;
 }
 
 .oilpipetoengine {
@@ -379,7 +446,7 @@ textarea {
     top: 631px;
     left: 547px;
     /*visibility: hidden;*/
-    visibility: visible;
+    /*visibility: visible;*/
     z-index: 5;
     width: 68px;
     height: 58px;
@@ -391,6 +458,25 @@ textarea {
     border: 0px;
     width: 123px;
     height: 76px;
+}
+.oilpipefromadaptertoengine_dis {
+    position: absolute;
+    top: 631px;
+    left: 547px;
+    /*visibility: hidden;*/
+    /*visibility: visible;*/
+    z-index: 5;
+    width: 68px;
+    height: 58px;
+}
+
+.oilpipefromadaptertoengine_dis img {
+    margin: 0;
+    padding: 0;
+    border: 0px;
+    width: 123px;
+    height: 76px;
+    opacity: 0.5;
 }
 
 .oilpipefromadaptertcooler {
@@ -452,13 +538,31 @@ textarea {
     top: 425px;
     left: 772px;
     /*visibility: hidden;*/
-    visibility: visible;
+    /*visibility: visible;*/
     z-index: 1;
     width: 158px;
     height: 135px;
 }
 
 .smallgreenpipe img {
+    margin: 0;
+    padding: 0;
+    border: 0px;
+    width: 303px;
+    height: 140px;
+}
+.smallgreenpipe_dis {
+    position: absolute;
+    top: 425px;
+    left: 772px;
+    /*visibility: hidden;*/
+    /*visibility: visible;*/
+    z-index: 1;
+    width: 158px;
+    height: 135px;
+}
+
+.smallgreenpipe_dis img {
     margin: 0;
     padding: 0;
     border: 0px;
@@ -487,8 +591,8 @@ textarea {
     position: absolute;
     top: 470px;
     left: 1057px;
-    /*visibility: hidden;*/
-    visibility: visible;
+    visibility: hidden;
+    /*visibility: visible;*/
     z-index: 5;
     width: 158px;
     height: 131px;
@@ -597,8 +701,8 @@ textarea {
     position: absolute;
     top: 410px;
     left: 835px;
-    /*visibility: hidden;*/
-    visibility: visible;
+    visibility: hidden;
+    /*visibility: visible;*/
     z-index: 5;
     width: 158px;
     height: 131px;
@@ -616,8 +720,8 @@ textarea {
     position: absolute;
     top: 365px;
     left: 840px;
-    /*visibility: hidden;*/
-    visibility: visible;
+    visibility: hidden;
+    /*visibility: visible;*/
     z-index: 5;
     width: 158px;
     height: 131px;
@@ -636,8 +740,8 @@ textarea {
     position: absolute;
     top: 361px;
     left: 678px;
-    /*visibility: hidden;*/
-    visibility: visible;
+    visibility: hidden;
+    /*visibility: visible;*/
     z-index: 5;
     width: 158px;
     height: 131px;

@@ -11,10 +11,14 @@ function doPoll() {
         type: "POST",
         url: "http://localhost:8283/values",
         success: function (data) {
-            //log(data.compressors[0].status);
+            log(data.compressors[0].status);
             var motorRunStatus = data.compressors[0].status.motor_run;
             var onLoadStatus = data.compressors[0].status.on_load;
+            var oilPressure = data.compressors[0].oil_pressure;
+            var oilTemperature = data.compressors[0].oil_temperature;
+            jQuery('[class="temperature"] > p').html("<strong>" + oilTemperature + " C</strong>");
 
+            var value = parseInt(oilPressure, 10);
 
             jQuery('[id="indicatorContainer"]').jqxGauge({
                 ranges: [{
@@ -53,19 +57,19 @@ function doPoll() {
             });
             jQuery('[id="indicatorValue"] > p').html(oilPressure);
             jQuery('[id="indicatorContainer"]').jqxGauge({max: 20});
-            jQuery('[id="indicatorContainer"]').jqxGauge({labels: { interval: 5}});
-            jQuery('[id="indicatorContainer"]').jqxGauge({ caption: { value: 'bar', position: 'bottom', offset: [0, 10]}});
+            jQuery('[id="indicatorContainer"]').jqxGauge({labels: {interval: 5}});
+            jQuery('[id="indicatorContainer"]').jqxGauge({
+                caption: {
+                    value: 'bar',
+                    position: 'bottom',
+                    offset: [0, 10]
+                }
+            });
             jQuery('[id="indicatorContainer"]').jqxGauge('value', value);
-
             motorRun(motorRunStatus);
             onLoad(onLoadStatus);
             lastState(motorRunStatus, onLoadStatus);
 
-            var oilPressure = data.compressors[0].oil_pressure;
-            var oilTemperature = data.compressors[0].oil_temperature;
-            jQuery('[class="temperature"] > p').html("<strong>" +oilTemperature + " C</strong>");
-
-            var value = parseInt(oilPressure, 10);
 
             setTimeout(doPoll, 1000);
         },
@@ -99,35 +103,41 @@ function onLoad(status) {
         //closeAirValve();
         //closeSepSpring();
         //StopAnimate_airarrows();
-        //stopVioletArrows();
+        stopVioletArrows();
     }
 }
 
 function motorRun(status) {
     if (status) {
-        //startEngine();
-        //startOilPipeFromSep();
+        startEngine();
+        startOilPipeFromSep();
+        startOilPipeFromAdapterToEngine();
+        startLiq();
         //Preview_oilpipefromadaptertoengine();
         //Preview_liq();
-        //Preview_ggas();
-        //Preview_resarrows();
+        Preview_ggas();
+        Preview_resarrows();
+        startSmallGreenPipe();
         //Preview_smallgreenpipe();
-        //openSolenoidValve();
-        //openSolenoidValveBlowDown();
-        //startVioletPipe2();
-        //startVioletPipe3();
+        openSolenoidValve();
+        openSolenoidValveBlowDown();
+        startVioletPipe2();
+        startVioletPipe3();
     } else {
-        //stopEngine();
-        //stopOilPipeFromSep();
+        stopEngine();
+        stopOilPipeFromSep();
+        stopOilPipeFromAdapterToEngine();
+        stopLiq();
         //StopAnimate_oilpipefromadaptertoengine();
         //StopAnimate_liq();
-        //StopAnimate_ggas();
-        //StopAnimate_resarrows();
+        StopAnimate_ggas();
+        StopAnimate_resarrows();
+        stopSmallGreenPipe();
         //StopAnimate_smallgreenpipe();
-        //closeSolenoidValve();
-        //closeSolenoidValveBlowDown();
-        //stopVioletPipe2();
-        //stopVioletPipe3();
+        closeSolenoidValve();
+        closeSolenoidValveBlowDown();
+        stopVioletPipe2();
+        stopVioletPipe3();
     }
 }
 
@@ -137,6 +147,100 @@ function startVioletArrows() {
 function stopVioletArrows() {
     document.getElementById("violetarrows").style.display = "none";
 }
+
+function startEngine() {
+    jQuery('[class="engine"]').css('visibility', 'visible');
+    jQuery('[id="engine_dis"]').css('visibility', 'hidden');
+}
+function stopEngine() {
+    jQuery('[class="engine"]').css('visibility', 'hidden');
+    jQuery('[id="engine_dis"]').css('visibility', 'visible');
+}
+
+function startOilPipeFromSep() {
+    jQuery('[class="oilpipefromsep"]').css('visibility', 'visible');
+    jQuery('[class="oilpipefromsep_dis"]').css('visibility', 'hidden');
+}
+function stopOilPipeFromSep() {
+    jQuery('[class="oilpipefromsep"]').css('visibility', 'hidden');
+    jQuery('[class="oilpipefromsep_dis"]').css('visibility', 'visible');
+}
+
+function startOilPipeFromAdapterToEngine() {
+    jQuery('[class="oilpipefromadaptertoengine"]').css('visibility', 'visible');
+    jQuery('[class="oilpipefromadaptertoengine_dis"]').css('visibility', 'hidden');
+}
+function stopOilPipeFromAdapterToEngine() {
+    jQuery('[class="oilpipefromadaptertoengine"]').css('visibility', 'hidden');
+    jQuery('[class="oilpipefromadaptertoengine_dis"]').css('visibility', 'visible');
+}
+
+function startLiq() {
+    jQuery('[class="liquid"]').css('visibility', 'visible');
+    jQuery('[class="liquid_dis"]').css('visibility', 'hidden');
+}
+function stopLiq() {
+    jQuery('[class="liquid"]').css('visibility', 'hidden');
+    jQuery('[class="liquid_dis"]').css('visibility', 'visible');
+}
+
+function startSmallGreenPipe() {
+    jQuery('[class="smallgreenpipe"]').css('visibility', 'visible');
+    jQuery('[class="smallgreenpipe_dis"]').css('visibility', 'hidden');
+}
+function stopSmallGreenPipe() {
+    jQuery('[class="smallgreenpipe"]').css('visibility', 'hidden');
+    jQuery('[class="smallgreenpipe_dis"]').css('visibility', 'visible');
+}
+
+var isSolenoidValveOpened = false;
+function openSolenoidValve() {
+    if (!isSolenoidValveOpened)
+        jQuery('[id="solenoidvalve"]').attr('src', 'img/gif/solenoidvalve.gif');
+    isSolenoidValveOpened = true;
+}
+function closeSolenoidValve() {
+    if (isSolenoidValveOpened)
+        jQuery('[id="solenoidvalve"]').attr('src', 'img/gif/solenoidvalve_rev.gif');
+    isSolenoidValveOpened = false;
+}
+
+var isSolenoidValveBlowDownOpened = false;
+function openSolenoidValveBlowDown() {
+    if (!isSolenoidValveBlowDownOpened)
+        jQuery('[id="solenoidvalveblowdown"]').attr('src', 'img/gif/solenoidvalveblowdown_rev.gif');
+    isSolenoidValveBlowDownOpened = true;
+}
+function closeSolenoidValveBlowDown() {
+    if (isSolenoidValveBlowDownOpened)
+        jQuery('[id="solenoidvalveblowdown"]').attr('src', 'img/gif/solenoidvalveblowdown.gif');
+    isSolenoidValveBlowDownOpened = false;
+}
+
+var isVioletPipe2 = false;
+function startVioletPipe2() {
+    if (!isVioletPipe2)
+        jQuery('[id="violetpipe2_"]').attr('src', 'img/gif/violetpipe2.gif');
+    isVioletPipe2 = true;
+}
+function stopVioletPipe2() {
+    if (isVioletPipe2)
+        jQuery('[id="violetpipe2_"]').attr('src', 'img/gif/violetpipe2_rev.gif');
+    isVioletPipe2 = false;
+}
+
+var isVioletPipe3 = false;
+function startVioletPipe3() {
+    if (!isVioletPipe3)
+        jQuery('[id="violetpipe3_"]').attr('src', 'img/gif/violetpipe3.gif');
+    isVioletPipe3 = true;
+}
+function stopVioletPipe3() {
+    if (isVioletPipe3)
+        jQuery('[id="violetpipe3_"]').attr('src', 'img/gif/violetpipe3_rev.gif');
+    isVioletPipe3 = false;
+}
+
 
 //var violetarrowsState = false;
 //function StartStopAnimate_violetarrows() {
