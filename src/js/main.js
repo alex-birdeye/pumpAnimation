@@ -95,14 +95,16 @@ function lastState(motorRunStatus, onLoadStatus) {
 
 function onLoad(status) {
     if (status) {
-        //openAirValve();
+        openAirValve();
         //openSepSpring();
         //Preview_airarrows();
+        startAirArrows();
         startVioletArrows();
     } else {
-        //closeAirValve();
+        closeAirValve();
         //closeSepSpring();
         //StopAnimate_airarrows();
+        stopAirArrows();
         stopVioletArrows();
     }
 }
@@ -193,6 +195,13 @@ function stopSmallGreenPipe() {
     jQuery('[class="smallgreenpipe_dis"]').css('visibility', 'visible');
 }
 
+function startAirArrows() {
+    jQuery('[class="airarrows"]').css('visibility', 'visible');
+}
+function stopAirArrows() {
+    jQuery('[class="airarrows"]').css('visibility', 'hidden');
+}
+
 var isSolenoidValveOpened = false;
 function openSolenoidValve() {
     if (!isSolenoidValveOpened)
@@ -203,6 +212,18 @@ function closeSolenoidValve() {
     if (isSolenoidValveOpened)
         jQuery('[id="solenoidvalve"]').attr('src', 'img/gif/solenoidvalve_rev.gif');
     isSolenoidValveOpened = false;
+}
+
+var isAirValveOpened = false;
+function openAirValve() {
+    if (!isAirValveOpened)
+        jQuery('[id="solenoidvalve"]').attr('src', 'img/gif/solenoidvalve.gif');
+    isAirValveOpened = true;
+}
+function closeAirValve() {
+    if (isAirValveOpened)
+        jQuery('[id="solenoidvalve"]').attr('src', 'img/gif/solenoidvalve_rev.gif');
+    isAirValveOpened = false;
 }
 
 var isSolenoidValveBlowDownOpened = false;
