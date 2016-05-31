@@ -2,25 +2,34 @@ function log(msg) {
     console.log(msg);
 }
 
+var blockNumber = 1;
+var compressorBlocksArray = jQuery('.compressor-block');
+var blocksCount = compressorBlocksArray.length;
+
 $(document).ready(function () {
     doPoll();
 });
 
 function doPoll() {
+    if (blockNumber > blocksCount)
+        blockNumber = 1;
+    var url = $('#' + blockNumber).data('url');
+    log(url);
     jQuery.ajax({
         type: "POST",
-        url: "http://localhost:8283/values",
+        url: url,
+        //url: "http://localhost:8283/values1",
         success: function (data) {
-            log(data.compressors[0].status);
+            //log(data.compressors[0].status);
             var motorRunStatus = data.compressors[0].status.motor_run;
             var onLoadStatus = data.compressors[0].status.on_load;
             var oilPressure = data.compressors[0].oil_pressure;
             var oilTemperature = data.compressors[0].oil_temperature;
-            jQuery('[class="temperature"] > p').html("<strong>" + oilTemperature + " C</strong>");
+            jQuery('#' + blockNumber + ' .temperature > p').html("<strong>" + oilTemperature + " C</strong>");
 
             var value = parseInt(oilPressure, 10);
-
-            jQuery('[id="indicatorContainer"]').jqxGauge({
+            //jQuery('[id="indicatorcontainer"]').jqxGauge({
+            jQuery('#' + blockNumber + ' .indicatorcontainer').jqxGauge({
                 ranges: [{
                     startValue: 0,
                     endValue: 5,
@@ -55,23 +64,24 @@ function doPoll() {
                 colorScheme: 'scheme03',
                 animationDuration: 1000
             });
-            jQuery('[id="indicatorValue"] > p').html(oilPressure);
-            jQuery('[id="indicatorContainer"]').jqxGauge({max: 20});
-            jQuery('[id="indicatorContainer"]').jqxGauge({labels: {interval: 5}});
-            jQuery('[id="indicatorContainer"]').jqxGauge({
+
+            jQuery('#' + blockNumber + ' .indicatorValue > p').html(oilPressure);
+            jQuery('#' + blockNumber + ' .indicatorcontainer').jqxGauge({max: 20});
+            jQuery('#' + blockNumber + ' .indicatorcontainer').jqxGauge({labels: {interval: 5}});
+            jQuery('#' + blockNumber + ' .indicatorcontainer').jqxGauge({
                 caption: {
                     value: 'bar',
                     position: 'bottom',
                     offset: [0, 10]
                 }
             });
-            jQuery('[id="indicatorContainer"]').jqxGauge('value', value);
+            jQuery('#' + blockNumber + ' .indicatorcontainer').jqxGauge('value', value);
             motorRun(motorRunStatus);
             onLoad(onLoadStatus);
             lastState(motorRunStatus, onLoadStatus);
 
-
-            setTimeout(doPoll, 1000);
+            blockNumber++;
+            setTimeout(doPoll, 10000);
         },
         error: function (XMLHttpRequest, textStatus, error) {
             alert("error\n" + XMLHttpRequest + "\n" + textStatus + "\n" + error);
@@ -81,29 +91,27 @@ function doPoll() {
 
 function lastState(motorRunStatus, onLoadStatus) {
     if (!motorRunStatus && !onLoadStatus) {
-        //startVioletPipe1();
-        //Preview_violetarrowssmall();
-        //Preview_violetarrowssmall2_();
-        //Preview_violetarrowssmall3_();
+        startVioletPipe1();
+        startVioletArrowsSmall();
+        startVioletArrowsSmall2_();
+        startVioletArrowsSmall3_();
     } else {
-        //stopVioletPipe1();
-        //StopAnimate_violetarrowssmall();
-        //StopAnimate_violetarrowssmall2_();
-        //StopAnimate_violetarrowssmall3_();
+        stopVioletPipe1();
+        stopVioletArrowsSmall();
+        stopVioletArrowsSmall2_();
+        stopVioletArrowsSmall3_();
     }
 }
 
 function onLoad(status) {
     if (status) {
         openAirValve();
-        //openSepSpring();
-        //Preview_airarrows();
+        openSepSpring();
         startAirArrows();
         startVioletArrows();
     } else {
         closeAirValve();
-        //closeSepSpring();
-        //StopAnimate_airarrows();
+        closeSepSpring();
         stopAirArrows();
         stopVioletArrows();
     }
@@ -115,12 +123,11 @@ function motorRun(status) {
         startOilPipeFromSep();
         startOilPipeFromAdapterToEngine();
         startLiq();
-        //Preview_oilpipefromadaptertoengine();
-        //Preview_liq();
-        Preview_ggas();
-        Preview_resarrows();
+        //Preview_ggas();
+        startGgas();
+        //Preview_resarrows();
+        startResArrows();
         startSmallGreenPipe();
-        //Preview_smallgreenpipe();
         openSolenoidValve();
         openSolenoidValveBlowDown();
         startVioletPipe2();
@@ -130,12 +137,11 @@ function motorRun(status) {
         stopOilPipeFromSep();
         stopOilPipeFromAdapterToEngine();
         stopLiq();
-        //StopAnimate_oilpipefromadaptertoengine();
-        //StopAnimate_liq();
-        StopAnimate_ggas();
-        StopAnimate_resarrows();
+        //StopAnimate_ggas();
+        stopGgas();
+        //StopAnimate_resarrows();
+        stopResArrows();
         stopSmallGreenPipe();
-        //StopAnimate_smallgreenpipe();
         closeSolenoidValve();
         closeSolenoidValveBlowDown();
         stopVioletPipe2();
@@ -144,131 +150,195 @@ function motorRun(status) {
 }
 
 function startVioletArrows() {
-    document.getElementById("violetarrows").style.display = "block";
+    jQuery('#' + blockNumber + ' .violetarrows').css('display', 'block');
 }
 function stopVioletArrows() {
-    document.getElementById("violetarrows").style.display = "none";
+    jQuery('#' + blockNumber + ' .violetarrows').css('display', 'none');
+}
+
+function startGgas() {
+    jQuery('#' + blockNumber + ' .ggas').css('display', 'block');
+}
+function stopGgas() {
+    jQuery('#' + blockNumber + ' .ggas').css('display', 'none');
+}
+
+function startResArrows() {
+    jQuery('#' + blockNumber + ' .resarrows').css('display', 'block');
+}
+function stopResArrows() {
+    jQuery('#' + blockNumber + ' .resarrows').css('display', 'none');
 }
 
 function startEngine() {
-    jQuery('[class="engine"]').css('visibility', 'visible');
-    jQuery('[id="engine_dis"]').css('visibility', 'hidden');
+    //jQuery('[class="engine"]').css('visibility', 'visible');
+    //jQuery('[class="engine_dis"]').css('visibility', 'hidden');
+    jQuery('#' + blockNumber + ' .engine').css('visibility', 'visible');
+    jQuery('#' + blockNumber + ' .engine_dis').css('visibility', 'hidden');
 }
 function stopEngine() {
-    jQuery('[class="engine"]').css('visibility', 'hidden');
-    jQuery('[id="engine_dis"]').css('visibility', 'visible');
+    //jQuery('[class="engine"]').css('visibility', 'hidden');
+    //jQuery('[class="engine_dis"]').css('visibility', 'visible');
+    jQuery('#' + blockNumber + ' .engine').css('visibility', 'hidden');
+    jQuery('#' + blockNumber + ' .engine_dis').css('visibility', 'visible');
+}
+
+function startOilPipeBig() {
+    jQuery('#' + blockNumber + ' .oilpipebig').css('visibility', 'visible');
+    jQuery('#' + blockNumber + ' .oilpipebig_dis').css('visibility', 'hidden');
+}
+function stopOilPipeBig() {
+    jQuery('#' + blockNumber + ' .oilpipebig').css('visibility', 'hidden');
+    jQuery('#' + blockNumber + ' .oilpipebig_dis').css('visibility', 'visible');
 }
 
 function startOilPipeFromSep() {
-    jQuery('[class="oilpipefromsep"]').css('visibility', 'visible');
-    jQuery('[class="oilpipefromsep_dis"]').css('visibility', 'hidden');
+    jQuery('#' + blockNumber + ' .oilpipefromsep').css('visibility', 'visible');
+    jQuery('#' + blockNumber + ' .oilpipefromsep_dis').css('visibility', 'hidden');
 }
 function stopOilPipeFromSep() {
-    jQuery('[class="oilpipefromsep"]').css('visibility', 'hidden');
-    jQuery('[class="oilpipefromsep_dis"]').css('visibility', 'visible');
+    jQuery('#' + blockNumber + ' .oilpipefromsep').css('visibility', 'hidden');
+    jQuery('#' + blockNumber + ' .oilpipefromsep_dis').css('visibility', 'visible');
 }
 
 function startOilPipeFromAdapterToEngine() {
-    jQuery('[class="oilpipefromadaptertoengine"]').css('visibility', 'visible');
-    jQuery('[class="oilpipefromadaptertoengine_dis"]').css('visibility', 'hidden');
+    jQuery('#' + blockNumber + ' .oilpipefromadaptertoengine').css('visibility', 'visible');
+    jQuery('#' + blockNumber + ' .oilpipefromadaptertoengine_dis').css('visibility', 'hidden');
 }
 function stopOilPipeFromAdapterToEngine() {
-    jQuery('[class="oilpipefromadaptertoengine"]').css('visibility', 'hidden');
-    jQuery('[class="oilpipefromadaptertoengine_dis"]').css('visibility', 'visible');
+    jQuery('#' + blockNumber + ' .oilpipefromadaptertoengine').css('visibility', 'hidden');
+    jQuery('#' + blockNumber + ' .oilpipefromadaptertoengine_dis').css('visibility', 'visible');
 }
 
 function startLiq() {
-    jQuery('[class="liquid"]').css('visibility', 'visible');
-    jQuery('[class="liquid_dis"]').css('visibility', 'hidden');
+    jQuery('#' + blockNumber + ' .liquid').css('visibility', 'visible');
+    jQuery('#' + blockNumber + ' .liquid_dis').css('visibility', 'hidden');
 }
 function stopLiq() {
-    jQuery('[class="liquid"]').css('visibility', 'hidden');
-    jQuery('[class="liquid_dis"]').css('visibility', 'visible');
+    jQuery('#' + blockNumber + ' .liquid').css('visibility', 'hidden');
+    jQuery('#' + blockNumber + ' .liquid_dis').css('visibility', 'visible');
 }
 
 function startSmallGreenPipe() {
-    jQuery('[class="smallgreenpipe"]').css('visibility', 'visible');
-    jQuery('[class="smallgreenpipe_dis"]').css('visibility', 'hidden');
+    jQuery('#' + blockNumber + ' .smallgreenpipe').css('visibility', 'visible');
+    jQuery('#' + blockNumber + ' .smallgreenpipe_dis').css('visibility', 'hidden');
 }
 function stopSmallGreenPipe() {
-    jQuery('[class="smallgreenpipe"]').css('visibility', 'hidden');
-    jQuery('[class="smallgreenpipe_dis"]').css('visibility', 'visible');
+    jQuery('#' + blockNumber + ' .smallgreenpipe').css('visibility', 'hidden');
+    jQuery('#' + blockNumber + ' .smallgreenpipe_dis').css('visibility', 'visible');
 }
 
 function startAirArrows() {
-    jQuery('[class="airarrows"]').css('visibility', 'visible');
+    jQuery('#' + blockNumber + ' .airarrows').css('visibility', 'visible');
 }
 function stopAirArrows() {
-    jQuery('[class="airarrows"]').css('visibility', 'hidden');
+    jQuery('#' + blockNumber + ' .airarrows').css('visibility', 'hidden');
 }
 
-var isSolenoidValveOpened = false;
+window['isSolenoidValveOpened' + blockNumber] = false;
 function openSolenoidValve() {
-    if (!isSolenoidValveOpened)
-        jQuery('[id="solenoidvalve"]').attr('src', 'img/gif/solenoidvalve.gif');
-    isSolenoidValveOpened = true;
+    if (!window['isSolenoidValveOpened' + blockNumber])
+        jQuery('#' + blockNumber + ' .solenoidvalve img').attr('src', 'img/gif/solenoidvalve.gif');
+    window['isSolenoidValveOpened' + blockNumber] = true;
 }
 function closeSolenoidValve() {
-    if (isSolenoidValveOpened)
-        jQuery('[id="solenoidvalve"]').attr('src', 'img/gif/solenoidvalve_rev.gif');
-    isSolenoidValveOpened = false;
+    if (window['isSolenoidValveOpened' + blockNumber])
+        jQuery('#' + blockNumber + ' .solenoidvalve img').attr('src', 'img/gif/solenoidvalve_rev.gif');
+    window['isSolenoidValveOpened' + blockNumber] = false;
 }
 
-var isAirValveOpened = false;
+//var isAirValveOpened = false;
+window['isAirValveOpened' + blockNumber] = false;
 function openAirValve() {
-    if (!isAirValveOpened)
-        jQuery('[id="solenoidvalve"]').attr('src', 'img/gif/solenoidvalve.gif');
-    isAirValveOpened = true;
+    if (!window['isAirValveOpened' + blockNumber]){
+        jQuery('#' + blockNumber + ' .airvalvespring img').attr('src', 'img/gif/airvalvespring.gif');
+    }
+    window['isAirValveOpened' + blockNumber] = true;
 }
 function closeAirValve() {
-    if (isAirValveOpened)
-        jQuery('[id="solenoidvalve"]').attr('src', 'img/gif/solenoidvalve_rev.gif');
-    isAirValveOpened = false;
+    if (window['isAirValveOpened' + blockNumber])
+    //jQuery('[id="airvalvespring"]').attr('src', 'img/gif/airvalvespring_rev.gif');
+        jQuery('#' + blockNumber + ' .airvalvespring img').attr('src', 'img/gif/airvalvespring_rev.gif');
+    window['isAirValveOpened' + blockNumber] = false;
 }
 
-var isSolenoidValveBlowDownOpened = false;
+window['isSepSpringOpened' + blockNumber] = false;
+function openSepSpring() {
+    if (!window['isSepSpringOpened' + blockNumber])
+        jQuery('#' + blockNumber + ' .sepspring img').attr('src', 'img/gif/sepspring.gif');
+    window['isSepSpringOpened' + blockNumber] = true;
+}
+function closeSepSpring() {
+    if (window['isSepSpringOpened' + blockNumber])
+        jQuery('#' + blockNumber + ' .sepspring img').attr('src', 'img/gif/sepspring_rev.gif');
+    window['isSepSpringOpened' + blockNumber] = false;
+}
+
+window['isSolenoidValveBlowDownOpened' + blockNumber] = false;
 function openSolenoidValveBlowDown() {
-    if (!isSolenoidValveBlowDownOpened)
-        jQuery('[id="solenoidvalveblowdown"]').attr('src', 'img/gif/solenoidvalveblowdown_rev.gif');
-    isSolenoidValveBlowDownOpened = true;
+    if (!window['isSolenoidValveBlowDownOpened' + blockNumber])
+        jQuery('#' + blockNumber + ' .solenoidvalveblowdown img').attr('src', 'img/gif/solenoidvalveblowdown_rev.gif');
+    window['isSolenoidValveBlowDownOpened' + blockNumber] = true;
 }
 function closeSolenoidValveBlowDown() {
-    if (isSolenoidValveBlowDownOpened)
-        jQuery('[id="solenoidvalveblowdown"]').attr('src', 'img/gif/solenoidvalveblowdown.gif');
-    isSolenoidValveBlowDownOpened = false;
+    if (window['isSolenoidValveBlowDownOpened' + blockNumber])
+        jQuery('#' + blockNumber + ' .solenoidvalveblowdown img').attr('src', 'img/gif/solenoidvalveblowdown.gif');
+    window['isSolenoidValveBlowDownOpened' + blockNumber] = false;
 }
 
-var isVioletPipe2 = false;
+window['isVioletPipe1' + blockNumber] = false;
+function startVioletPipe1() {
+    if (!window['isVioletPipe1' + blockNumber])
+        jQuery('#' + blockNumber + ' .violetpipe1_ img').attr('src', 'img/gif/violetpipe1.gif');
+    window['isVioletPipe1' + blockNumber] = true;
+}
+function stopVioletPipe1() {
+    if (window['isVioletPipe1' + blockNumber])
+        jQuery('#' + blockNumber + ' .violetpipe1_ img').attr('src', 'img/gif/violetpipe1_rev.gif');
+    window['isVioletPipe1' + blockNumber] = false;
+}
+
+window['isVioletPipe2' + blockNumber] = false;
 function startVioletPipe2() {
-    if (!isVioletPipe2)
-        jQuery('[id="violetpipe2_"]').attr('src', 'img/gif/violetpipe2.gif');
-    isVioletPipe2 = true;
+    if (!window['isVioletPipe2' + blockNumber])
+        jQuery('#' + blockNumber + ' .violetpipe2_ img').attr('src', 'img/gif/violetpipe2.gif');
+    window['isVioletPipe2' + blockNumber] = true;
 }
 function stopVioletPipe2() {
-    if (isVioletPipe2)
-        jQuery('[id="violetpipe2_"]').attr('src', 'img/gif/violetpipe2_rev.gif');
-    isVioletPipe2 = false;
+    if (window['isVioletPipe2' + blockNumber])
+        jQuery('#' + blockNumber + ' .violetpipe2_ img').attr('src', 'img/gif/violetpipe2_rev.gif');
+    window['isVioletPipe2' + blockNumber] = false;
 }
 
-var isVioletPipe3 = false;
+window['isVioletPipe3' + blockNumber] = false;
 function startVioletPipe3() {
-    if (!isVioletPipe3)
-        jQuery('[id="violetpipe3_"]').attr('src', 'img/gif/violetpipe3.gif');
-    isVioletPipe3 = true;
+    if (!window['isVioletPipe3' + blockNumber])
+        jQuery('#' + blockNumber + ' .violetpipe3_ img').attr('src', 'img/gif/violetpipe3.gif');
+    window['isVioletPipe3' + blockNumber] = true;
 }
 function stopVioletPipe3() {
-    if (isVioletPipe3)
-        jQuery('[id="violetpipe3_"]').attr('src', 'img/gif/violetpipe3_rev.gif');
-    isVioletPipe3 = false;
+    if (window['isVioletPipe3' + blockNumber])
+        jQuery('#' + blockNumber + ' .violetpipe3_ img').attr('src', 'img/gif/violetpipe3_rev.gif');
+    window['isVioletPipe3' + blockNumber] = false;
 }
 
+function startVioletArrowsSmall() {
+    jQuery('#' + blockNumber + ' .violetarrowssmall').css('visibility', 'visible');
+}
+function stopVioletArrowsSmall() {
+    jQuery('#' + blockNumber + ' .violetarrowssmall').css('visibility', 'hidden');
+}
 
-//var violetarrowsState = false;
-//function StartStopAnimate_violetarrows() {
-//    violetarrowsState = !violetarrowsState;
-//    if (violetarrowsState) {
-//        //Preview_violetarrows()
-//    } else {
-//        //StopAnimate_violetarrows();
-//    }
-//}
+function startVioletArrowsSmall2_() {
+    jQuery('#' + blockNumber + ' .violetarrowssmall2_').css('visibility', 'visible');
+}
+function stopVioletArrowsSmall2_() {
+    jQuery('#' + blockNumber + ' .violetarrowssmall2_').css('visibility', 'hidden');
+}
+
+function startVioletArrowsSmall3_() {
+    jQuery('#' + blockNumber + ' .violetarrowssmall3_').css('visibility', 'visible');
+}
+function stopVioletArrowsSmall3_() {
+    jQuery('#' + blockNumber + ' .violetarrowssmall3_').css('visibility', 'hidden');
+}

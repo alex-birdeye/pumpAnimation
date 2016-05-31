@@ -263,10 +263,15 @@ textarea {
     /*visibility: hidden;*/
 /*}*/
 
+.compressor-block
+{
+    width: 100%;position: relative;
+}
+
 .engine {
     position: absolute;
     top: 494px;
-    left: 629px;
+    left: 429px;
     /*visibility: hidden;*/
     visibility: visible;
     z-index: 1;
@@ -281,8 +286,8 @@ textarea {
 .engine_dis {
     position: absolute;
     top: 494px;
-    left: 629px;
-    visibility: hidden;
+    left: 429px;
+    /*visibility: hidden;*/
     /*visibility: visible;*/
     z-index: 1;
 }
@@ -296,9 +301,9 @@ textarea {
 
 .ggas {
     position: absolute;
-    top: 427px;
-    left: 785px;
-    visibility: hidden;
+    top: 419px;
+    left: 577px;
+    /*visibility: hidden;*/
     /*visibility: visible;*/
     z-index: 1;
 }
@@ -312,7 +317,7 @@ textarea {
 .airarrows {
     position: absolute;
     top: 171px;
-    left: 609px;
+    left: 409px;
     visibility: hidden;
     /*visibility: visible;*/
     width: 136px;
@@ -323,7 +328,7 @@ textarea {
 .liquid {
     position: absolute;
     top: 560px;
-    left: 1055px;
+    left: 855px;
     /*visibility: hidden;*/
     visibility: visible;
     z-index: 5;
@@ -340,7 +345,7 @@ textarea {
 .liquid_dis {
     position: absolute;
     top: 560px;
-    left: 1055px;
+    left: 855px;
     /*visibility: hidden;*/
     /*visibility: visible;*/
     z-index: 5;
@@ -358,7 +363,7 @@ textarea {
 .oilpipebig {
     position: absolute;
     top: 212px;
-    left: 493px;
+    left: 293px;
     visibility: hidden;
     /*visibility: visible;*/
     z-index: 5;
@@ -368,7 +373,7 @@ textarea {
 .oilpipebig_dis {
     position: absolute;
     top: 212px;
-    left: 493px;
+    left: 293px;
     /*visibility: hidden;*/
     visibility: visible;
     z-index: 5;
@@ -384,7 +389,7 @@ textarea {
 .oilpipefromsep {
     position: absolute;
     top: 553px;
-    left: 548px;
+    left: 348px;
     /*visibility: visible;*/
     /*z-index: 1;*/
     width: 68px;
@@ -403,7 +408,7 @@ textarea {
 .oilpipefromsep_dis {
     position: absolute;
     top: 553px;
-    left: 548px;
+    left: 348px;
     /*visibility: visible;*/
     /*z-index: 1;*/
     width: 68px;
@@ -424,7 +429,7 @@ textarea {
 .oilpipetoengine {
     position: absolute;
     top: 515px;
-    left: 567px;
+    left: 367px;
     visibility: hidden;
     z-index: 5;
     width: 68px;
@@ -434,7 +439,7 @@ textarea {
 .oilpipefromadaptertoadapter {
     position: absolute;
     top: 619px;
-    left: 631px;
+    left: 331px;
     visibility: hidden;
     z-index: 5;
     width: 68px;
@@ -444,7 +449,7 @@ textarea {
 .oilpipefromadaptertoengine {
     position: absolute;
     top: 631px;
-    left: 547px;
+    left: 347px;
     /*visibility: hidden;*/
     /*visibility: visible;*/
     z-index: 5;
@@ -462,7 +467,7 @@ textarea {
 .oilpipefromadaptertoengine_dis {
     position: absolute;
     top: 631px;
-    left: 547px;
+    left: 347px;
     /*visibility: hidden;*/
     /*visibility: visible;*/
     z-index: 5;
@@ -482,7 +487,7 @@ textarea {
 .oilpipefromadaptertcooler {
     position: absolute;
     top: 615px;
-    left: 587px;
+    left: 387px;
     visibility: hidden;
     z-index: 5;
     width: 68px;
@@ -500,7 +505,7 @@ textarea {
 .oilpipefrombypasstocooler {
     position: absolute;
     top: 515px;
-    left: 535px;
+    left: 335px;
     visibility: hidden;
     z-index: 5;
     width: 68px;
@@ -518,7 +523,7 @@ textarea {
 .water {
     position: absolute;
     top: 584px;
-    left: 451px;
+    left: 251px;
     visibility: hidden;
     z-index: 5;
     width: 158px;
@@ -536,7 +541,7 @@ textarea {
 .smallgreenpipe {
     position: absolute;
     top: 425px;
-    left: 772px;
+    left: 572px;
     /*visibility: hidden;*/
     /*visibility: visible;*/
     z-index: 1;
@@ -554,7 +559,7 @@ textarea {
 .smallgreenpipe_dis {
     position: absolute;
     top: 425px;
-    left: 772px;
+    left: 572px;
     /*visibility: hidden;*/
     /*visibility: visible;*/
     z-index: 1;
@@ -573,8 +578,8 @@ textarea {
 .airvalvespring {
     position: absolute;
     top: 398px;
-    left: 697px;
-    visibility: hidden;
+    left: 497px;
+    /*visibility: hidden;*/
     z-index: 5;
     width: 158px;
     height: 131px;
@@ -590,12 +595,12 @@ textarea {
 .resarrows {
     position: absolute;
     top: 470px;
-    left: 1057px;
-    visibility: hidden;
+    left: 850px;
+    /*visibility: hidden;*/
     /*visibility: visible;*/
     z-index: 5;
-    width: 158px;
-    height: 131px;
+    /*width: 158px;*/
+    /*height: 131px;*/
 }
 
 .resarrows img {
@@ -608,7 +613,7 @@ textarea {
 .solenoidvalve {
     position: absolute;
     top: 464px;
-    left: 787px;
+    left: 587px;
     /*visibility: hidden;*/
     visibility: visible;
     z-index: 5;
@@ -627,7 +632,7 @@ textarea {
 .solenoidvalveblowdown {
     position: absolute;
     top: 384px;
-    left: 910px;
+    left: 710px;
     /*visibility: hidden;*/
     visibility: visible;
     z-index: 5;
@@ -645,7 +650,7 @@ textarea {
 .airvalvespringsmall {
     position: absolute;
     top: 368px;
-    left: 722px;
+    left: 522px;
     /*visibility: hidden;*/
     visibility: visible;
     z-index: 5;
@@ -663,7 +668,7 @@ textarea {
 .sepspring {
     position: absolute;
     top: 372px;
-    left: 1083px;
+    left: 883px;
     /*visibility: hidden;*/
     visibility: visible;
     z-index: 5;
@@ -681,7 +686,7 @@ textarea {
 .enginespring {
     position: absolute;
     top: 594px;
-    left: 670px;
+    left: 470px;
     /*visibility: hidden;*/
     visibility: visible;
     z-index: 5;
@@ -700,8 +705,8 @@ textarea {
 .violetarrowssmall {
     position: absolute;
     top: 410px;
-    left: 835px;
-    visibility: hidden;
+    left: 635px;
+    /*visibility: hidden;*/
     /*visibility: visible;*/
     z-index: 5;
     width: 158px;
@@ -719,8 +724,8 @@ textarea {
 .violetarrowssmall2_ {
     position: absolute;
     top: 365px;
-    left: 840px;
-    visibility: hidden;
+    left: 640px;
+    /*visibility: hidden;*/
     /*visibility: visible;*/
     z-index: 5;
     width: 158px;
@@ -739,8 +744,8 @@ textarea {
 .violetarrowssmall3_ {
     position: absolute;
     top: 361px;
-    left: 678px;
-    visibility: hidden;
+    left: 478px;
+    /*visibility: hidden;*/
     /*visibility: visible;*/
     z-index: 5;
     width: 158px;
@@ -759,7 +764,7 @@ textarea {
 .violetpipe2_ {
     position: absolute;
     top: 409px;
-    left: 834px;
+    left: 634px;
     /*visibility: hidden;*/
     visibility: visible;
     width: 158px;
@@ -777,7 +782,7 @@ textarea {
 .violetpipe1_ {
     position: absolute;
     top: 366px;
-    left: 686px;
+    left: 486px;
     /*visibility: hidden;*/
     visibility: visible;
     width: 158px;
@@ -795,7 +800,7 @@ textarea {
 .violetpipe3_ {
     position: absolute;
     top: 451px;
-    left: 778px;
+    left: 578px;
     /*visibility: hidden;*/
     visibility: visible;
     width: 158px;
@@ -812,4 +817,16 @@ textarea {
 
 iframe[seamless] {
     border: none;
+}
+
+.wrap { width: 600px; height: 590px; padding: 0; overflow: hidden; }
+.frame { width: 800px; height: 720px; border: 1px solid black; overflow: hidden; }
+.frame {
+    -ms-zoom: 0.5;
+    -moz-transform: scale(0.5);
+    -moz-transform-origin: 0 0;
+    -o-transform: scale(0.5);
+    -o-transform-origin: 0 0;
+    -webkit-transform: scale(0.5);
+    -webkit-transform-origin: 0 0;
 }
