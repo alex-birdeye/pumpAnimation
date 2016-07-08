@@ -25,6 +25,9 @@ function doPoll() {
             var onLoadStatus = data.compressors[0].status.on_load;
             var oilPressure = data.compressors[0].oil_pressure;
             var oilTemperature = data.compressors[0].oil_temperature;
+            var motorSpeed = data.compressors[0].motor_speed_rpm;
+
+            jQuery('#' + blockNumber + ' .pressure > p').html("<strong>" + oilPressure + "</strong>");
             jQuery('#' + blockNumber + ' .temperature > p').html("<strong>" + oilTemperature + " C</strong>");
 
             var value = parseInt(oilPressure, 10);
@@ -132,6 +135,8 @@ function motorRun(status) {
         openSolenoidValveBlowDown();
         startVioletPipe2();
         startVioletPipe3();
+
+        jQuery('#' + blockNumber + ' .status-motor').addClass("status-on");
     } else {
         stopEngine();
         stopOilPipeFromSep();
@@ -146,6 +151,7 @@ function motorRun(status) {
         closeSolenoidValveBlowDown();
         stopVioletPipe2();
         stopVioletPipe3();
+        jQuery('#' + blockNumber + ' .status-motor').removeClass("status-on");
     }
 }
 
