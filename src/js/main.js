@@ -26,6 +26,9 @@ function doPoll() {
             var oilPressure = data.compressors[0].oil_pressure;
             var oilTemperature = data.compressors[0].oil_temperature;
             var motorSpeed = data.compressors[0].motor_speed_rpm;
+            var avaria = data.compressors[0].status.fault;
+            var poperedzhennia = data.compressors[0].status.warning;
+            var service = data.compressors[0].status.service_req;
 
             jQuery('#' + blockNumber + ' .pressure > p').html("<strong>" + oilPressure + "</strong>");
             jQuery('#' + blockNumber + ' .temperature > p').html("<strong>" + oilTemperature + " C</strong>");
@@ -82,9 +85,10 @@ function doPoll() {
             motorRun(motorRunStatus);
             onLoad(onLoadStatus);
             lastState(motorRunStatus, onLoadStatus);
+            handleUvagaBlock(avaria, poperedzhennia, service);
 
             blockNumber++;
-            setTimeout(doPoll, 10000);
+            setTimeout(doPoll, 5000);
         },
         error: function (XMLHttpRequest, textStatus, error) {
             alert("error\n" + XMLHttpRequest + "\n" + textStatus + "\n" + error);
@@ -106,17 +110,36 @@ function lastState(motorRunStatus, onLoadStatus) {
     }
 }
 
+function handleUvagaBlock(avaria, poperedzhennia, service) {
+    if (avaria)
+        jQuery('#' + blockNumber + ' .status-avaria').addClass("status-on");
+    else
+        jQuery('#' + blockNumber + ' .status-avaria').removeClass("status-on");
+    if (poperedzhennia)
+        jQuery('#' + blockNumber + ' .status-poperedzhennia').addClass("status-on");
+    else
+        jQuery('#' + blockNumber + ' .status-poperedzhennia').removeClass("status-on");
+    if (service)
+        jQuery('#' + blockNumber + ' .status-service').addClass("status-on");
+    else
+        jQuery('#' + blockNumber + ' .status-service').removeClass("status-on");
+}
+
 function onLoad(status) {
     if (status) {
         openAirValve();
         openSepSpring();
         startAirArrows();
         startVioletArrows();
+
+        jQuery('#' + blockNumber + ' .status-load').addClass("status-on");
     } else {
         closeAirValve();
         closeSepSpring();
         stopAirArrows();
         stopVioletArrows();
+
+        jQuery('#' + blockNumber + ' .status-load').removeClass("status-on");
     }
 }
 
