@@ -21,6 +21,9 @@
     <script type="text/javascript" src="js/jqwidgets/jqxchart.js"></script>
     <script type="text/javascript" src="js/jqwidgets/jqxgauge.js"></script>
     <script type="text/javascript" src="js/jqwidgets/jqxbuttons.js"></script>
+    <script type="text/javascript" src="js/jqwidgets/jqxchart.core.js"></script>
+    <script type="text/javascript" src="js/jqwidgets/jqxdata.js"></script>
+    <script type="text/javascript" src="js/jqwidgets/jqxdraw.js"></script>
 
 </head>
 <body style="height: 700px;">
@@ -204,22 +207,22 @@
                 <!--<img src="img/BG/red.png" style="position: absolute;width: 100%;bottom: 0px;">-->
             </div>
 
-            <div class="row" style="font-size: 2em">
+            <div class="row information-block" style="font-size: 2em">
                 <div class="col-md-4">
                     <div class="row">
                         <div class="col-md-2 pressure">
                             <p>000</p>
                         </div>
                         <div class="col-md-6">
-                            <p>bar</p>
+                            <p>бар</p>
                         </div>
                     </div>
-                    <h3>STAN</h3>
+                    <h3>СТАН</h3>
                     <ul class="stan" style="list-style-type: none">
                         <li>
                             <div class="row">
-                                <div class="col-md-6">
-                                    <p>Vvimkn. </p>
+                                <div class="col-md-7">
+                                    <p>Ввімкн. </p>
                                 </div>
                                 <div class="col-md-2">
                                     <div class="status-vvimkn" style="width: 25px; height: 25px; border: solid 1px">
@@ -231,8 +234,8 @@
                         </li>
                         <li>
                             <div class="row">
-                                <div class="col-md-6">
-                                    <p>Dvygun. </p>
+                                <div class="col-md-7">
+                                    <p>Двигун </p>
                                 </div>
                                 <div class="col-md-2">
                                     <div class="status-motor" style="width: 25px; height: 25px; border: solid 1px">
@@ -244,8 +247,8 @@
                         </li>
                         <li>
                             <div class="row">
-                                <div class="col-md-6">
-                                    <p>Navantazh. </p>
+                                <div class="col-md-7">
+                                    <p>Навантаження </p>
                                 </div>
                                 <div class="col-md-2">
                                     <div class="status-load" style="width: 25px; height: 25px; border: solid 1px">
@@ -255,8 +258,8 @@
 
                             </div>
                         </li>
-                        <li>Temperatura:</li>
-                        <li>4astota obert:</li>
+                        <li class="temperature">Температура: <p></p></li>
+                        <li class="frequency">Частота обертання: <p></p></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
@@ -265,15 +268,15 @@
                             <p class="pressure">000</p>
                         </div>
                         <div class="col-md-6">
-                            <p>m3/hv</p>
+                            <p>м3/хв</p>
                         </div>
                     </div>
-                    <h3>YVAGA</h3>
+                    <h3>УВАГА</h3>
                     <ul class="stan" style="list-style-type: none">
                         <li>
                             <div class="row">
-                                <div class="col-md-6">
-                                    <p>Avaria </p>
+                                <div class="col-md-7">
+                                    <p>Аварія </p>
                                 </div>
                                 <div class="col-md-2">
                                     <div class="status-avaria" style="width: 25px; height: 25px; border: solid 1px">
@@ -285,8 +288,8 @@
                         </li>
                         <li>
                             <div class="row">
-                                <div class="col-md-6">
-                                    <p>Popered. </p>
+                                <div class="col-md-7">
+                                    <p>Попередження </p>
                                 </div>
                                 <div class="col-md-2">
                                     <div class="status-poperedzhennia" style="width: 25px; height: 25px; border: solid 1px">
@@ -298,8 +301,8 @@
                         </li>
                         <li>
                             <div class="row">
-                                <div class="col-md-6">
-                                    <p>Servis </p>
+                                <div class="col-md-7">
+                                    <p>Сервіс </p>
                                 </div>
                                 <div class="col-md-2">
                                     <div class="status-service" style="width: 25px; height: 25px; border: solid 1px">
@@ -314,14 +317,15 @@
                 <div class="col-md-4">
                     <div class="row">
                         <div class="col-md-2">
-                            <p class="pressure">000</p>
+                            <p class="pressure"></p>
                         </div>
                         <div class="col-md-6">
-                            <p>god</p>
+                            <p class="running-hrs">год</p>
                         </div>
                     </div>
-                    <h3>NAPRATS</h3>
-
+                    <h3>НАПРАЦЮВАННЯ</h3>
+                    <div id='jqxChart' style="width: 300px; height: 300px;">
+                    </div>
                 </div>
             </div>
 

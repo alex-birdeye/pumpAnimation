@@ -195,7 +195,8 @@ button.jqx-button, input[type=button].jqx-button,  input[type=submit].jqx-button
 {
     fill: #333333;
     color: #333333;
-    font-size: 11px;
+    /*font-size: 11px;*/
+    font-size: 1em;
     font-family: Verdana;
 }
 .jqx-chart-axis-description

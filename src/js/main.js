@@ -26,12 +26,16 @@ function doPoll() {
             var oilPressure = data.compressors[0].oil_pressure;
             var oilTemperature = data.compressors[0].oil_temperature;
             var motorSpeed = data.compressors[0].motor_speed_rpm;
+            var runningHrs = data.compressors[0].running_hrs;
+            var loadedHrs = data.compressors[0].loaded_hrs;
             var avaria = data.compressors[0].status.fault;
             var poperedzhennia = data.compressors[0].status.warning;
             var service = data.compressors[0].status.service_req;
 
             jQuery('#' + blockNumber + ' .pressure > p').html("<strong>" + oilPressure + "</strong>");
             jQuery('#' + blockNumber + ' .temperature > p').html("<strong>" + oilTemperature + " C</strong>");
+            jQuery('#' + blockNumber + ' .running-hrs').html("<strong>" + runningHrs + "</strong> год");
+            jQuery('#' + blockNumber + ' .frequency > p').html("<strong>" + motorSpeed + "</strong> об/хв");
 
             var value = parseInt(oilPressure, 10);
             //jQuery('[id="indicatorcontainer"]').jqxGauge({
@@ -71,6 +75,35 @@ function doPoll() {
                 animationDuration: 1000
             });
 
+            var workingHrs = [
+                { hrs: runningHrs, state: 'Всього' },
+                { hrs: loadedHrs, state: 'Навантаж.' }
+            ];
+
+            var settings = {
+                animationDuration: 0,
+                showBorderLine: false,
+                backgroundColor: 'transparent',
+                source: workingHrs,
+                colorScheme: 'scheme05',
+                title: '',
+                description: '',
+                seriesGroups:
+                    [{
+                        type: 'pie',
+                        showLabels: true,
+                        useGradient: false,
+                        series: [{
+                            dataField: 'hrs', displayText: 'state',
+                            labelRadius: 30,
+                            initialAngle: 90,
+                            radius: 120,
+                            centerOffset: 5
+                        }]
+                    }]
+            };
+            $('#jqxChart').jqxChart(settings);
+
             jQuery('#' + blockNumber + ' .indicatorValue > p').html(oilPressure);
             jQuery('#' + blockNumber + ' .indicatorcontainer').jqxGauge({max: 20});
             jQuery('#' + blockNumber + ' .indicatorcontainer').jqxGauge({labels: {interval: 5}});
@@ -82,6 +115,7 @@ function doPoll() {
                 }
             });
             jQuery('#' + blockNumber + ' .indicatorcontainer').jqxGauge('value', value);
+            jQuery('text:contains("www.jqwidgets.com")').html("");
             motorRun(motorRunStatus);
             onLoad(onLoadStatus);
             lastState(motorRunStatus, onLoadStatus);
