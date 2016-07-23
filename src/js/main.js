@@ -32,10 +32,11 @@ function doPoll() {
             var poperedzhennia = data.compressors[0].status.warning;
             var service = data.compressors[0].status.service_req;
 
-            jQuery('#' + blockNumber + ' .pressure > p').html("<strong>" + oilPressure + "</strong>");
+            jQuery('#' + blockNumber + ' .pressure > p').html("<strong>" + oilPressure + "</strong> бар");
             jQuery('#' + blockNumber + ' .temperature > p').html("<strong>" + oilTemperature + " C</strong>");
+            jQuery('#' + blockNumber + ' li.temperature > p').html("Температура: <strong>" + oilTemperature + " C</strong>");
             jQuery('#' + blockNumber + ' .running-hrs').html("<strong>" + runningHrs + "</strong> год");
-            jQuery('#' + blockNumber + ' .frequency > p').html("<strong>" + motorSpeed + "</strong> об/хв");
+            jQuery('#' + blockNumber + ' .frequency > p').html("Частота обертання: <strong>" + motorSpeed + " об/хв</strong>");
 
             var value = parseInt(oilPressure, 10);
             //jQuery('[id="indicatorcontainer"]').jqxGauge({
@@ -97,7 +98,7 @@ function doPoll() {
                             dataField: 'hrs', displayText: 'state',
                             labelRadius: 30,
                             initialAngle: 90,
-                            radius: 120,
+                            radius: 110,
                             centerOffset: 5
                         }]
                     }]
