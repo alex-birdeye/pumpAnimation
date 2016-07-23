@@ -22,6 +22,11 @@ html {
  * Customize the background color to match your design.
  */
 
+body {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
 ::selection {
     background: #b3d4fc;
     text-shadow: none;
