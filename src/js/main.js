@@ -32,6 +32,11 @@ function doPoll() {
             var runningHrs = data.compressors[0].running_hrs;
             var loadedHrs = data.compressors[0].loaded_hrs;
             var volume = data.compressors[0].volume;
+            var line_pressure = data.compressors[0].line_pressure;
+            var line_temperature = data.compressors[0].line_temperature;
+            var dew_point = data.dryer.dew_point;
+            var operating = data.dryer.operating;
+            var alarm = data.dryer.alarm;
 
             jQuery('#' + blockNumber + ' .pressure > p').html("<strong>" + oilPressure + "</strong> бар");
             jQuery('#' + blockNumber + ' .temperature > p').html("<strong>" + oilTemperature + " C</strong>");
@@ -39,6 +44,12 @@ function doPoll() {
             jQuery('#' + blockNumber + ' li.temperature > p').html("Температура: <strong>" + oilTemperature + " C</strong>");
             jQuery('#' + blockNumber + ' .running-hrs').html("<strong>" + runningHrs + "</strong> год");
             jQuery('#' + blockNumber + ' .frequency > p').html("Частота обертання: <strong>" + motorSpeed + " об/хв</strong>");
+            jQuery('#air-intake-1 > p').html("<strong>" + line_pressure + "</strong> бар");
+            jQuery('#dryer-pressure').html("<strong>" + line_pressure + "</strong> бар");
+            jQuery('#dew_point').html("<strong>" + dew_point + "</strong> C");
+            jQuery('#air-intake-2-pressure').html("<strong>" + line_pressure + "</strong> бар");
+            jQuery('#air-intake-2-temperature').html("<strong>" + line_temperature + "</strong> C");
+            jQuery('#air-intake-2-volume').html("<strong>" + volume + "</strong> м3/хв");
 
             var value = parseInt(oilPressure, 10);
             //jQuery('[id="indicatorcontainer"]').jqxGauge({
@@ -105,7 +116,7 @@ function doPoll() {
                         }]
                     }]
             };
-            $('.jqxChart').jqxChart(settings);
+            $('#' + blockNumber + ' .jqxChart').jqxChart(settings);
 
             jQuery('#' + blockNumber + ' .indicatorValue > p').html(oilPressure);
             jQuery('#' + blockNumber + ' .indicatorcontainer').jqxGauge({max: 20});
@@ -123,6 +134,7 @@ function doPoll() {
             onLoad(onLoadStatus);
             lastState(motorRunStatus, onLoadStatus);
             handleUvagaBlock(avaria, poperedzhennia, service);
+            handleDryer(operating, alarm);
 
             blockNumber++;
             setTimeout(doPoll, 5000);
@@ -145,6 +157,17 @@ function lastState(motorRunStatus, onLoadStatus) {
         stopVioletArrowsSmall2_();
         stopVioletArrowsSmall3_();
     }
+}
+
+function handleDryer(operating, alarm) {
+    if (operating)
+        jQuery('#dryer-indicators .status-vvimkn').addClass("status-on");
+    else
+        jQuery('#dryer-indicators .status-vvimkn').removeClass("status-on");
+    if (alarm)
+        jQuery('#dryer-indicators .status-avaria').addClass("status-on");
+    else
+        jQuery('#dryer-indicators .status-avaria').removeClass("status-on");
 }
 
 function handleUvagaBlock(avaria, poperedzhennia, service) {
