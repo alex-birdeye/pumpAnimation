@@ -23,17 +23,19 @@ function doPoll() {
             //log(data.compressors[0].status);
             var motorRunStatus = data.compressors[0].status.motor_run;
             var onLoadStatus = data.compressors[0].status.on_load;
+            var avaria = data.compressors[0].status.fault;
+            var poperedzhennia = data.compressors[0].status.warning;
+            var service = data.compressors[0].status.service_req;
             var oilPressure = data.compressors[0].oil_pressure;
             var oilTemperature = data.compressors[0].oil_temperature;
             var motorSpeed = data.compressors[0].motor_speed_rpm;
             var runningHrs = data.compressors[0].running_hrs;
             var loadedHrs = data.compressors[0].loaded_hrs;
-            var avaria = data.compressors[0].status.fault;
-            var poperedzhennia = data.compressors[0].status.warning;
-            var service = data.compressors[0].status.service_req;
+            var volume = data.compressors[0].volume;
 
             jQuery('#' + blockNumber + ' .pressure > p').html("<strong>" + oilPressure + "</strong> бар");
             jQuery('#' + blockNumber + ' .temperature > p').html("<strong>" + oilTemperature + " C</strong>");
+            jQuery('#' + blockNumber + ' .volume > p').html("<strong>" + volume + "</strong>  м3/хв");
             jQuery('#' + blockNumber + ' li.temperature > p').html("Температура: <strong>" + oilTemperature + " C</strong>");
             jQuery('#' + blockNumber + ' .running-hrs').html("<strong>" + runningHrs + "</strong> год");
             jQuery('#' + blockNumber + ' .frequency > p').html("Частота обертання: <strong>" + motorSpeed + " об/хв</strong>");
@@ -103,7 +105,7 @@ function doPoll() {
                         }]
                     }]
             };
-            $('#jqxChart').jqxChart(settings);
+            $('.jqxChart').jqxChart(settings);
 
             jQuery('#' + blockNumber + ' .indicatorValue > p').html(oilPressure);
             jQuery('#' + blockNumber + ' .indicatorcontainer').jqxGauge({max: 20});
