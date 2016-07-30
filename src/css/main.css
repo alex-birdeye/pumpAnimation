@@ -23,8 +23,9 @@ html {
  */
 
 body {
-    overflow-y: scroll;
-    overflow-x: hidden;
+    /*overflow-y: scroll;*/
+    /*overflow-x: hidden;*/
+    overflow: hidden;
 }
 
 ::selection {
@@ -842,20 +843,27 @@ iframe[seamless] {
 
 #air-intake-pipe-1 {
     position: absolute;
-    top: 370px;
-    left: 550px;
+    top: 270px;
+    left: 555px;
 }
 #air-intake-pipe-2 {
     position: absolute;
-    top: 370px;
-    left: 1006px;
+    top: 270px;
+    left: 1017px;
 }
 #air-intake-pipe-3 {
     position: absolute;
-    top: 370px;
-    left: 1464px;
+    top: 270px;
+    left: 1477px;
 }
 .air-intake-pipe-img{
     width: 260px;
     height: 30px;
+}
+
+.info {
+    line-height: 28px;
+}
+#dryer-indicators {
+    line-height: 10px;
 }
