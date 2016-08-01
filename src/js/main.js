@@ -5,6 +5,7 @@ function log(msg) {
 var blockNumber = 1;
 var compressorBlocksArray = jQuery('.compressor-block');
 var blocksCount = compressorBlocksArray.length;
+var url = $('#compressors').data('url');
 
 $(document).ready(function () {
     doPoll();
@@ -14,7 +15,7 @@ $(document).ready(function () {
 function doPoll() {
     if (blockNumber > blocksCount)
         blockNumber = 1;
-    var url = $('#' + blockNumber).data('url');
+    // var url = $('#' + blockNumber).data('url');
     log(url);
     jQuery.ajax({
         type: "POST",
@@ -22,35 +23,57 @@ function doPoll() {
         //url: "http://localhost:8283/values1",
         success: function (data) {
             //log(data.compressors[0].status);
-            var motorRunStatus = data.compressors[0].status.motor_run;
-            var onLoadStatus = data.compressors[0].status.on_load;
-            var avaria = data.compressors[0].status.fault;
-            var poperedzhennia = data.compressors[0].status.warning;
-            var service = data.compressors[0].status.service_req;
-            var oilPressure = data.compressors[0].oil_pressure;
-            var oilTemperature = data.compressors[0].oil_temperature;
-            var motorSpeed = data.compressors[0].motor_speed_rpm;
-            var runningHrs = data.compressors[0].running_hrs;
-            var loadedHrs = data.compressors[0].loaded_hrs;
-            var volume = data.compressors[0].volume;
-            var line_pressure = data.compressors[0].line_pressure;
-            var line_temperature = data.compressors[0].line_temperature;
+            // var motorRunStatus = data.compressors[0].status.motor_run;
+            // var onLoadStatus = data.compressors[0].status.on_load;
+            // var avaria = data.compressors[0].status.fault;
+            // var poperedzhennia = data.compressors[0].status.warning;
+            // var service = data.compressors[0].status.service_req;
+            // var oilPressure = data.compressors[0].oil_pressure;
+            // var oilTemperature = data.compressors[0].oil_temperature;
+            // var motorSpeed = data.compressors[0].motor_speed_rpm;
+            // var runningHrs = data.compressors[0].running_hrs;
+            // var loadedHrs = data.compressors[0].loaded_hrs;
+            // var volume = data.compressors[0].volume;
+            // var line_pressure = data.compressors[0].line_pressure;
+            // var line_temperature = data.compressors[0].line_temperature;
+            // var dew_point = data.dryer.dew_point;
+            // var operating = data.dryer.operating;
+            // var alarm = data.dryer.alarm;
+
+            var motorRunStatus = data.compressors[blockNumber - 1].status.motor_run;
+            var onLoadStatus = data.compressors[blockNumber - 1].status.on_load;
+            var avaria = data.compressors[blockNumber - 1].status.fault;
+            var poperedzhennia = data.compressors[blockNumber - 1].status.warning;
+            var service = data.compressors[blockNumber - 1].status.service_req;
+            var oilPressure = data.compressors[blockNumber - 1].oil_pressure;
+            var oilTemperature = data.compressors[blockNumber - 1].oil_temperature;
+            var motorSpeed = data.compressors[blockNumber - 1].motor_speed_rpm;
+            var runningHrs = data.compressors[blockNumber - 1].running_hrs;
+            var loadedHrs = data.compressors[blockNumber - 1].loaded_hrs;
+            var volume_compr = data.compressors[blockNumber - 1].volume;
+            var volume_coll = data.collectors[1].volume;
+            var line_pressure1 = data.collectors[0].line_pressure;
+            var line_pressure2 = data.collectors[1].line_pressure;
+            var line_temperature = data.collectors[1].line_temperature;
             var dew_point = data.dryer.dew_point;
+            var dryer_pressure = data.dryer.line_pressure;
             var operating = data.dryer.operating;
             var alarm = data.dryer.alarm;
 
             jQuery('#' + blockNumber + ' .pressure > p').html("<strong>" + oilPressure + "</strong> бар");
             jQuery('#' + blockNumber + ' .temperature > p').html("<strong>" + oilTemperature + " C</strong>");
-            jQuery('#' + blockNumber + ' .volume > p').html("<strong>" + volume + "</strong>  м3/хв");
+            jQuery('#' + blockNumber + ' .volume > p').html("<strong>" + volume_compr + "</strong>  м3/хв");
             jQuery('#' + blockNumber + ' li.temperature > p').html("Температура: <strong>" + oilTemperature + " C</strong>");
             jQuery('#' + blockNumber + ' .running-hrs').html("<strong>" + runningHrs + "</strong> год");
             jQuery('#' + blockNumber + ' .frequency > p').html("Частота обертання: <strong>" + motorSpeed + " об/хв</strong>");
-            jQuery('#air-intake-1 > p').html("<strong>" + line_pressure + "</strong> бар");
-            jQuery('#dryer-pressure').html("<strong>" + line_pressure + "</strong> бар");
+
+            jQuery('#dryer-pressure').html("<strong>" + dryer_pressure + "</strong> бар");
             jQuery('#dew_point').html("<strong>" + dew_point + "</strong> C");
-            jQuery('#air-intake-2-pressure').html("<strong>" + line_pressure + "</strong> бар");
+
+            jQuery('#air-intake-1 > p').html("<strong>" + line_pressure1 + "</strong> бар");
+            jQuery('#air-intake-2-pressure').html("<strong>" + line_pressure2 + "</strong> бар");
             jQuery('#air-intake-2-temperature').html("<strong>" + line_temperature + "</strong> C");
-            jQuery('#air-intake-2-volume').html("<strong>" + volume + "</strong> м3/хв");
+            jQuery('#air-intake-2-volume').html("<strong>" + volume_coll + "</strong> м3/хв");
 
             var value = parseInt(oilPressure, 10);
             //jQuery('[id="indicatorcontainer"]').jqxGauge({
@@ -91,8 +114,8 @@ function doPoll() {
             });
 
             var workingHrs = [
-                { hrs: runningHrs, state: 'Всього' },
-                { hrs: loadedHrs, state: 'Навантаж.' }
+                {hrs: runningHrs, state: 'Всього'},
+                {hrs: loadedHrs, state: 'Навантаж.'}
             ];
 
             var settings = {
@@ -103,19 +126,18 @@ function doPoll() {
                 colorScheme: 'scheme05',
                 title: '',
                 description: '',
-                seriesGroups:
-                    [{
-                        type: 'pie',
-                        showLabels: true,
-                        useGradient: false,
-                        series: [{
-                            dataField: 'hrs', displayText: 'state',
-                            labelRadius: 30,
-                            initialAngle: 90,
-                            radius: 110,
-                            centerOffset: 5
-                        }]
+                seriesGroups: [{
+                    type: 'pie',
+                    showLabels: true,
+                    useGradient: false,
+                    series: [{
+                        dataField: 'hrs', displayText: 'state',
+                        labelRadius: 60,
+                        initialAngle: 90,
+                        radius: 110,
+                        centerOffset: 5
                     }]
+                }]
             };
             $('#' + blockNumber + ' .jqxChart').jqxChart(settings);
 
@@ -146,8 +168,7 @@ function doPoll() {
     });
 }
 
-function date_time(id)
-{
+function date_time(id) {
     date = new Date;
     year = date.getFullYear();
     month = date.getMonth();
@@ -156,24 +177,21 @@ function date_time(id)
     day = date.getDay();
     days = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday');
     h = date.getHours();
-    if(h<10)
-    {
-        h = "0"+h;
+    if (h < 10) {
+        h = "0" + h;
     }
     m = date.getMinutes();
-    if(m<10)
-    {
-        m = "0"+m;
+    if (m < 10) {
+        m = "0" + m;
     }
     s = date.getSeconds();
-    if(s<10)
-    {
-        s = "0"+s;
+    if (s < 10) {
+        s = "0" + s;
     }
     // result = ''+days[day]+' '+months[month]+' '+d+' '+year+' '+h+':'+m+':'+s;
-    result = ''+d+'.'+month+'.'+year+' '+h+':'+m+':'+s;
+    result = '' + d + '.' + month + '.' + year + ' ' + h + ':' + m + ':' + s;
     document.getElementById(id).innerHTML = result;
-    setTimeout('date_time("'+id+'");','1000');
+    setTimeout('date_time("' + id + '");', '1000');
     return true;
 }
 
@@ -197,20 +215,20 @@ function handleDryer(operating, alarm) {
     else
         jQuery('#dryer-indicators .status-vvimkn').removeClass("status-on");
     if (alarm)
-        jQuery('#dryer-indicators .status-avaria').addClass("status-on");
+        jQuery('#dryer-indicators .status-avaria').addClass("status-avaria");
     else
-        jQuery('#dryer-indicators .status-avaria').removeClass("status-on");
+        jQuery('#dryer-indicators .status-avaria').removeClass("status-avaria");
 }
 
 function handleUvagaBlock(avaria, poperedzhennia, service) {
     if (avaria)
-        jQuery('#' + blockNumber + ' .status-avaria').addClass("status-on");
+        jQuery('#' + blockNumber + ' .status-avaria').addClass("status-avaria");
     else
-        jQuery('#' + blockNumber + ' .status-avaria').removeClass("status-on");
+        jQuery('#' + blockNumber + ' .status-avaria').removeClass("status-avaria");
     if (poperedzhennia)
-        jQuery('#' + blockNumber + ' .status-poperedzhennia').addClass("status-on");
+        jQuery('#' + blockNumber + ' .status-poperedzhennia').addClass("status-avaria");
     else
-        jQuery('#' + blockNumber + ' .status-poperedzhennia').removeClass("status-on");
+        jQuery('#' + blockNumber + ' .status-poperedzhennia').removeClass("status-onavaria");
     if (service)
         jQuery('#' + blockNumber + ' .status-service').addClass("status-on");
     else
@@ -371,7 +389,7 @@ function closeSolenoidValve() {
 //var isAirValveOpened = false;
 window['isAirValveOpened' + blockNumber] = false;
 function openAirValve() {
-    if (!window['isAirValveOpened' + blockNumber]){
+    if (!window['isAirValveOpened' + blockNumber]) {
         jQuery('#' + blockNumber + ' .airvalvespring img').attr('src', 'img/gif/airvalvespring.gif');
     }
     window['isAirValveOpened' + blockNumber] = true;

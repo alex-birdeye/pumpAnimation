@@ -840,6 +840,9 @@ iframe[seamless] {
 .status-on {
     background-color: green;
 }
+.status-avaria {
+    background-color: red;
+}
 
 #air-intake-pipe-1 {
     position: absolute;
@@ -866,4 +869,9 @@ iframe[seamless] {
 }
 #dryer-indicators {
     line-height: 10px;
+}
+.compressor-title{
+    text-align: center;
+    margin-bottom: 0;
+    font-weight: bold;
 }
