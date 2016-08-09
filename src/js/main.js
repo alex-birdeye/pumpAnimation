@@ -9,7 +9,8 @@ var url = $('#compressors').data('url');
 
 $(document).ready(function () {
     doPoll();
-    date_time("date-time");
+    // date_time("date-time");
+    jQuery('#datetimepicker').datepicker();
 });
 
 function doPoll() {
@@ -115,7 +116,7 @@ function doPoll() {
 
             var workingHrs = [
                 {hrs: runningHrs, state: 'Всього'},
-                {hrs: loadedHrs, state: 'Навантаж.'}
+                {hrs: loadedHrs, state: 'Під навантаженням'}
             ];
 
             var settings = {
