@@ -847,20 +847,20 @@ iframe[seamless] {
 #air-intake-pipe-1 {
     position: absolute;
     top: 270px;
-    left: 555px;
+    left: 502px;
 }
 #air-intake-pipe-2 {
     position: absolute;
     top: 270px;
-    left: 1017px;
+    left: 974px;
 }
 #air-intake-pipe-3 {
     position: absolute;
     top: 270px;
-    left: 1477px;
+    left: 1425px;
 }
 .air-intake-pipe-img{
-    width: 260px;
+    width: 360px;
     height: 30px;
 }
 
