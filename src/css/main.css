@@ -25,7 +25,7 @@ html {
 body {
     /*overflow-y: scroll;*/
     /*overflow-x: hidden;*/
-    /*overflow: hidden;*/
+    overflow: hidden;
 }
 
 ::selection {
@@ -276,7 +276,7 @@ textarea {
 
 .engine {
     position: absolute;
-    top: 494px;
+    top: 344px;
     left: 329px;
     /*visibility: hidden;*/
     visibility: visible;
@@ -291,7 +291,7 @@ textarea {
 }
 .engine_dis {
     position: absolute;
-    top: 494px;
+    top: 344px;
     left: 329px;
     /*visibility: hidden;*/
     /*visibility: visible;*/
@@ -307,7 +307,7 @@ textarea {
 
 .ggas {
     position: absolute;
-    top: 419px;
+    top: 269px;
     left: 477px;
     /*visibility: hidden;*/
     /*visibility: visible;*/
@@ -322,7 +322,7 @@ textarea {
 }
 .airarrows {
     position: absolute;
-    top: 171px;
+    top: 31px;
     left: 309px;
     visibility: hidden;
     /*visibility: visible;*/
@@ -333,7 +333,7 @@ textarea {
 
 .liquid {
     position: absolute;
-    top: 560px;
+    top: 410px;
     left: 755px;
     /*visibility: hidden;*/
     visibility: visible;
@@ -350,7 +350,7 @@ textarea {
 }
 .liquid_dis {
     position: absolute;
-    top: 560px;
+    top: 410px;
     left: 755px;
     /*visibility: hidden;*/
     /*visibility: visible;*/
@@ -368,7 +368,7 @@ textarea {
 
 .oilpipebig {
     position: absolute;
-    top: 212px;
+    top: 62px;
     left: 193px;
     visibility: hidden;
     /*visibility: visible;*/
@@ -378,7 +378,7 @@ textarea {
 }
 .oilpipebig_dis {
     position: absolute;
-    top: 212px;
+    top: 62px;
     left: 193px;
     /*visibility: hidden;*/
     visibility: visible;
@@ -394,7 +394,7 @@ textarea {
 
 .oilpipefromsep {
     position: absolute;
-    top: 553px;
+    top: 403px;
     left: 248px;
     /*visibility: visible;*/
     /*z-index: 1;*/
@@ -413,7 +413,7 @@ textarea {
 }
 .oilpipefromsep_dis {
     position: absolute;
-    top: 553px;
+    top: 403px;
     left: 248px;
     /*visibility: visible;*/
     /*z-index: 1;*/
@@ -434,7 +434,7 @@ textarea {
 
 .oilpipetoengine {
     position: absolute;
-    top: 515px;
+    top: 365px;
     left: 267px;
     visibility: hidden;
     z-index: 5;
@@ -444,7 +444,7 @@ textarea {
 
 .oilpipefromadaptertoadapter {
     position: absolute;
-    top: 619px;
+    top: 469px;
     left: 231px;
     visibility: hidden;
     z-index: 5;
@@ -454,7 +454,7 @@ textarea {
 
 .oilpipefromadaptertoengine {
     position: absolute;
-    top: 631px;
+    top: 481px;
     left: 247px;
     /*visibility: hidden;*/
     /*visibility: visible;*/
@@ -472,7 +472,7 @@ textarea {
 }
 .oilpipefromadaptertoengine_dis {
     position: absolute;
-    top: 631px;
+    top: 481px;
     left: 247px;
     /*visibility: hidden;*/
     /*visibility: visible;*/
@@ -492,7 +492,7 @@ textarea {
 
 .oilpipefromadaptertcooler {
     position: absolute;
-    top: 615px;
+    top: 465px;
     left: 287px;
     visibility: hidden;
     z-index: 5;
@@ -510,7 +510,7 @@ textarea {
 
 .oilpipefrombypasstocooler {
     position: absolute;
-    top: 515px;
+    top: 415px;
     left: 235px;
     visibility: hidden;
     z-index: 5;
@@ -528,7 +528,7 @@ textarea {
 
 .water {
     position: absolute;
-    top: 584px;
+    top: 434px;
     left: 151px;
     visibility: hidden;
     z-index: 5;
@@ -546,7 +546,7 @@ textarea {
 
 .smallgreenpipe {
     position: absolute;
-    top: 425px;
+    top: 275px;
     left: 472px;
     /*visibility: hidden;*/
     /*visibility: visible;*/
@@ -564,7 +564,7 @@ textarea {
 }
 .smallgreenpipe_dis {
     position: absolute;
-    top: 425px;
+    top: 275px;
     left: 472px;
     /*visibility: hidden;*/
     /*visibility: visible;*/
@@ -583,7 +583,7 @@ textarea {
 
 .airvalvespring {
     position: absolute;
-    top: 398px;
+    top: 248px;
     left: 397px;
     /*visibility: hidden;*/
     z-index: 5;
@@ -600,7 +600,7 @@ textarea {
 }
 .resarrows {
     position: absolute;
-    top: 470px;
+    top: 320px;
     left: 750px;
     /*visibility: hidden;*/
     /*visibility: visible;*/
@@ -618,7 +618,7 @@ textarea {
 }
 .solenoidvalve {
     position: absolute;
-    top: 464px;
+    top: 314px;
     left: 487px;
     /*visibility: hidden;*/
     visibility: visible;
@@ -637,7 +637,7 @@ textarea {
 
 .solenoidvalveblowdown {
     position: absolute;
-    top: 384px;
+    top: 234px;
     left: 610px;
     /*visibility: hidden;*/
     visibility: visible;
@@ -655,7 +655,7 @@ textarea {
 }
 .airvalvespringsmall {
     position: absolute;
-    top: 368px;
+    top: 218px;
     left: 422px;
     /*visibility: hidden;*/
     visibility: visible;
@@ -673,7 +673,7 @@ textarea {
 }
 .sepspring {
     position: absolute;
-    top: 372px;
+    top: 222px;
     left: 783px;
     /*visibility: hidden;*/
     visibility: visible;
@@ -691,7 +691,7 @@ textarea {
 }
 .enginespring {
     position: absolute;
-    top: 594px;
+    top: 444px;
     left: 370px;
     /*visibility: hidden;*/
     visibility: visible;
@@ -710,7 +710,7 @@ textarea {
 
 .violetarrowssmall {
     position: absolute;
-    top: 410px;
+    top: 260px;
     left: 535px;
     /*visibility: hidden;*/
     /*visibility: visible;*/
@@ -729,7 +729,7 @@ textarea {
 
 .violetarrowssmall2_ {
     position: absolute;
-    top: 365px;
+    top: 215px;
     left: 540px;
     /*visibility: hidden;*/
     /*visibility: visible;*/
@@ -749,7 +749,7 @@ textarea {
 
 .violetarrowssmall3_ {
     position: absolute;
-    top: 361px;
+    top: 211px;
     left: 378px;
     /*visibility: hidden;*/
     /*visibility: visible;*/
@@ -769,7 +769,7 @@ textarea {
 
 .violetpipe2_ {
     position: absolute;
-    top: 409px;
+    top: 259px;
     left: 534px;
     /*visibility: hidden;*/
     visibility: visible;
@@ -787,7 +787,7 @@ textarea {
 
 .violetpipe1_ {
     position: absolute;
-    top: 366px;
+    top: 216px;
     left: 386px;
     /*visibility: hidden;*/
     visibility: visible;
@@ -805,7 +805,7 @@ textarea {
 
 .violetpipe3_ {
     position: absolute;
-    top: 451px;
+    top: 301px;
     left: 478px;
     /*visibility: hidden;*/
     visibility: visible;

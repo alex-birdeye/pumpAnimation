@@ -10,7 +10,7 @@ var url = $('#compressors').data('url');
 $(document).ready(function () {
     doPoll();
     // date_time("date-time");
-    jQuery('#datetimepicker').datepicker();
+    jQuery('#datetimepicker').datepicker($.datepicker.regional[ "ru" ]);
 });
 
 function doPoll() {
