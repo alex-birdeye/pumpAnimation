@@ -25,7 +25,7 @@ html {
 body {
     /*overflow-y: scroll;*/
     /*overflow-x: hidden;*/
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 ::selection {
@@ -277,7 +277,7 @@ textarea {
 .engine {
     position: absolute;
     top: 344px;
-    left: 329px;
+    left: 159px;
     /*visibility: hidden;*/
     visibility: visible;
     z-index: 1;
@@ -292,7 +292,7 @@ textarea {
 .engine_dis {
     position: absolute;
     top: 344px;
-    left: 329px;
+    left: 159px;
     /*visibility: hidden;*/
     /*visibility: visible;*/
     z-index: 1;
@@ -308,7 +308,7 @@ textarea {
 .ggas {
     position: absolute;
     top: 269px;
-    left: 477px;
+    left: 307px;
     /*visibility: hidden;*/
     /*visibility: visible;*/
     z-index: 1;
@@ -323,7 +323,7 @@ textarea {
 .airarrows {
     position: absolute;
     top: 31px;
-    left: 309px;
+    left: 139px;
     visibility: hidden;
     /*visibility: visible;*/
     width: 136px;
@@ -334,7 +334,7 @@ textarea {
 .liquid {
     position: absolute;
     top: 410px;
-    left: 755px;
+    left: 585px;
     /*visibility: hidden;*/
     visibility: visible;
     z-index: 5;
@@ -351,7 +351,7 @@ textarea {
 .liquid_dis {
     position: absolute;
     top: 410px;
-    left: 755px;
+    left: 585px;
     /*visibility: hidden;*/
     /*visibility: visible;*/
     z-index: 5;
@@ -369,7 +369,7 @@ textarea {
 .oilpipebig {
     position: absolute;
     top: 62px;
-    left: 193px;
+    left: 23px;
     visibility: hidden;
     /*visibility: visible;*/
     z-index: 5;
@@ -379,7 +379,7 @@ textarea {
 .oilpipebig_dis {
     position: absolute;
     top: 62px;
-    left: 193px;
+    left: 23px;
     /*visibility: hidden;*/
     visibility: visible;
     z-index: 5;
@@ -395,7 +395,7 @@ textarea {
 .oilpipefromsep {
     position: absolute;
     top: 403px;
-    left: 248px;
+    left: 78px;
     /*visibility: visible;*/
     /*z-index: 1;*/
     width: 68px;
@@ -414,7 +414,7 @@ textarea {
 .oilpipefromsep_dis {
     position: absolute;
     top: 403px;
-    left: 248px;
+    left: 78px;
     /*visibility: visible;*/
     /*z-index: 1;*/
     width: 68px;
@@ -435,7 +435,7 @@ textarea {
 .oilpipetoengine {
     position: absolute;
     top: 365px;
-    left: 267px;
+    left: 97px;
     visibility: hidden;
     z-index: 5;
     width: 68px;
@@ -445,7 +445,7 @@ textarea {
 .oilpipefromadaptertoadapter {
     position: absolute;
     top: 469px;
-    left: 231px;
+    left: 61px;
     visibility: hidden;
     z-index: 5;
     width: 68px;
@@ -455,7 +455,7 @@ textarea {
 .oilpipefromadaptertoengine {
     position: absolute;
     top: 481px;
-    left: 247px;
+    left: 77px;
     /*visibility: hidden;*/
     /*visibility: visible;*/
     z-index: 5;
@@ -473,7 +473,7 @@ textarea {
 .oilpipefromadaptertoengine_dis {
     position: absolute;
     top: 481px;
-    left: 247px;
+    left: 77px;
     /*visibility: hidden;*/
     /*visibility: visible;*/
     z-index: 5;
@@ -493,7 +493,7 @@ textarea {
 .oilpipefromadaptertcooler {
     position: absolute;
     top: 465px;
-    left: 287px;
+    left: 117px;
     visibility: hidden;
     z-index: 5;
     width: 68px;
@@ -511,7 +511,7 @@ textarea {
 .oilpipefrombypasstocooler {
     position: absolute;
     top: 415px;
-    left: 235px;
+    left: 65px;
     visibility: hidden;
     z-index: 5;
     width: 68px;
@@ -529,7 +529,7 @@ textarea {
 .water {
     position: absolute;
     top: 434px;
-    left: 151px;
+    left: -19px;
     visibility: hidden;
     z-index: 5;
     width: 158px;
@@ -547,7 +547,7 @@ textarea {
 .smallgreenpipe {
     position: absolute;
     top: 275px;
-    left: 472px;
+    left: 302px;
     /*visibility: hidden;*/
     /*visibility: visible;*/
     z-index: 1;
@@ -565,7 +565,7 @@ textarea {
 .smallgreenpipe_dis {
     position: absolute;
     top: 275px;
-    left: 472px;
+    left: 302px;
     /*visibility: hidden;*/
     /*visibility: visible;*/
     z-index: 1;
@@ -584,7 +584,7 @@ textarea {
 .airvalvespring {
     position: absolute;
     top: 248px;
-    left: 397px;
+    left: 227px;
     /*visibility: hidden;*/
     z-index: 5;
     width: 158px;
@@ -601,7 +601,7 @@ textarea {
 .resarrows {
     position: absolute;
     top: 320px;
-    left: 750px;
+    left: 580px;
     /*visibility: hidden;*/
     /*visibility: visible;*/
     z-index: 5;
@@ -619,7 +619,7 @@ textarea {
 .solenoidvalve {
     position: absolute;
     top: 314px;
-    left: 487px;
+    left: 317px;
     /*visibility: hidden;*/
     visibility: visible;
     z-index: 5;
@@ -638,7 +638,7 @@ textarea {
 .solenoidvalveblowdown {
     position: absolute;
     top: 234px;
-    left: 610px;
+    left: 440px;
     /*visibility: hidden;*/
     visibility: visible;
     z-index: 5;
@@ -656,7 +656,7 @@ textarea {
 .airvalvespringsmall {
     position: absolute;
     top: 218px;
-    left: 422px;
+    left: 252px;
     /*visibility: hidden;*/
     visibility: visible;
     z-index: 5;
@@ -674,7 +674,7 @@ textarea {
 .sepspring {
     position: absolute;
     top: 222px;
-    left: 783px;
+    left: 613px;
     /*visibility: hidden;*/
     visibility: visible;
     z-index: 5;
@@ -692,7 +692,7 @@ textarea {
 .enginespring {
     position: absolute;
     top: 444px;
-    left: 370px;
+    left: 200px;
     /*visibility: hidden;*/
     visibility: visible;
     z-index: 5;
@@ -711,7 +711,7 @@ textarea {
 .violetarrowssmall {
     position: absolute;
     top: 260px;
-    left: 535px;
+    left: 365px;
     /*visibility: hidden;*/
     /*visibility: visible;*/
     z-index: 5;
@@ -730,7 +730,7 @@ textarea {
 .violetarrowssmall2_ {
     position: absolute;
     top: 215px;
-    left: 540px;
+    left: 370px;
     /*visibility: hidden;*/
     /*visibility: visible;*/
     z-index: 5;
@@ -750,7 +750,7 @@ textarea {
 .violetarrowssmall3_ {
     position: absolute;
     top: 211px;
-    left: 378px;
+    left: 208px;
     /*visibility: hidden;*/
     /*visibility: visible;*/
     z-index: 5;
@@ -770,7 +770,7 @@ textarea {
 .violetpipe2_ {
     position: absolute;
     top: 259px;
-    left: 534px;
+    left: 364px;
     /*visibility: hidden;*/
     visibility: visible;
     width: 158px;
@@ -788,7 +788,7 @@ textarea {
 .violetpipe1_ {
     position: absolute;
     top: 216px;
-    left: 386px;
+    left: 216px;
     /*visibility: hidden;*/
     visibility: visible;
     width: 158px;
@@ -806,7 +806,7 @@ textarea {
 .violetpipe3_ {
     position: absolute;
     top: 301px;
-    left: 478px;
+    left: 308px;
     /*visibility: hidden;*/
     visibility: visible;
     width: 158px;
@@ -905,6 +905,6 @@ line-height: 38px;
 }
 .ui-state-highlight {
     border: 1px solid #fff !important;
-    background: #337ab7 !important; 
+    background: #337ab7 !important;
     color: #fff !important;
 }
