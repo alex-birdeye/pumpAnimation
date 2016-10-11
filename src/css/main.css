@@ -875,3 +875,36 @@ iframe[seamless] {
     margin-bottom: 0;
     font-weight: bold;
 }
+#air-intake-2 p, #dryer p, #air-intake-1 p{
+    margin: 0 !important;
+}
+.info-scheme {
+    position:absolute;
+    text-align: center;
+    top: 420px;
+    left: 1000px;
+    width:295px;
+    z-index: 10;
+    font-size: 36px;
+}
+.indicatorValue {
+position:absolute;top: 278px;left: 1055px;width: 80px;height: 100px;text-align: center;
+}
+.indicatorValue p {
+    font-size: 32px;
+    font-weight: 600;
+}
+.jqx-gauge-label {
+    font-size: 16px !important;
+     font-weight: 600;
+}
+.information-block p {
+font-size: 34px;
+font-weight: 600;
+line-height: 38px;
+}
+.ui-state-highlight {
+    border: 1px solid #fff !important;
+    background: #337ab7 !important; 
+    color: #fff !important;
+}

@@ -61,20 +61,20 @@ function doPoll() {
             var operating = data.dryer.operating;
             var alarm = data.dryer.alarm;
 
-            jQuery('#' + blockNumber + ' .pressure > p').html("<strong>" + oilPressure + "</strong> бар");
-            jQuery('#' + blockNumber + ' .temperature > p').html("<strong>" + oilTemperature + " C</strong>");
-            jQuery('#' + blockNumber + ' .volume > p').html("<strong>" + volume_compr + "</strong>  м3/хв");
-            jQuery('#' + blockNumber + ' li.temperature > p').html("Температура: <strong>" + oilTemperature + " C</strong>");
+            jQuery('#' + blockNumber + ' .info-scheme p.pressure').html("Тиск<br><strong>" + oilPressure + " бар</strong>");
+            jQuery('#' + blockNumber + ' .info-scheme p.temperature').html("T масла<br><strong>" + oilTemperature + " °C</strong>");
+            jQuery('#' + blockNumber + ' .info-scheme p.volume').html("Продуктивність<br><strong>" + volume_compr + " м³/хв</strong>");
+            jQuery('#' + blockNumber + ' li.temperature > p').html("Температура: <strong>" + oilTemperature + " °C</strong>");
             jQuery('#' + blockNumber + ' .running-hrs').html("<strong>" + runningHrs + "</strong> год");
             jQuery('#' + blockNumber + ' .frequency > p').html("Частота обертання: <strong>" + motorSpeed + " об/хв</strong>");
 
-            jQuery('#dryer-pressure').html("<strong>" + dryer_pressure + "</strong> бар");
-            jQuery('#dew_point').html("<strong>" + dew_point + "</strong> C");
+            jQuery('#dryer-pressure').html("<strong>Тиск: " + dryer_pressure + "</strong> бар");
+            jQuery('#dew_point').html("<strong>Точка роси: " + dew_point + "</strong> °C");
 
-            jQuery('#air-intake-1 > p').html("<strong>" + line_pressure1 + "</strong> бар");
-            jQuery('#air-intake-2-pressure').html("<strong>" + line_pressure2 + "</strong> бар");
-            jQuery('#air-intake-2-temperature').html("<strong>" + line_temperature + "</strong> C");
-            jQuery('#air-intake-2-volume').html("<strong>" + volume_coll + "</strong> м3/хв");
+            jQuery('#air-intake-1 > p').html("<strong>Тиск: " + line_pressure1 + "</strong> бар");
+            jQuery('#air-intake-2-pressure').html("<strong>Тиск: " + line_pressure2 + "</strong> бар");
+            jQuery('#air-intake-2-temperature').html("<strong>Температура: " + line_temperature + "</strong> °C");
+            jQuery('#air-intake-2-volume').html("<strong>Продуктивність: " + volume_coll + "</strong> м³/хв");
 
             var value = parseInt(oilPressure, 10);
             //jQuery('[id="indicatorcontainer"]').jqxGauge({
@@ -135,7 +135,7 @@ function doPoll() {
                         dataField: 'hrs', displayText: 'state',
                         labelRadius: 60,
                         initialAngle: 90,
-                        radius: 110,
+                        radius: 90,
                         centerOffset: 5
                     }]
                 }]

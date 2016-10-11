@@ -55,14 +55,14 @@
         </h3>
     </div>
 
-    <div id="air-intake-1" style="position: absolute;top: 160px;left: 580px; font-size: 1.2em">
+    <div id="air-intake-1" style="position: absolute;top: 130px;left: 580px; font-size: 1.2em">
         <p></p>
     </div>
-    <div id="dryer" style="position: absolute;top: 160px;left: 1040px; font-size: 1.2em">
+    <div id="dryer" style="position: absolute;top: 130px;left: 1040px; font-size: 1.2em">
         <p id="dryer-pressure"></p>
         <p id="dew_point"></p>
     </div>
-    <div id="air-intake-2" style="position: absolute;top: 160px;left: 1490px; font-size: 1.2em">
+    <div id="air-intake-2" style="position: absolute;top: 130px;left: 1490px; font-size: 1.2em">
         <p id="air-intake-2-pressure"></p>
         <p id="air-intake-2-temperature"></p>
         <p id="air-intake-2-volume"></p>
@@ -81,21 +81,22 @@
     </div>
 
     <br>
-   
+    <br>
+
     <div class="row">
-         <div class="col-md-3 col-md-offset-2">
-            <div style="text-align: left"><h3 style="margin-top:0;float:left;text-align: center" class="compressor-title">Повітрозабірник</h3></div>
+        <div class="col-md-3 col-md-offset-2">
             <div style="width:200px; height: 200px;text-align: center">
+                <h4zz style="text-align: center">Повітрозабірник</h4>
                 <img src="img/Air%20Reciever%20Tank_cr.png" style="height: 100%">
             </div>
         </div>
         <div class="col-md-3">
-            <div style="text-align: left"><h3 style="margin-top:0;float:left;text-align: center" class="compressor-title">Осушувач Donaldson ALD 0650 SPUC</h3></div>
             <div style="width:200px; height: 200px;text-align: center">
+                <h4>Осушувач Donaldson ALD 0650 SPUC</h4>
                 <img src="img/Adsorption%20dryer_4.png" style="height: 80%">
             </div>
             <div id="dryer-indicators">
-                <br><br><br>
+                <br>
                 <div class="row">
                     <div class="col-md-3 col-md-offset-1">
                         <p>Ввімкн. </p>
@@ -120,8 +121,8 @@
             </div>
         </div>
         <div class="col-md-3">
-            <div style="text-align: left"><h3 style="margin-top:0;float:left;text-align: center" class="compressor-title">Повітрозабірник</h3></div>
             <div style="width:200px; height: 200px;text-align: center">
+                <h4 style="text-align: center">Повітрозабірник</h4>
                 <img src="img/Air%20Reciever%20Tank_cr.png" style="height: 100%">
             </div>
         </div>
@@ -303,11 +304,14 @@
                 <div class="row information-block" style="font-size: 2.5em">
                     <div class="col-md-4 info">
                         <div class="row">
+                            <div class="col-md-12 pressure" style="text-align: center">
+                                <p>000</p>
+                            </div>
                             <!--<div class="col-md-6">-->
                             <!--<p></p>-->
                             <!--</div>-->
                         </div>
-                         <h3 style="font-size: 4.8rem; text-align: center"><span class="label label-primary">СТАН</span></h3>
+                        <h3 style="font-size: 3.5rem; text-align: center">СТАН</h3>
                         <ul class="stan" style="list-style-type: none; font-size: 3rem">
                             <li>
                                 <div class="row">
@@ -348,17 +352,20 @@
 
                                 </div>
                             </li>
-                            <!-- <li class="temperature"><p></p></li> -->
-                            <li class="frequency" style="width: 200%;"><p></p></li>
+                            <li class="temperature"><p></p></li>
+                            <li class="frequency" style="width: 150%;"><p></p></li>
                         </ul>
                     </div>
                     <div class="col-md-4 info">
                         <div class="row">
+                            <div class="col-md-12 volume" style="text-align: center">
+                                <p>000</p>
+                            </div>
                             <!--<div class="col-md-2">-->
                             <!--<p>м3/хв</p>-->
                             <!--</div>-->
                         </div>
-                         <h3 style="font-size: 4.8rem; text-align: center"><span class="label label-danger">УВАГА</span></h3>
+                        <h3 style="font-size: 3.5rem; text-align: center">УВАГА</h3>
                         <ul class="stan" style="list-style-type: none; font-size: 3rem">
                             <li>
                                 <div class="row">
@@ -408,11 +415,11 @@
                             <!--<div class="col-md-2">-->
                             <!--<p class="pressure"></p>-->
                             <!--</div>-->
-                            <!-- <div class="col-md-12" style="text-align: center">
+                            <div class="col-md-12" style="text-align: center">
                                 <p class="running-hrs"></p>
-                            </div> -->
+                            </div>
                         </div>
-                         <h3 style="font-size: 4.8rem; text-align: center"><span class="label label-default">НАПРАЦЮВАННЯ</span></h3>
+                        <h3 style="font-size: 3.5rem; text-align: center">НАПРАЦЮВАННЯ</h3>
                         <div class='jqxChart' style="width: 380px; height: 300px;font-size: 2.8rem; margin-left: 10%">
                         </div>
                     </div>
@@ -423,13 +430,17 @@
                     <div class="indicatorcontainer"
                          style="position:absolute;top: 150px;left: 979px;width: 100px;height: 100px;">
                     </div>
-                    <div class="indicatorValue">
+                    <div class="indicatorValue"
+                         style="position:absolute;top: 278px;left: 1083px;width: 100px;height: 100px;">
                         <p>0</p>
                     </div>
-                    <div class="info-scheme">
-                        <p class="temperature bg-primary"></p>
-                        <p class="pressure bg-primary"></p>
-                        <p class="volume bg-primary"></p>
+                    <div class="temperature"
+                         style="position:absolute;top: 480px;left: 805px;width: 43px;height: 34px;background-image: url('img/685.png');background-repeat: no-repeat;background-size: contain;z-index: 10;">
+                        <p style="position: relative; top: 13px; left: 5px;font-size: 14px;"><strong>16 C</strong></p>
+                    </div>
+                    <div class="temperature"
+                         style="position:absolute;top: 650px;left: 355px;width: 43px;height: 34px;background-image: url('img/685.png');background-repeat: no-repeat;background-size: contain;z-index: 10;">
+                        <p style="position: relative; top: 13px; left: 5px;font-size: 14px;"><strong>16 C</strong></p>
                     </div>
                 </div>
             </div>
@@ -609,11 +620,14 @@
                 <div class="row information-block" style="font-size: 2.5em">
                     <div class="col-md-4 info">
                         <div class="row">
+                            <div class="col-md-12 pressure" style="text-align: center">
+                                <p>000</p>
+                            </div>
                             <!--<div class="col-md-6">-->
                             <!--<p></p>-->
                             <!--</div>-->
                         </div>
-                        <h3 style="font-size: 4.8rem; text-align: center"><span class="label label-primary">СТАН</span></h3>
+                        <h3 style="font-size: 3.5rem; text-align: center">СТАН</h3>
                         <ul class="stan" style="list-style-type: none; font-size: 3rem">
                             <li>
                                 <div class="row">
@@ -654,16 +668,19 @@
 
                                 </div>
                             </li>
-                            <!-- <li class="temperature"><p></p></li> -->
+                            <li class="temperature"><p></p></li>
                         </ul>
                     </div>
                     <div class="col-md-4 info">
                         <div class="row">
+                            <div class="col-md-12 volume" style="text-align: center">
+                                <p>000</p>
+                            </div>
                             <!--<div class="col-md-2">-->
                             <!--<p>м3/хв</p>-->
                             <!--</div>-->
                         </div>
-                        <h3 style="font-size: 4.8rem; text-align: center"><span class="label label-danger">УВАГА</span></h3>
+                        <h3 style="font-size: 3.5rem; text-align: center">УВАГА</h3>
                         <ul class="stan" style="list-style-type: none; font-size: 3rem">
                             <li>
                                 <div class="row">
@@ -713,11 +730,11 @@
                             <!--<div class="col-md-2">-->
                             <!--<p class="pressure"></p>-->
                             <!--</div>-->
-                            <!-- <div class="col-md-12" style="text-align: center">
+                            <div class="col-md-12" style="text-align: center">
                                 <p class="running-hrs"></p>
-                            </div> -->
+                            </div>
                         </div>
-                         <h3 style="font-size: 4.8rem; text-align: center"><span class="label label-default">НАПРАЦЮВАННЯ</span></h3>
+                        <h3 style="font-size: 3.5rem; text-align: center">НАПРАЦЮВАННЯ</h3>
                         <div class='jqxChart' style="width: 380px; height: 300px;font-size: 2.8rem; margin-left: 10%">
                         </div>
                     </div>
@@ -728,13 +745,17 @@
                     <div class="indicatorcontainer"
                          style="position:absolute;top: 150px;left: 979px;width: 100px;height: 100px;">
                     </div>
-                    <div class="indicatorValue">
+                    <div class="indicatorValue"
+                         style="position:absolute;top: 278px;left: 1083px;width: 100px;height: 100px;">
                         <p>0</p>
                     </div>
-                    <div class="info-scheme">
-                        <p class="temperature bg-primary"></p>
-                        <p class="pressure bg-primary"></p>
-                        <p class="volume bg-primary"></p>
+                    <div class="temperature"
+                         style="position:absolute;top: 480px;left: 805px;width: 43px;height: 34px;background-image: url('img/685.png');background-repeat: no-repeat;background-size: contain;z-index: 10;">
+                        <p style="position: relative; top: 13px; left: 5px;font-size: 14px;"><strong>16 C</strong></p>
+                    </div>
+                    <div class="temperature"
+                         style="position:absolute;top: 650px;left: 355px;width: 43px;height: 34px;background-image: url('img/685.png');background-repeat: no-repeat;background-size: contain;z-index: 10;">
+                        <p style="position: relative; top: 13px; left: 5px;font-size: 14px;"><strong>16 C</strong></p>
                     </div>
                 </div>
             </div>
@@ -914,11 +935,14 @@
                 <div class="row information-block" style="font-size: 2.5em">
                     <div class="col-md-4 info">
                         <div class="row">
-                                                       <!--<div class="col-md-6">-->
+                            <div class="col-md-12 pressure" style="text-align: center">
+                                <p>000</p>
+                            </div>
+                            <!--<div class="col-md-6">-->
                             <!--<p></p>-->
                             <!--</div>-->
                         </div>
-                        <h3 style="font-size: 4.8rem; text-align: center"><span class="label label-primary">СТАН</span></h3>
+                        <h3 style="font-size: 3.5rem; text-align: center">СТАН</h3>
                         <ul class="stan" style="list-style-type: none; font-size: 3rem">
                             <li>
                                 <div class="row">
@@ -959,16 +983,19 @@
 
                                 </div>
                             </li>
-                            <!-- <li class="temperature"><p></p></li> -->
+                            <li class="temperature"><p></p></li>
                         </ul>
                     </div>
                     <div class="col-md-4 info">
                         <div class="row">
-                                                        <!--<div class="col-md-2">-->
+                            <div class="col-md-12 volume" style="text-align: center">
+                                <p>000</p>
+                            </div>
+                            <!--<div class="col-md-2">-->
                             <!--<p>м3/хв</p>-->
                             <!--</div>-->
                         </div>
-                        <h3 style="font-size: 4.8rem; text-align: center"><span class="label label-danger">УВАГА</span></h3>
+                        <h3 style="font-size: 3.5rem; text-align: center">УВАГА</h3>
                         <ul class="stan" style="list-style-type: none; font-size: 3rem">
                             <li>
                                 <div class="row">
@@ -1018,11 +1045,11 @@
                             <!--<div class="col-md-2">-->
                             <!--<p class="pressure"></p>-->
                             <!--</div>-->
-                            <!-- <div class="col-md-12" style="text-align: center">
+                            <div class="col-md-12" style="text-align: center">
                                 <p class="running-hrs"></p>
-                            </div> -->
+                            </div>
                         </div>
-                        <h3 style="font-size: 4.8rem; text-align: center"><span class="label label-default">НАПРАЦЮВАННЯ</span></h3>
+                        <h3 style="font-size: 3.5rem; text-align: center">НАПРАЦЮВАННЯ</h3>
                         <div class='jqxChart' style="width: 380px; height: 300px;font-size: 2.8rem; margin-left: 10%">
                         </div>
                     </div>
@@ -1033,13 +1060,17 @@
                     <div class="indicatorcontainer"
                          style="position:absolute;top: 150px;left: 979px;width: 100px;height: 100px;">
                     </div>
-                    <div class="indicatorValue">
+                    <div class="indicatorValue"
+                         style="position:absolute;top: 278px;left: 1083px;width: 100px;height: 100px;">
                         <p>0</p>
                     </div>
-                    <div class="info-scheme">
-                        <p class="temperature bg-primary"></p>
-                        <p class="pressure bg-primary"></p>
-                        <p class="volume bg-primary"></p>
+                    <div class="temperature"
+                         style="position:absolute;top: 480px;left: 805px;width: 43px;height: 34px;background-image: url('img/685.png');background-repeat: no-repeat;background-size: contain;z-index: 10;">
+                        <p style="position: relative; top: 13px; left: 5px;font-size: 14px;"><strong>16 C</strong></p>
+                    </div>
+                    <div class="temperature"
+                         style="position:absolute;top: 650px;left: 355px;width: 43px;height: 34px;background-image: url('img/685.png');background-repeat: no-repeat;background-size: contain;z-index: 10;">
+                        <p style="position: relative; top: 13px; left: 5px;font-size: 14px;"><strong>16 C</strong></p>
                     </div>
                 </div>
             </div>
@@ -1053,10 +1084,10 @@
     <!--</div>-->
 
     <div class="row">
-        <div class="col-md-4 col-md-offset-8 right"  style="bottom:25px">
-            <div id="datetimepicker" class="col-md-7" style="width: 200px;left:80px;font-size: 14px"></div>
-            <div class="col-md-5 pull-right" style="top:15px">
-                <canvas id="clock" width="240" height="150">
+        <div class="col-md-3 col-md-offset-9 right">
+            <div id="datetimepicker" class="col-md-7" style="width: 200px;left:80px;font-size: 10px"></div>
+            <div class="col-md-5 pull-right">
+                <canvas id="clock" width="150" height="150">
                 </canvas>
             </div>
         </div>
