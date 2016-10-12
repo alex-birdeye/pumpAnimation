@@ -61,9 +61,12 @@ function doPoll() {
             var operating = data.dryer.operating;
             var alarm = data.dryer.alarm;
 
-            jQuery('#' + blockNumber + ' .info-scheme p.pressure').html("Тиск<br><strong>" + oilPressure + " бар</strong>");
-            jQuery('#' + blockNumber + ' .info-scheme p.temperature').html("T масла<br><strong>" + oilTemperature + " °C</strong>");
-            jQuery('#' + blockNumber + ' .info-scheme p.volume').html("Продуктивність<br><strong>" + volume_compr + " м³/хв</strong>");
+            // jQuery('#' + blockNumber + ' .info-scheme pressure').html("Тиск<br><strong>" + oilPressure + " бар</strong>");
+            jQuery('#' + blockNumber + ' .info-scheme .pressure').val(oilPressure);
+            // jQuery('#' + blockNumber + ' .info-scheme temperature').html("T масла<br><strong>" + oilTemperature + " °C</strong>");
+            jQuery('#' + blockNumber + ' .info-scheme .temperature').val(oilTemperature);
+            // jQuery('#' + blockNumber + ' .info-scheme volume').html("Продуктивність<br><strong>" + volume_compr + " м³/хв</strong>");
+            jQuery('#' + blockNumber + ' .info-scheme .volume').val(volume_compr);
             jQuery('#' + blockNumber + ' li.temperature > p').html("Температура: <strong>" + oilTemperature + " °C</strong>");
             jQuery('#' + blockNumber + ' .running-hrs').html("<strong>" + runningHrs + "</strong> год");
             jQuery('#' + blockNumber + ' .frequency > p').html("Частота обертання: <strong>" + motorSpeed + " об/хв</strong>");
@@ -112,8 +115,8 @@ function doPoll() {
                 value: 0,
                 colorScheme: 'scheme03',
                 animationDuration: 1000,
-                width: '180px',
-                height: '180px'
+                // width: '180px',
+                // height: '180px'
             });
 
             var workingHrs = [
