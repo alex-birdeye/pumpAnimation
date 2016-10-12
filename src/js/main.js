@@ -112,8 +112,8 @@ function doPoll() {
                 value: 0,
                 colorScheme: 'scheme03',
                 animationDuration: 1000,
-                width: '200px',
-                height: '200px'
+                width: '180px',
+                height: '180px'
             });
 
             var workingHrs = [
