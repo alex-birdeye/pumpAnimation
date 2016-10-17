@@ -25,7 +25,7 @@ html {
 body {
     /*overflow-y: scroll;*/
     /*overflow-x: hidden;*/
-    /*overflow: hidden;*/
+    overflow: hidden;
 }
 
 ::selection {
@@ -846,21 +846,21 @@ iframe[seamless] {
 
 #air-intake-pipe-1 {
     position: absolute;
-    top: 230px;
-    left: 198px;
-    width: 250px;
+    top: 165px;
+    left: 180px;
+    width: 270px;
 }
 #air-intake-pipe-2 {
     position: absolute;
-    top: 230px;
-    left: 532px;
-    width: 320px;
+    top: 165px;
+    left: 510px;
+    width: 355px;
 }
 #air-intake-pipe-3 {
     position: absolute;
-    top: 230px;
-    left: 915px;
-    width: 250px;
+    top: 165px;
+    left: 900px;
+    width: 280px;
 }
 .air-intake-pipe-img{
     width: 100%;
