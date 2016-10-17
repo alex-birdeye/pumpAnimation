@@ -51,6 +51,7 @@ function doPoll() {
             var motorSpeed = data.compressors[blockNumber - 1].motor_speed_rpm;
             var runningHrs = data.compressors[blockNumber - 1].running_hrs;
             var loadedHrs = data.compressors[blockNumber - 1].loaded_hrs;
+            var lowesServiceHrs = data.compressors[blockNumber - 1].lowes_service_hrs;
             var volume_compr = data.compressors[blockNumber - 1].volume;
             var volume_coll = data.collectors[1].volume;
             var line_pressure1 = data.collectors[0].line_pressure;
@@ -68,10 +69,13 @@ function doPoll() {
             jQuery('#' + blockNumber + ' .info-scheme .temperature').val(oilTemperature);
             // jQuery('#' + blockNumber + ' .info-scheme volume').html("Продуктивність<br><strong>" + volume_compr + " м³/хв</strong>");
             jQuery('#' + blockNumber + ' .info-scheme .volume').val(volume_compr);
-            jQuery('#' + blockNumber + ' li.temperature > p').html("Температура: <strong>" + oilTemperature + " °C</strong>");
-            jQuery('#' + blockNumber + ' .running-hrs').html("<strong>" + runningHrs + "</strong> год");
-            jQuery('#' + blockNumber + ' .frequency > p').html("Частота обертання: <strong>" + motorSpeed + " об/хв</strong>");
+            // jQuery('#' + blockNumber + ' li.temperature > p').html("Температура: <strong>" + oilTemperature + " °C</strong>");
+            // jQuery('#' + blockNumber + ' .running-hrs').html("<strong>" + runningHrs + "</strong> год");
+            // jQuery('#' + blockNumber + ' .frequency > p').html("Частота обертання: <strong>" + motorSpeed + " об/хв</strong>");
 
+            jQuery('#' + blockNumber + ' .running-hours').val(runningHrs);
+            jQuery('#' + blockNumber + ' .loaded-hours').val(loadedHrs);
+            jQuery('#' + blockNumber + ' .lowes-service-hours').val(lowesServiceHrs);
             // jQuery('#dryer-pressure').html("<strong>Тиск: " + dryer_pressure + "</strong> бар");
             // jQuery('#dew_point').html("<strong>Точка роси: " + dew_point + "</strong> °C");
 
@@ -235,9 +239,11 @@ function handleDryer(operating, alarm) {
 
 function handleUvagaBlock(avaria, poperedzhennia, service) {
     if (avaria)
-        jQuery('#' + blockNumber + ' .status-avaria').addClass("status-avaria");
+        jQuery('#' + blockNumber + ' .status-avaria').html("Тревога");
+        // jQuery('#' + blockNumber + ' .status-avaria').addClass("status-avaria");
     else
-        jQuery('#' + blockNumber + ' .status-avaria').removeClass("status-avaria");
+        jQuery('#' + blockNumber + ' .status-avaria').html("Без тривог");
+        // jQuery('#' + blockNumber + ' .status-avaria').removeClass("status-avaria");
     if (poperedzhennia)
         jQuery('#' + blockNumber + ' .status-poperedzhennia').addClass("status-avaria");
     else
@@ -255,14 +261,16 @@ function onLoad(status) {
         startAirArrows();
         startVioletArrows();
 
-        jQuery('#' + blockNumber + ' .status-load').addClass("status-on");
+        // jQuery('#' + blockNumber + ' .status-load').addClass("status-on");
+        jQuery('#' + blockNumber + ' .status-load').html("Під навантаженням");
     } else {
         closeAirValve();
         closeSepSpring();
         stopAirArrows();
         stopVioletArrows();
 
-        jQuery('#' + blockNumber + ' .status-load').removeClass("status-on");
+        // jQuery('#' + blockNumber + ' .status-load').removeClass("status-on");
+        jQuery('#' + blockNumber + ' .status-load').html("Без навантаження");
     }
 }
 

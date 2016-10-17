@@ -826,7 +826,7 @@ iframe[seamless] {
 }
 
 .wrap { width: 600px; height: 590px; padding: 0; overflow: hidden; }
-.frame { width: 800px; height: 720px; border: 1px solid black; overflow: hidden; }
+.frame { width: 1000px; height: 920px; border: 1px solid black; overflow: hidden; }
 .frame {
     -ms-zoom: 0.3;
     -moz-transform: scale(0.3);
@@ -841,7 +841,7 @@ iframe[seamless] {
     background-color: green;
 }
 .status-avaria {
-    background-color: red;
+    /*background-color: red;*/
 }
 
 #air-intake-pipe-1 {
