@@ -50,32 +50,42 @@
         <img class="air-intake-pipe-img" src="img/air-intake-pipe.jpg">
     </div>
 
-    <div style="position: absolute;top: 220px; left: 1540px">
-        <h3>
+    <div style="position: absolute;top: 230px; left: 1070px;">
+        <h3 style="font-size: 0.9em">
             На виробництво
         </h3>
     </div>
 
-    <div id="air-intake-1" style="position: absolute;top: 160px;left: 580px; font-size: 1.2em">
-        <p></p>
+    <div id="air-intake-1" style="position: absolute;top: 160px;left: 220px; width: 130px; font-size: 0.9em">
+        <p>Тиск бар <input type="text" class="pressure bg-input" value="" style="float: right;width: 50px"></p>
+        <br>
+        <p>Т масла °C <input type="text" class="temperature bg-input" value="" style="float: right;width: 50px"></p>
     </div>
-    <div id="dryer" style="position: absolute;top: 160px;left: 1040px; font-size: 1.2em">
-        <p id="dryer-pressure"></p>
-        <p id="dew_point"></p>
+    <div id="dryer" style="position: absolute;top: 160px;left: 560px;width: 160px; font-size: 0.9em">
+        <!--<p id="dryer-pressure"></p>-->
+        <!--<p id="dew_point"></p>-->
+        <p>Тиск бар <input type="text" class="pressure bg-input" value="" style="float: right;width: 50px"></p>
+        <br>
+        <p>Точка роси °C <input type="text" class="dew_point bg-input" value="" style="float: right;width: 50px"></p>
     </div>
-    <div id="air-intake-2" style="position: absolute;top: 160px;left: 1490px; font-size: 1.2em">
-        <p id="air-intake-2-pressure"></p>
-        <p id="air-intake-2-temperature"></p>
-        <p id="air-intake-2-volume"></p>
+    <div id="air-intake-2" style="position: absolute;top: 140px;left: 950px;width: 200px; font-size: 0.9em">
+        <!--<p id="air-intake-2-pressure"></p>-->
+        <!--<p id="air-intake-2-temperature"></p>-->
+        <!--<p id="air-intake-2-volume"></p>-->
+        <p>Тиск бар <input type="text" class="pressure bg-input" value="" style="float: right;width: 50px"></p>
+        <br>
+        <p>Температура °C <input type="text" class="temperature bg-input" value="" style="float: right;width: 50px"></p>
+        <br>
+        <p>Продуктивність м³/хв <input type="text" class="volume bg-input" value="" style="float: right;width: 50px"></p>
     </div>
 
     <div class="row">
-        <div class="zakazchik-logo col-md-3" style="width:400px; height: 70px; padding-top: 5px">
+        <div class="zakazchik-logo col-md-3" style="width:120px; height: 40px; padding-top: 5px">
             <!--<h3>Logo zakazchika</h3>-->
-            <img src="img/logo-7.jpg">
+            <img src="img/logo-7.jpg" style="width: 100%">
         </div>
         <div class="compressors-logo col-md-3"
-             style="width:400px; height: 70px;float: right;">
+             style="width:250px; height: 70px;float: right;">
             <!--<h3>Logo compressor</h3>-->
             <img src="img/Logo_CI_12.12.06.ai-crop.jpg" style="width:100%;">
         </div>
@@ -84,21 +94,22 @@
     <br>
 
     <div class="row">
-        <div class="col-md-3 col-md-offset-2">
+        <div class="col-md-3 col-md-offset-1">
             <div style="text-align: left"><h3 style="margin-top:0;float:left;text-align: center"
                                               class="compressor-title">Повітрозабірник</h3></div>
-            <div style="width:200px; height: 200px;text-align: center">
-                <img src="img/Air%20Reciever%20Tank_cr.png" style="height: 100%">
+            <div style="width:200px; height: 150px;text-align: center">
+                <img src="img/Air%20Reciever%20Tank_cr.png" style="height: 100%; float: left">
             </div>
         </div>
         <div class="col-md-3">
             <div style="text-align: left"><h3 style="margin-top:0;float:left;text-align: center"
                                               class="compressor-title">Осушувач Donaldson ALD 0650 SPUC</h3></div>
-            <div style="width:200px; height: 200px;text-align: center">
-                <img src="img/Adsorption%20dryer_4.png" style="height: 80%">
+            <div style="width:200px; height: 150px;text-align: center">
+                <img src="img/Adsorption%20dryer_4.png" style="height: 80%; float: left">
             </div>
-            <div id="dryer-indicators">
-                <br><br><br>
+            <div id="dryer-indicators"  style="border: solid 1px black; margin-top: 12px">
+
+                <h4 style="font-size: 1em; font-weight: bold; text-align: center;">Стан</h4>
                 <div class="row">
                     <div class="col-md-3 col-md-offset-1">
                         <p>Ввімкн. </p>
@@ -108,8 +119,8 @@
 
                         </div>
                     </div>
-                </div>
-                <div class="row">
+                <!--</div>-->
+                <!--<div class="row">-->
                     <div class="col-md-3 col-md-offset-1">
                         <p>Аварія </p>
                     </div>
@@ -122,11 +133,11 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 col-md-offset-1">
             <div style="text-align: left"><h3 style="margin-top:0;float:left;text-align: center"
                                               class="compressor-title">Повітрозабірник</h3></div>
-            <div style="width:200px; height: 200px;text-align: center">
-                <img src="img/Air%20Reciever%20Tank_cr.png" style="height: 100%">
+            <div style="width:200px; height: 150px;text-align: center">
+                <img src="img/Air%20Reciever%20Tank_cr.png" style="height: 100%; float: left">
             </div>
         </div>
     </div>

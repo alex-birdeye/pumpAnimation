@@ -55,7 +55,8 @@ function doPoll() {
             var volume_coll = data.collectors[1].volume;
             var line_pressure1 = data.collectors[0].line_pressure;
             var line_pressure2 = data.collectors[1].line_pressure;
-            var line_temperature = data.collectors[1].line_temperature;
+            var line_temperature1 = data.collectors[1].line_temperature;
+            var line_temperature2 = data.collectors[1].line_temperature;
             var dew_point = data.dryer.dew_point;
             var dryer_pressure = data.dryer.line_pressure;
             var operating = data.dryer.operating;
@@ -71,13 +72,19 @@ function doPoll() {
             jQuery('#' + blockNumber + ' .running-hrs').html("<strong>" + runningHrs + "</strong> год");
             jQuery('#' + blockNumber + ' .frequency > p').html("Частота обертання: <strong>" + motorSpeed + " об/хв</strong>");
 
-            jQuery('#dryer-pressure').html("<strong>Тиск: " + dryer_pressure + "</strong> бар");
-            jQuery('#dew_point').html("<strong>Точка роси: " + dew_point + "</strong> °C");
+            // jQuery('#dryer-pressure').html("<strong>Тиск: " + dryer_pressure + "</strong> бар");
+            // jQuery('#dew_point').html("<strong>Точка роси: " + dew_point + "</strong> °C");
 
-            jQuery('#air-intake-1 > p').html("<strong>Тиск: " + line_pressure1 + "</strong> бар");
-            jQuery('#air-intake-2-pressure').html("<strong>Тиск: " + line_pressure2 + "</strong> бар");
-            jQuery('#air-intake-2-temperature').html("<strong>Температура: " + line_temperature + "</strong> °C");
-            jQuery('#air-intake-2-volume').html("<strong>Продуктивність: " + volume_coll + "</strong> м³/хв");
+            // jQuery('#air-intake-1 > p').html("<strong>Тиск: " + line_pressure1 + "</strong> бар");
+            jQuery('#air-intake-1 .pressure').val(line_pressure1);
+            jQuery('#air-intake-1 .temperature').val(line_temperature1);
+
+            jQuery('#dryer .pressure').val(dryer_pressure);
+            jQuery('#dryer .dew_point').val(dew_point);
+
+            jQuery('#air-intake-2 .pressure').val(line_pressure2);
+            jQuery('#air-intake-2 .temperature').val(line_temperature2);
+            jQuery('#air-intake-2 .volume').val(volume_coll);
 
             var value = parseInt(oilPressure, 10);
             //jQuery('[id="indicatorcontainer"]').jqxGauge({
