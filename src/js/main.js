@@ -121,13 +121,13 @@ function doPoll() {
                         endWidth: 11,
                         startWidth: 8
                     }],
-                ticksMinor: {interval: 1, size: '5%'},
-                ticksMajor: {interval: 5, size: '9%'},
+                ticksMinor: {interval: 1, size: '10%'},
+                ticksMajor: {interval: 5, size: '15%'},
                 value: 0,
                 colorScheme: 'scheme03',
                 animationDuration: 1000,
-                // width: '180px',
-                // height: '180px'
+                width: '300px',
+                height: '300px'
             });
 
             var workingHrs = [

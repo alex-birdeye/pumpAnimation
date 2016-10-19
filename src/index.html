@@ -37,7 +37,6 @@
     your browser</a> to improve your experience.</p>
 <![endif]-->
 
-<!--<div style="height: 0px; visibility: hidden;" id="Loading_box">Loading... 95%</div>-->
 <div style="width: 97%">
 
     <div id="air-intake-pipe-1">
@@ -48,6 +47,9 @@
     </div>
     <div id="air-intake-pipe-3">
         <img class="air-intake-pipe-img" src="img/air-intake-pipe.jpg">
+        <button class="btn-default" style="float: right; width: 26px; padding: 0; border: none"><img
+            src="img/exit-arrow.png" style="width: 25px">
+        </button>
     </div>
 
     <div style="position: absolute;top: 137px; left: 1070px;">
@@ -64,8 +66,6 @@
     </div>
     <div id="dryer" class="bordered"
          style="position: absolute;top: 110px;left: 546px;width: 200px; font-size: 0.9em; line-height: 80%">
-        <!--<p id="dryer-pressure"></p>-->
-        <!--<p id="dew_point"></p>-->
         <p>Тиск бар <input type="text" class="pressure bg-input" value="" style="float: right;width: 50px"></p>
         <br>
         <p>Точка роси °C <input type="text" class="dew_point bg-input" value="" style="float: right;width: 50px"></p>
@@ -78,26 +78,18 @@
         </p>
         <br>
         <p>Температура °C <input type="text" class="temperature bg-input" value="" style="float: right;width: 50px"></p>
-
-        <!--<p>Тиск бар </p><input type="text" class="pressure bg-input" value="" style="width: 50px">-->
-        <!--<p>Продуктивність м³/хв </p><input type="text" class="volume bg-input" value="" style="width: 50px">-->
-        <!--<p>Температура °C </p><input type="text" class="temperature bg-input" value="" style="width: 50px">-->
         </p>
     </div>
 
     <div class="row">
         <div class="zakazchik-logo col-md-3" style="width:120px; height: 40px; padding-top: 5px">
-            <!--<h3>Logo zakazchika</h3>-->
             <img src="img/logo-7.jpg" style="width: 100%">
         </div>
         <div class="compressors-logo col-md-3"
              style="width:250px; height: 70px;float: right;">
-            <!--<h3>Logo compressor</h3>-->
             <img src="img/Logo_CI_12.12.06.ai-crop.jpg" style="width:100%;">
         </div>
     </div>
-
-    <!--<br>-->
 
     <div class="row">
         <div class="col-md-3 col-md-offset-1">
@@ -117,8 +109,6 @@
 
                 <h4 style="font-size: 1em; font-weight: bold; text-align: center; margin-top: 5px; margin-bottom: 5px">Стан</h4>
                 <div class="row" style="padding-bottom: 0; padding-top: 5px; border-top: solid 1px black; width: 104%; left: 10px; position: relative">
-                    <!--<div style="border-right: solid 1px red; width: 150px; height: 10px">-->
-
                         <div class="col-md-3 <!--col-md-offset-1-->">
                             <p>Ввімкн. </p>
                         </div>
@@ -127,9 +117,6 @@
 
                             </div>
                         </div>
-                    <!--</div>-->
-                    <!--</div>-->
-                    <!--<div class="row">-->
                     <div class="col-md-3 col-md-offset-1" style="border-left: solid 1px black">
                         <p>Аварія </p>
                     </div>
@@ -138,10 +125,9 @@
 
                         </div>
                     </div>
-
                 </div>
             </div>
-            <button class="btn-default" style="float: right">Графік</button>
+            <button class="btn-default" style="margin-left: 60%/*float: right*/">Графік</button>
         </div>
         <div class="col-md-3 col-md-offset-1">
             <div style="text-align: left"><h3 style="margin-top:0;float:left;text-align: center"
@@ -153,16 +139,14 @@
                 <div class="col-md-9">
 
                     <div class="row">
-                        <button class="btn-default" style="float: right">Графік</button>
+                        <button class="btn-default" style="float: right; width: 60px">Графік</button>
                     </div>
                     <div class="row">
-                        <button class="btn-default" style="float: right">Архів</button>
+                        <button class="btn-default" style="float: right; width: 60px">Архів</button>
                     </div>
                 </div>
                 <div class="col-md-1 col-md-offset-1">
-                    <button class="btn-default" style="float: right; width: 26px; padding: 0; border: none"><img
-                        src="img/exit-arrow.png" style="width: 25px">
-                    </button>
+
                 </div>
 
             </div>
@@ -321,151 +305,25 @@
                 <div class="violetarrows"
                      style="position: absolute; top: 14px; left: 430px;height: 400px; display: none;">
                     <div class="wrap">
-                        <!--<iframe class="frame" style="width: 350px;height: 350px;" src="canvas/frames.html" seamless></iframe>-->
                         <iframe class="frame" src="canvas/frames.html" seamless></iframe>
                     </div>
                 </div>
                 <div class="ggas">
                     <div class="wrap">
-                        <!--<iframe class="frame" style="width: 450px;height: 338px;" src="canvas/ggas.html" seamless></iframe>-->
                         <iframe class="frame" src="canvas/ggas.html" seamless></iframe>
                     </div>
                 </div>
                 <div class="resarrows" style="display: block; width: 110px; height: 110px">
-                    <!--<div class="wrap">-->
-                    <!--<iframe class="frame" style="width: 100px;height: 110px;" src="canvas/resarrows.html" seamless></iframe>-->
                     <iframe class="frame" src="canvas/resarrows.html" seamless></iframe>
-                    <!--</div>-->
                 </div>
 
                 <div style="height: 600px;width: 103%;margin-bottom: 20px;background-image: url('img/BG/223.png');">
-                    <!--<img src="img/BG/red.png" style="position: relative;width: 1920px;margin-top: 653px;bottom: 0px;">-->
-                    <!--<img src="img/BG/red.png" style="position: relative;width: 100%;margin-top: 700px;bottom: 0px;">-->
-                    <!--<img src="img/BG/red.png" style="position: absolute;width: 100%;bottom: 0px;">-->
                 </div>
 
 
-                <div class="row information-block" style="font-size: 2.5em">
-                    <!--<div class="col-md-4 info">-->
-                    <!--<div class="row">-->
-                    <!--&lt;!&ndash;<div class="col-md-6">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<p></p>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                    <!--</div>-->
-                    <!--<h3 style="font-size: 4.8rem; text-align: center"><span class="label label-primary">СТАН</span>-->
-                    <!--</h3>-->
-                    <!--<ul class="stan" style="list-style-type: none; font-size: 3rem">-->
-                    <!--<li>-->
-                    <!--<div class="row">-->
-                    <!--<div class="col-md-10">-->
-                    <!--<p>Ввімкн. </p>-->
-                    <!--</div>-->
-                    <!--<div class="col-md-2">-->
-                    <!--<div class="status-vvimkn" style="width: 25px; height: 25px; border: solid 1px">-->
+                <div class="row information-block bordered" style="font-size: 2.5em">
 
-                    <!--</div>-->
-                    <!--</div>-->
-
-                    <!--</div>-->
-                    <!--</li>-->
-                    <!--<li>-->
-                    <!--<div class="row">-->
-                    <!--<div class="col-md-10">-->
-                    <!--<p>Двигун </p>-->
-                    <!--</div>-->
-                    <!--<div class="col-md-2">-->
-                    <!--<div class="status-motor" style="width: 25px; height: 25px; border: solid 1px">-->
-
-                    <!--</div>-->
-                    <!--</div>-->
-
-                    <!--</div>-->
-                    <!--</li>-->
-                    <!--<li>-->
-                    <!--<div class="row">-->
-                    <!--<div class="col-md-10">-->
-                    <!--<p>Навантаження </p>-->
-                    <!--</div>-->
-                    <!--<div class="col-md-2">-->
-                    <!--<div class="status-load" style="width: 25px; height: 25px; border: solid 1px">-->
-
-                    <!--</div>-->
-                    <!--</div>-->
-
-                    <!--</div>-->
-                    <!--</li>-->
-                    <!--&lt;!&ndash; <li class="temperature"><p></p></li> &ndash;&gt;-->
-                    <!--<li class="frequency" style="width: 200%;"><p></p></li>-->
-                    <!--</ul>-->
-                    <!--</div>-->
-                    <!--<div class="col-md-4 info">-->
-                    <!--<div class="row">-->
-                    <!--&lt;!&ndash;<div class="col-md-2">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<p>м3/хв</p>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                    <!--</div>-->
-                    <!--<h3 style="font-size: 4.8rem; text-align: center"><span class="label label-danger">УВАГА</span>-->
-                    <!--</h3>-->
-                    <!--<ul class="stan" style="list-style-type: none; font-size: 3rem">-->
-                    <!--<li>-->
-                    <!--<div class="row">-->
-                    <!--<div class="col-md-10">-->
-                    <!--<p>Аварія </p>-->
-                    <!--</div>-->
-                    <!--<div class="col-md-2">-->
-                    <!--<div class="status-avaria" style="width: 25px; height: 25px; border: solid 1px">-->
-
-                    <!--</div>-->
-                    <!--</div>-->
-
-                    <!--</div>-->
-                    <!--</li>-->
-                    <!--<li>-->
-                    <!--<div class="row">-->
-                    <!--<div class="col-md-10">-->
-                    <!--<p>Попередження </p>-->
-                    <!--</div>-->
-                    <!--<div class="col-md-2">-->
-                    <!--<div class="status-poperedzhennia"-->
-                    <!--style="width: 25px; height: 25px; border: solid 1px">-->
-
-                    <!--</div>-->
-                    <!--</div>-->
-
-                    <!--</div>-->
-                    <!--</li>-->
-                    <!--<li>-->
-                    <!--<div class="row">-->
-                    <!--<div class="col-md-10">-->
-                    <!--<p>Сервіс </p>-->
-                    <!--</div>-->
-                    <!--<div class="col-md-2">-->
-                    <!--<div class="status-service"-->
-                    <!--style="width: 25px; height: 25px; border: solid 1px">-->
-
-                    <!--</div>-->
-                    <!--</div>-->
-
-                    <!--</div>-->
-                    <!--</li>-->
-                    <!--</ul>-->
-                    <!--</div>-->
-                    <!--<div class="col-md-4 info">-->
-                    <!--<div class="row">-->
-                    <!--&lt;!&ndash;<div class="col-md-2">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<p class="pressure"></p>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                    <!--&lt;!&ndash; <div class="col-md-12" style="text-align: center">-->
-                    <!--<p class="running-hrs"></p>-->
-                    <!--</div> &ndash;&gt;-->
-                    <!--</div>-->
-                    <!--<h3 style="font-size: 4.8rem; text-align: center"><span-->
-                    <!--class="label label-default">НАПРАЦЮВАННЯ</span></h3>-->
-                    <!--<div class='jqxChart' style="width: 380px; height: 300px;font-size: 2.8rem; margin-left: 10%">-->
-                    <!--</div>-->
-                    <!--</div>-->
-
-                    <div class="col-md-8">
+                    <div class="col-md-6" style="border-right: solid 1px black">
                         <p>Годин роботи <input type="text" class="running-hours bg-input" value=""
                                                style="float: right;width: 100px"></p>
                         <p>Годин під навантаженням<input type="text" class="loaded-hours bg-input" value=""
@@ -475,24 +333,21 @@
 
                         <h3 style="font-size: 4.8rem; text-align: center"><span
                             class="label label-default">НАПРАЦЮВАННЯ</span></h3>
-                        <div class='jqxChart' style="width: 420px; height: 300px;font-size: 2.8rem; margin-left: 25%">
+                        <div class='jqxChart' style="width: 420px; height: 300px;font-size: 2.8rem; margin-left: 15%">
                         </div>
                     </div>
-                    <div class="col-md-4" style="text-align: center">
+                    <div class="col-md-6" style="text-align: center">
                         <h3 style="font-size: 4.8rem"><span
                             class="label label-default">СТАН</span></h3>
                         <p class="status-load"></p>
-                        <h3 style="font-size: 4.8rem"><span
+                        <h3 style="font-size: 4.8rem; border-top: solid 1px black; padding-top: 65px"><span
                             class="label label-default">ТРЕВОГИ</span></h3>
                         <p class="status-avaria"></p>
                         <br>
-                        <div class="row">
-                            <button class="btn-default">Графік</button>
-                        </div>
-                        <div class="row">
-                            <button class="btn-default">Архів</button>
-                        </div>
-                        <div class="row">
+                        <div style="border-top: solid 1px black; padding-top: 45px">
+
+                            <button class="btn-default" style="margin-right: 10px">Графік</button>
+                            <button class="btn-default" style="margin-right: 10px">Архів</button>
                             <button class="btn-default">Статистика</button>
                         </div>
                     </div>
@@ -507,22 +362,18 @@
                     <div class="indicatorValue">
                         <p>0</p>
                     </div>
-                    <div class="info-scheme" style="text-align: left">
-                        <!--<p class="temperature bg-primary"></p>-->
-                        <!--<p class="pressure bg-primary"></p>-->
-                        <!--<p class="volume bg-primary"></p>-->
-                        <p>Температура масла °C <input type="text" class="temperature bg-input" value=""
+                    <div class="info-scheme" style="text-align: left; top: 480px;">
+                        <p class="bordered">Температура масла °C <input type="text" class="temperature bg-input" value=""
                                                        style="float: right;width: 100px"></p>
-                        <p>Тиск бар <input type="text" class="pressure bg-input" value=""
+                        <p class="bordered">Тиск бар <input type="text" class="pressure bg-input" value=""
                                            style="float: right;width: 100px"></p>
-                        <p>Продуктивність м³/хв <input type="text" class="volume bg-input" value=""
+                        <p class="bordered">Продуктивність м³/хв <input type="text" class="volume bg-input" value=""
                                                        style="float: right;width: 100px"></p>
 
                     </div>
-                    <button class="btn-default" style="position: absolute;top: 200px; left: 1150px; border: none"><img
+                    <button class="btn-default" style="position: absolute;top: 270px; left: 1200px; border: none"><img
                         src="img/exit-arrow.png" style="width: 75px"></button>
                 </div>
-                <!--<button class="btn-default" style="position: absolute;top: -140px; left: 550px"><img src="img/exit-arrow.png" style="width: 25px"> </button>-->
             </div>
         </div>
 
@@ -675,151 +526,25 @@
                 <div class="violetarrows"
                      style="position: absolute; top: 14px; left: 430px;height: 400px; display: none;">
                     <div class="wrap">
-                        <!--<iframe class="frame" style="width: 350px;height: 350px;" src="canvas/frames.html" seamless></iframe>-->
                         <iframe class="frame" src="canvas/frames.html" seamless></iframe>
                     </div>
                 </div>
                 <div class="ggas">
                     <div class="wrap">
-                        <!--<iframe class="frame" style="width: 450px;height: 338px;" src="canvas/ggas.html" seamless></iframe>-->
                         <iframe class="frame" src="canvas/ggas.html" seamless></iframe>
                     </div>
                 </div>
                 <div class="resarrows" style="display: block; width: 110px; height: 110px">
-                    <!--<div class="wrap">-->
-                    <!--<iframe class="frame" style="width: 100px;height: 110px;" src="canvas/resarrows.html" seamless></iframe>-->
                     <iframe class="frame" src="canvas/resarrows.html" seamless></iframe>
-                    <!--</div>-->
                 </div>
 
                 <div style="height: 600px;width: 103%;margin-bottom: 20px;background-image: url('img/BG/223.png');">
-                    <!--<img src="img/BG/red.png" style="position: relative;width: 1920px;margin-top: 653px;bottom: 0px;">-->
-                    <!--<img src="img/BG/red.png" style="position: relative;width: 100%;margin-top: 700px;bottom: 0px;">-->
-                    <!--<img src="img/BG/red.png" style="position: absolute;width: 100%;bottom: 0px;">-->
                 </div>
 
 
-                <div class="row information-block" style="font-size: 2.5em">
-                    <!--<div class="col-md-4 info">-->
-                    <!--<div class="row">-->
-                    <!--&lt;!&ndash;<div class="col-md-6">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<p></p>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                    <!--</div>-->
-                    <!--<h3 style="font-size: 4.8rem; text-align: center"><span class="label label-primary">СТАН</span>-->
-                    <!--</h3>-->
-                    <!--<ul class="stan" style="list-style-type: none; font-size: 3rem">-->
-                    <!--<li>-->
-                    <!--<div class="row">-->
-                    <!--<div class="col-md-10">-->
-                    <!--<p>Ввімкн. </p>-->
-                    <!--</div>-->
-                    <!--<div class="col-md-2">-->
-                    <!--<div class="status-vvimkn" style="width: 25px; height: 25px; border: solid 1px">-->
+                <div class="row information-block bordered" style="font-size: 2.5em">
 
-                    <!--</div>-->
-                    <!--</div>-->
-
-                    <!--</div>-->
-                    <!--</li>-->
-                    <!--<li>-->
-                    <!--<div class="row">-->
-                    <!--<div class="col-md-10">-->
-                    <!--<p>Двигун </p>-->
-                    <!--</div>-->
-                    <!--<div class="col-md-2">-->
-                    <!--<div class="status-motor" style="width: 25px; height: 25px; border: solid 1px">-->
-
-                    <!--</div>-->
-                    <!--</div>-->
-
-                    <!--</div>-->
-                    <!--</li>-->
-                    <!--<li>-->
-                    <!--<div class="row">-->
-                    <!--<div class="col-md-10">-->
-                    <!--<p>Навантаження </p>-->
-                    <!--</div>-->
-                    <!--<div class="col-md-2">-->
-                    <!--<div class="status-load" style="width: 25px; height: 25px; border: solid 1px">-->
-
-                    <!--</div>-->
-                    <!--</div>-->
-
-                    <!--</div>-->
-                    <!--</li>-->
-                    <!--&lt;!&ndash; <li class="temperature"><p></p></li> &ndash;&gt;-->
-                    <!--<li class="frequency" style="width: 200%;"><p></p></li>-->
-                    <!--</ul>-->
-                    <!--</div>-->
-                    <!--<div class="col-md-4 info">-->
-                    <!--<div class="row">-->
-                    <!--&lt;!&ndash;<div class="col-md-2">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<p>м3/хв</p>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                    <!--</div>-->
-                    <!--<h3 style="font-size: 4.8rem; text-align: center"><span class="label label-danger">УВАГА</span>-->
-                    <!--</h3>-->
-                    <!--<ul class="stan" style="list-style-type: none; font-size: 3rem">-->
-                    <!--<li>-->
-                    <!--<div class="row">-->
-                    <!--<div class="col-md-10">-->
-                    <!--<p>Аварія </p>-->
-                    <!--</div>-->
-                    <!--<div class="col-md-2">-->
-                    <!--<div class="status-avaria" style="width: 25px; height: 25px; border: solid 1px">-->
-
-                    <!--</div>-->
-                    <!--</div>-->
-
-                    <!--</div>-->
-                    <!--</li>-->
-                    <!--<li>-->
-                    <!--<div class="row">-->
-                    <!--<div class="col-md-10">-->
-                    <!--<p>Попередження </p>-->
-                    <!--</div>-->
-                    <!--<div class="col-md-2">-->
-                    <!--<div class="status-poperedzhennia"-->
-                    <!--style="width: 25px; height: 25px; border: solid 1px">-->
-
-                    <!--</div>-->
-                    <!--</div>-->
-
-                    <!--</div>-->
-                    <!--</li>-->
-                    <!--<li>-->
-                    <!--<div class="row">-->
-                    <!--<div class="col-md-10">-->
-                    <!--<p>Сервіс </p>-->
-                    <!--</div>-->
-                    <!--<div class="col-md-2">-->
-                    <!--<div class="status-service"-->
-                    <!--style="width: 25px; height: 25px; border: solid 1px">-->
-
-                    <!--</div>-->
-                    <!--</div>-->
-
-                    <!--</div>-->
-                    <!--</li>-->
-                    <!--</ul>-->
-                    <!--</div>-->
-                    <!--<div class="col-md-4 info">-->
-                    <!--<div class="row">-->
-                    <!--&lt;!&ndash;<div class="col-md-2">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<p class="pressure"></p>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                    <!--&lt;!&ndash; <div class="col-md-12" style="text-align: center">-->
-                    <!--<p class="running-hrs"></p>-->
-                    <!--</div> &ndash;&gt;-->
-                    <!--</div>-->
-                    <!--<h3 style="font-size: 4.8rem; text-align: center"><span-->
-                    <!--class="label label-default">НАПРАЦЮВАННЯ</span></h3>-->
-                    <!--<div class='jqxChart' style="width: 380px; height: 300px;font-size: 2.8rem; margin-left: 10%">-->
-                    <!--</div>-->
-                    <!--</div>-->
-
-                    <div class="col-md-8">
+                    <div class="col-md-6" style="border-right: solid 1px black">
                         <p>Годин роботи <input type="text" class="running-hours bg-input" value=""
                                                style="float: right;width: 100px"></p>
                         <p>Годин під навантаженням<input type="text" class="loaded-hours bg-input" value=""
@@ -829,24 +554,21 @@
 
                         <h3 style="font-size: 4.8rem; text-align: center"><span
                             class="label label-default">НАПРАЦЮВАННЯ</span></h3>
-                        <div class='jqxChart' style="width: 420px; height: 300px;font-size: 2.8rem; margin-left: 25%">
+                        <div class='jqxChart' style="width: 420px; height: 300px;font-size: 2.8rem; margin-left: 15%">
                         </div>
                     </div>
-                    <div class="col-md-4" style="text-align: center">
+                    <div class="col-md-6" style="text-align: center">
                         <h3 style="font-size: 4.8rem"><span
                             class="label label-default">СТАН</span></h3>
                         <p class="status-load"></p>
-                        <h3 style="font-size: 4.8rem"><span
+                        <h3 style="font-size: 4.8rem; border-top: solid 1px black; padding-top: 65px"><span
                             class="label label-default">ТРЕВОГИ</span></h3>
                         <p class="status-avaria"></p>
                         <br>
-                        <div class="row">
-                            <button class="btn-default">Графік</button>
-                        </div>
-                        <div class="row">
-                            <button class="btn-default">Архів</button>
-                        </div>
-                        <div class="row">
+                        <div style="border-top: solid 1px black; padding-top: 45px">
+
+                            <button class="btn-default" style="margin-right: 10px">Графік</button>
+                            <button class="btn-default" style="margin-right: 10px">Архів</button>
                             <button class="btn-default">Статистика</button>
                         </div>
                     </div>
@@ -861,325 +583,19 @@
                     <div class="indicatorValue">
                         <p>0</p>
                     </div>
-                    <div class="info-scheme" style="text-align: left">
-                        <!--<p class="temperature bg-primary"></p>-->
-                        <!--<p class="pressure bg-primary"></p>-->
-                        <!--<p class="volume bg-primary"></p>-->
-                        <p>Температура масла °C <input type="text" class="temperature bg-input" value=""
-                                                       style="float: right;width: 100px"></p>
-                        <p>Тиск бар <input type="text" class="pressure bg-input" value=""
-                                           style="float: right;width: 100px"></p>
-                        <p>Продуктивність м³/хв <input type="text" class="volume bg-input" value=""
-                                                       style="float: right;width: 100px"></p>
+                    <div class="info-scheme" style="text-align: left; top: 480px;">
+                        <p class="bordered">Температура масла °C <input type="text" class="temperature bg-input" value=""
+                                                                        style="float: right;width: 100px"></p>
+                        <p class="bordered">Тиск бар <input type="text" class="pressure bg-input" value=""
+                                                            style="float: right;width: 100px"></p>
+                        <p class="bordered">Продуктивність м³/хв <input type="text" class="volume bg-input" value=""
+                                                                        style="float: right;width: 100px"></p>
 
                     </div>
-                    <button class="btn-default" style="position: absolute;top: 200px; left: 1150px; border: none"><img
+                    <button class="btn-default" style="position: absolute;top: 270px; left: 1200px; border: none"><img
                         src="img/exit-arrow.png" style="width: 75px"></button>
                 </div>
-                <!--<button class="btn-default" style="position: absolute;top: -140px; left: 550px"><img src="img/exit-arrow.png" style="width: 25px"> </button>-->
             </div>
-
-            <!--<div id="2" class="compressor-block" style="zoom: 50%;">-->
-            <!--<div class="engine">-->
-            <!--<img src="img/gif/engine.gif">-->
-            <!--</div>-->
-            <!--<div class="engine_dis">-->
-            <!--<img src="img/EngineWithGreenThing/1.png">-->
-            <!--</div>-->
-
-            <!--<div class="liquid">-->
-            <!--<img src="img/gif/liq.gif">-->
-            <!--</div>-->
-            <!--<div class="liquid_dis">-->
-            <!--<img src="img/Liquid/Image%20456.png">-->
-            <!--</div>-->
-
-            <!--<div class="airarrows">-->
-            <!--<img src="img/gif/airarrows.gif">-->
-            <!--</div>-->
-
-            <!--<div class="oilpipebig">-->
-            <!--<img src="img/gif/oilpipebig.gif">-->
-            <!--</div>-->
-            <!--<div class="oilpipebig_dis">-->
-            <!--<img src="img/OilPipeBig/1.png">-->
-            <!--</div>-->
-
-            <!--<div class="oilpipefromsep">-->
-            <!--<img src="img/gif/oilpipefromsep.gif">-->
-            <!--</div>-->
-            <!--<div class="oilpipefromsep_dis">-->
-            <!--<img src="img/OilPipeFromSep/1.png">-->
-            <!--</div>-->
-
-            <!--<div class="oilpipefromadaptertoengine">-->
-            <!--<img src="img/gif/oilpipefromadaptertoengine.gif">-->
-            <!--</div>-->
-            <!--<div class="oilpipefromadaptertoengine_dis">-->
-            <!--<img src="img/OilPipeFromAdapterToEngine/1.png">-->
-            <!--</div>-->
-
-            <!--<div class="smallgreenpipe">-->
-            <!--<img src="img/gif/smallgreenpipe.gif">-->
-            <!--</div>-->
-            <!--<div class="smallgreenpipe_dis">-->
-            <!--<img src="img/568.png">-->
-            <!--</div>-->
-
-            <!--<div class="airvalvespring">-->
-            <!--<img src="img/gif/airvalvespring_rev.gif">-->
-            <!--</div>-->
-
-            <!--<div class="solenoidvalve">-->
-            <!--<img src="img/gif/solenoidvalve_rev.gif">-->
-            <!--</div>-->
-
-            <!--<div class="solenoidvalveblowdown">-->
-            <!--<img src="img/gif/solenoidvalveblowdown.gif">-->
-            <!--</div>-->
-
-            <!--<div class="airvalvespringsmall">-->
-            <!--<img src="img/gif/airvalvespringsmall.gif">-->
-            <!--</div>-->
-
-            <!--<div class="sepspring">-->
-            <!--<img src="img/gif/sepspring_rev.gif">-->
-            <!--</div>-->
-
-            <!--<div class="enginespring">-->
-            <!--<img src="img/gif/enginespring.gif">-->
-            <!--</div>-->
-
-            <!--<div class="violetarrowssmall">-->
-            <!--<img src="img/gif/violetarrows.gif">-->
-            <!--</div>-->
-
-            <!--<div class="violetarrowssmall2_">-->
-            <!--<img src="img/gif/violetarrows.gif">-->
-            <!--</div>-->
-
-            <!--<div class="violetarrowssmall3_">-->
-            <!--<img src="img/gif/violetarrows.gif">-->
-            <!--</div>-->
-
-            <!--<div class="violetpipe2_">-->
-            <!--<img src="img/gif/violetpipe2_rev.gif">-->
-            <!--</div>-->
-
-            <!--<div class="violetpipe1_">-->
-            <!--<img src="img/gif/violetpipe1_rev.gif">-->
-            <!--</div>-->
-
-            <!--<div class="violetpipe3_">-->
-            <!--<img src="img/gif/violetpipe3_rev.gif">-->
-            <!--</div>-->
-
-            <!--<div style="position: absolute; top:205px; left:720px"><img-->
-            <!--style="margin:0;padding:0;border:0px;width:180px;height:309px;" src="img/4.png">-->
-            <!--</div>-->
-            <!--<div style="position: absolute; top:223px; left:369px"-->
-            <!--&gt;<img style="margin:0;padding:0;border:0px;width:171px;height:200px;"-->
-            <!--src="img/310.png">-->
-            <!--</div>-->
-            <!--<div style="position: absolute; top:137px; left:302px"-->
-            <!--&gt;<img style="margin:0;padding:0;border:0px;width:173px;height:163px;"-->
-            <!--src="img/1.png">-->
-            <!--</div>-->
-            <!--<div style="position: absolute; top:101px; left:453px"-->
-            <!--&gt;<img style="margin:0;padding:0;border:0px;width:126px;height:106px;"-->
-            <!--src="img/Image%20289.png">-->
-            <!--</div>-->
-
-            <!--<div style="position: absolute; top:56px; left:185px;z-index: 0"-->
-            <!--&gt;<img style="margin:0;padding:0;border:0px;width:655px;height:40px;"-->
-            <!--src="img/566.png">-->
-            <!--</div>-->
-            <!--<div style="position: absolute; top:544px; left:246px;z-index: 6;"-->
-            <!--&gt;<img style="margin:0;padding:0;border:0px;width:17px;height:15px;"-->
-            <!--src="img/692.png">-->
-            <!--</div>-->
-
-            <!--<div style="position: absolute; top:328px; left:471px;"-->
-            <!--&gt;<img style="margin:0;padding:0;border:0px;width:50px;height:15px;"-->
-            <!--src="img/2.png">-->
-            <!--</div>-->
-            <!--<div style="position: absolute; top:232px; left:421px;"-->
-            <!--&gt;<img style="margin:0;padding:0;border:0px;width:52px;height:181px;"-->
-            <!--src="img/3.png">-->
-            <!--</div>-->
-            <!--<div style="position: absolute; top:62px; left:648px;"-->
-            <!--&gt;<img style="margin:0;padding:0;border:0px;width:251px;height:183px;"-->
-            <!--src="img/577.png">-->
-            <!--</div>-->
-
-            <!--<div style="position: absolute; top:275px; left:472px;"-->
-            <!--&gt;<img style="margin:0;padding:0;border:0px;width:303px;height:140px;"-->
-            <!--src="img/568.png">-->
-            <!--</div>-->
-
-            <!--<div style="position: absolute; top:240px; left:499px;"-->
-            <!--&gt;<img style="margin:0;padding:0;border:0px;width:325px;height:195px;"-->
-            <!--src="img/962.png">-->
-            <!--</div>-->
-
-
-            <!--<div class="violetarrows" style="position: absolute; top: 14px; left: 600px;display: none;">-->
-            <!--<div class="wrap">-->
-            <!--&lt;!&ndash;<iframe class="frame" style="width: 350px;height: 350px;" src="canvas/frames.html" seamless></iframe>&ndash;&gt;-->
-            <!--<iframe class="frame" src="canvas/frames.html" seamless></iframe>-->
-            <!--</div>-->
-            <!--</div>-->
-            <!--<div class="ggas">-->
-            <!--<div class="wrap">-->
-            <!--&lt;!&ndash;<iframe class="frame" style="width: 450px;height: 338px;" src="canvas/ggas.html" seamless></iframe>&ndash;&gt;-->
-            <!--<iframe class="frame" src="canvas/ggas.html" seamless></iframe>-->
-            <!--</div>-->
-            <!--</div>-->
-            <!--<div class="resarrows" style="display: block; width: 110px; height: 110px">-->
-            <!--&lt;!&ndash;<div class="wrap">&ndash;&gt;-->
-            <!--&lt;!&ndash;<iframe class="frame" style="width: 100px;height: 110px;" src="canvas/resarrows.html" seamless></iframe>&ndash;&gt;-->
-            <!--<iframe class="frame" src="canvas/resarrows.html" seamless></iframe>-->
-            <!--&lt;!&ndash;</div>&ndash;&gt;-->
-            <!--</div>-->
-
-            <!--<div style="height: 600px;width: 103%;margin-bottom: 20px;background-image: url('img/BG/223.png');">-->
-            <!--&lt;!&ndash;<img src="img/BG/red.png" style="position: relative;width: 1920px;margin-top: 653px;bottom: 0px;">&ndash;&gt;-->
-            <!--&lt;!&ndash;<img src="img/BG/red.png" style="position: relative;width: 100%;margin-top: 700px;bottom: 0px;">&ndash;&gt;-->
-            <!--&lt;!&ndash;<img src="img/BG/red.png" style="position: absolute;width: 100%;bottom: 0px;">&ndash;&gt;-->
-            <!--</div>-->
-
-            <!--<div class="row information-block" style="font-size: 2.5em">-->
-            <!--<div class="col-md-4 info">-->
-            <!--<div class="row">-->
-            <!--&lt;!&ndash;<div class="col-md-6">&ndash;&gt;-->
-            <!--&lt;!&ndash;<p></p>&ndash;&gt;-->
-            <!--&lt;!&ndash;</div>&ndash;&gt;-->
-            <!--</div>-->
-            <!--<h3 style="font-size: 4.8rem; text-align: center"><span class="label label-primary">СТАН</span></h3>-->
-            <!--<ul class="stan" style="list-style-type: none; font-size: 3rem">-->
-            <!--<li>-->
-            <!--<div class="row">-->
-            <!--<div class="col-md-10">-->
-            <!--<p>Ввімкн. </p>-->
-            <!--</div>-->
-            <!--<div class="col-md-2">-->
-            <!--<div class="status-vvimkn" style="width: 25px; height: 25px; border: solid 1px">-->
-
-            <!--</div>-->
-            <!--</div>-->
-
-            <!--</div>-->
-            <!--</li>-->
-            <!--<li>-->
-            <!--<div class="row">-->
-            <!--<div class="col-md-10">-->
-            <!--<p>Двигун </p>-->
-            <!--</div>-->
-            <!--<div class="col-md-2">-->
-            <!--<div class="status-motor" style="width: 25px; height: 25px; border: solid 1px">-->
-
-            <!--</div>-->
-            <!--</div>-->
-
-            <!--</div>-->
-            <!--</li>-->
-            <!--<li>-->
-            <!--<div class="row">-->
-            <!--<div class="col-md-10">-->
-            <!--<p>Навантаження </p>-->
-            <!--</div>-->
-            <!--<div class="col-md-2">-->
-            <!--<div class="status-load" style="width: 25px; height: 25px; border: solid 1px">-->
-
-            <!--</div>-->
-            <!--</div>-->
-
-            <!--</div>-->
-            <!--</li>-->
-            <!--&lt;!&ndash; <li class="temperature"><p></p></li> &ndash;&gt;-->
-            <!--</ul>-->
-            <!--</div>-->
-            <!--<div class="col-md-4 info">-->
-            <!--<div class="row">-->
-            <!--&lt;!&ndash;<div class="col-md-2">&ndash;&gt;-->
-            <!--&lt;!&ndash;<p>м3/хв</p>&ndash;&gt;-->
-            <!--&lt;!&ndash;</div>&ndash;&gt;-->
-            <!--</div>-->
-            <!--<h3 style="font-size: 4.8rem; text-align: center"><span class="label label-danger">УВАГА</span></h3>-->
-            <!--<ul class="stan" style="list-style-type: none; font-size: 3rem">-->
-            <!--<li>-->
-            <!--<div class="row">-->
-            <!--<div class="col-md-10">-->
-            <!--<p>Аварія </p>-->
-            <!--</div>-->
-            <!--<div class="col-md-2">-->
-            <!--<div class="status-avaria" style="width: 25px; height: 25px; border: solid 1px">-->
-
-            <!--</div>-->
-            <!--</div>-->
-
-            <!--</div>-->
-            <!--</li>-->
-            <!--<li>-->
-            <!--<div class="row">-->
-            <!--<div class="col-md-10">-->
-            <!--<p>Попередження </p>-->
-            <!--</div>-->
-            <!--<div class="col-md-2">-->
-            <!--<div class="status-poperedzhennia"-->
-            <!--style="width: 25px; height: 25px; border: solid 1px">-->
-
-            <!--</div>-->
-            <!--</div>-->
-
-            <!--</div>-->
-            <!--</li>-->
-            <!--<li>-->
-            <!--<div class="row">-->
-            <!--<div class="col-md-10">-->
-            <!--<p>Сервіс </p>-->
-            <!--</div>-->
-            <!--<div class="col-md-2">-->
-            <!--<div class="status-service"-->
-            <!--style="width: 25px; height: 25px; border: solid 1px">-->
-
-            <!--</div>-->
-            <!--</div>-->
-
-            <!--</div>-->
-            <!--</li>-->
-            <!--</ul>-->
-            <!--</div>-->
-            <!--<div class="col-md-4 info">-->
-            <!--<div class="row">-->
-            <!--&lt;!&ndash;<div class="col-md-2">&ndash;&gt;-->
-            <!--&lt;!&ndash;<p class="pressure"></p>&ndash;&gt;-->
-            <!--&lt;!&ndash;</div>&ndash;&gt;-->
-            <!--&lt;!&ndash; <div class="col-md-12" style="text-align: center">-->
-            <!--<p class="running-hrs"></p>-->
-            <!--</div> &ndash;&gt;-->
-            <!--</div>-->
-            <!--<h3 style="font-size: 4.8rem; text-align: center"><span class="label label-default">НАПРАЦЮВАННЯ</span></h3>-->
-            <!--<div class='jqxChart' style="width: 380px; height: 300px;font-size: 2.8rem; margin-left: 10%">-->
-            <!--</div>-->
-            <!--</div>-->
-            <!--</div>-->
-
-
-            <!--<div style="position: absolute;top: -140px; left: -90px">-->
-            <!--<div class="indicatorcontainer"-->
-            <!--style="position:absolute;top: 150px;left: 979px;width: 100px;height: 100px;">-->
-            <!--</div>-->
-            <!--<div class="indicatorValue">-->
-            <!--<p>0</p>-->
-            <!--</div>-->
-            <!--<div class="info-scheme">-->
-            <!--<p class="temperature bg-primary"></p>-->
-            <!--<p class="pressure bg-primary"></p>-->
-            <!--<p class="volume bg-primary"></p>-->
-            <!--</div>-->
-            <!--</div>-->
-            <!--</div>-->
         </div>
 
         <div class="col-md-4">
@@ -1331,151 +747,25 @@
                 <div class="violetarrows"
                      style="position: absolute; top: 14px; left: 430px;height: 400px; display: none;">
                     <div class="wrap">
-                        <!--<iframe class="frame" style="width: 350px;height: 350px;" src="canvas/frames.html" seamless></iframe>-->
                         <iframe class="frame" src="canvas/frames.html" seamless></iframe>
                     </div>
                 </div>
                 <div class="ggas">
                     <div class="wrap">
-                        <!--<iframe class="frame" style="width: 450px;height: 338px;" src="canvas/ggas.html" seamless></iframe>-->
                         <iframe class="frame" src="canvas/ggas.html" seamless></iframe>
                     </div>
                 </div>
                 <div class="resarrows" style="display: block; width: 110px; height: 110px">
-                    <!--<div class="wrap">-->
-                    <!--<iframe class="frame" style="width: 100px;height: 110px;" src="canvas/resarrows.html" seamless></iframe>-->
                     <iframe class="frame" src="canvas/resarrows.html" seamless></iframe>
-                    <!--</div>-->
                 </div>
 
                 <div style="height: 600px;width: 103%;margin-bottom: 20px;background-image: url('img/BG/223.png');">
-                    <!--<img src="img/BG/red.png" style="position: relative;width: 1920px;margin-top: 653px;bottom: 0px;">-->
-                    <!--<img src="img/BG/red.png" style="position: relative;width: 100%;margin-top: 700px;bottom: 0px;">-->
-                    <!--<img src="img/BG/red.png" style="position: absolute;width: 100%;bottom: 0px;">-->
                 </div>
 
 
-                <div class="row information-block" style="font-size: 2.5em">
-                    <!--<div class="col-md-4 info">-->
-                    <!--<div class="row">-->
-                    <!--&lt;!&ndash;<div class="col-md-6">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<p></p>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                    <!--</div>-->
-                    <!--<h3 style="font-size: 4.8rem; text-align: center"><span class="label label-primary">СТАН</span>-->
-                    <!--</h3>-->
-                    <!--<ul class="stan" style="list-style-type: none; font-size: 3rem">-->
-                    <!--<li>-->
-                    <!--<div class="row">-->
-                    <!--<div class="col-md-10">-->
-                    <!--<p>Ввімкн. </p>-->
-                    <!--</div>-->
-                    <!--<div class="col-md-2">-->
-                    <!--<div class="status-vvimkn" style="width: 25px; height: 25px; border: solid 1px">-->
+                <div class="row information-block bordered" style="font-size: 2.5em">
 
-                    <!--</div>-->
-                    <!--</div>-->
-
-                    <!--</div>-->
-                    <!--</li>-->
-                    <!--<li>-->
-                    <!--<div class="row">-->
-                    <!--<div class="col-md-10">-->
-                    <!--<p>Двигун </p>-->
-                    <!--</div>-->
-                    <!--<div class="col-md-2">-->
-                    <!--<div class="status-motor" style="width: 25px; height: 25px; border: solid 1px">-->
-
-                    <!--</div>-->
-                    <!--</div>-->
-
-                    <!--</div>-->
-                    <!--</li>-->
-                    <!--<li>-->
-                    <!--<div class="row">-->
-                    <!--<div class="col-md-10">-->
-                    <!--<p>Навантаження </p>-->
-                    <!--</div>-->
-                    <!--<div class="col-md-2">-->
-                    <!--<div class="status-load" style="width: 25px; height: 25px; border: solid 1px">-->
-
-                    <!--</div>-->
-                    <!--</div>-->
-
-                    <!--</div>-->
-                    <!--</li>-->
-                    <!--&lt;!&ndash; <li class="temperature"><p></p></li> &ndash;&gt;-->
-                    <!--<li class="frequency" style="width: 200%;"><p></p></li>-->
-                    <!--</ul>-->
-                    <!--</div>-->
-                    <!--<div class="col-md-4 info">-->
-                    <!--<div class="row">-->
-                    <!--&lt;!&ndash;<div class="col-md-2">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<p>м3/хв</p>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                    <!--</div>-->
-                    <!--<h3 style="font-size: 4.8rem; text-align: center"><span class="label label-danger">УВАГА</span>-->
-                    <!--</h3>-->
-                    <!--<ul class="stan" style="list-style-type: none; font-size: 3rem">-->
-                    <!--<li>-->
-                    <!--<div class="row">-->
-                    <!--<div class="col-md-10">-->
-                    <!--<p>Аварія </p>-->
-                    <!--</div>-->
-                    <!--<div class="col-md-2">-->
-                    <!--<div class="status-avaria" style="width: 25px; height: 25px; border: solid 1px">-->
-
-                    <!--</div>-->
-                    <!--</div>-->
-
-                    <!--</div>-->
-                    <!--</li>-->
-                    <!--<li>-->
-                    <!--<div class="row">-->
-                    <!--<div class="col-md-10">-->
-                    <!--<p>Попередження </p>-->
-                    <!--</div>-->
-                    <!--<div class="col-md-2">-->
-                    <!--<div class="status-poperedzhennia"-->
-                    <!--style="width: 25px; height: 25px; border: solid 1px">-->
-
-                    <!--</div>-->
-                    <!--</div>-->
-
-                    <!--</div>-->
-                    <!--</li>-->
-                    <!--<li>-->
-                    <!--<div class="row">-->
-                    <!--<div class="col-md-10">-->
-                    <!--<p>Сервіс </p>-->
-                    <!--</div>-->
-                    <!--<div class="col-md-2">-->
-                    <!--<div class="status-service"-->
-                    <!--style="width: 25px; height: 25px; border: solid 1px">-->
-
-                    <!--</div>-->
-                    <!--</div>-->
-
-                    <!--</div>-->
-                    <!--</li>-->
-                    <!--</ul>-->
-                    <!--</div>-->
-                    <!--<div class="col-md-4 info">-->
-                    <!--<div class="row">-->
-                    <!--&lt;!&ndash;<div class="col-md-2">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<p class="pressure"></p>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                    <!--&lt;!&ndash; <div class="col-md-12" style="text-align: center">-->
-                    <!--<p class="running-hrs"></p>-->
-                    <!--</div> &ndash;&gt;-->
-                    <!--</div>-->
-                    <!--<h3 style="font-size: 4.8rem; text-align: center"><span-->
-                    <!--class="label label-default">НАПРАЦЮВАННЯ</span></h3>-->
-                    <!--<div class='jqxChart' style="width: 380px; height: 300px;font-size: 2.8rem; margin-left: 10%">-->
-                    <!--</div>-->
-                    <!--</div>-->
-
-                    <div class="col-md-8">
+                    <div class="col-md-6" style="border-right: solid 1px black">
                         <p>Годин роботи <input type="text" class="running-hours bg-input" value=""
                                                style="float: right;width: 100px"></p>
                         <p>Годин під навантаженням<input type="text" class="loaded-hours bg-input" value=""
@@ -1485,24 +775,21 @@
 
                         <h3 style="font-size: 4.8rem; text-align: center"><span
                             class="label label-default">НАПРАЦЮВАННЯ</span></h3>
-                        <div class='jqxChart' style="width: 420px; height: 300px;font-size: 2.8rem; margin-left: 25%">
+                        <div class='jqxChart' style="width: 420px; height: 300px;font-size: 2.8rem; margin-left: 15%">
                         </div>
                     </div>
-                    <div class="col-md-4" style="text-align: center">
+                    <div class="col-md-6" style="text-align: center">
                         <h3 style="font-size: 4.8rem"><span
                             class="label label-default">СТАН</span></h3>
                         <p class="status-load"></p>
-                        <h3 style="font-size: 4.8rem"><span
+                        <h3 style="font-size: 4.8rem; border-top: solid 1px black; padding-top: 65px"><span
                             class="label label-default">ТРЕВОГИ</span></h3>
                         <p class="status-avaria"></p>
                         <br>
-                        <div class="row">
-                            <button class="btn-default">Графік</button>
-                        </div>
-                        <div class="row">
-                            <button class="btn-default">Архів</button>
-                        </div>
-                        <div class="row">
+                        <div style="border-top: solid 1px black; padding-top: 45px">
+
+                            <button class="btn-default" style="margin-right: 10px">Графік</button>
+                            <button class="btn-default" style="margin-right: 10px">Архів</button>
                             <button class="btn-default">Статистика</button>
                         </div>
                     </div>
@@ -1517,338 +804,28 @@
                     <div class="indicatorValue">
                         <p>0</p>
                     </div>
-                    <div class="info-scheme" style="text-align: left">
-                        <!--<p class="temperature bg-primary"></p>-->
-                        <!--<p class="pressure bg-primary"></p>-->
-                        <!--<p class="volume bg-primary"></p>-->
-                        <p>Температура масла °C <input type="text" class="temperature bg-input" value=""
-                                                       style="float: right;width: 100px"></p>
-                        <p>Тиск бар <input type="text" class="pressure bg-input" value=""
-                                           style="float: right;width: 100px"></p>
-                        <p>Продуктивність м³/хв <input type="text" class="volume bg-input" value=""
-                                                       style="float: right;width: 100px"></p>
+                    <div class="info-scheme" style="text-align: left; top: 480px;">
+                        <p class="bordered">Температура масла °C <input type="text" class="temperature bg-input" value=""
+                                                                        style="float: right;width: 100px"></p>
+                        <p class="bordered">Тиск бар <input type="text" class="pressure bg-input" value=""
+                                                            style="float: right;width: 100px"></p>
+                        <p class="bordered">Продуктивність м³/хв <input type="text" class="volume bg-input" value=""
+                                                                        style="float: right;width: 100px"></p>
 
                     </div>
-                    <button class="btn-default" style="position: absolute;top: 200px; left: 1150px; border: none"><img
+                    <button class="btn-default" style="position: absolute;top: 270px; left: 1200px; border: none"><img
                         src="img/exit-arrow.png" style="width: 75px"></button>
                 </div>
-                <!--<button class="btn-default" style="position: absolute;top: -140px; left: 550px"><img src="img/exit-arrow.png" style="width: 25px"> </button>-->
             </div>
-
-            <!--<div id="3" class="compressor-block" style="zoom: 50%;">-->
-            <!--<div class="engine">-->
-            <!--<img src="img/gif/engine.gif">-->
-            <!--</div>-->
-            <!--<div class="engine_dis">-->
-            <!--<img src="img/EngineWithGreenThing/1.png">-->
-            <!--</div>-->
-
-            <!--<div class="liquid">-->
-            <!--<img src="img/gif/liq.gif">-->
-            <!--</div>-->
-            <!--<div class="liquid_dis">-->
-            <!--<img src="img/Liquid/Image%20456.png">-->
-            <!--</div>-->
-
-            <!--<div class="airarrows">-->
-            <!--<img src="img/gif/airarrows.gif">-->
-            <!--</div>-->
-
-            <!--<div class="oilpipebig">-->
-            <!--<img src="img/gif/oilpipebig.gif">-->
-            <!--</div>-->
-            <!--<div class="oilpipebig_dis">-->
-            <!--<img src="img/OilPipeBig/1.png">-->
-            <!--</div>-->
-
-            <!--<div class="oilpipefromsep">-->
-            <!--<img src="img/gif/oilpipefromsep.gif">-->
-            <!--</div>-->
-            <!--<div class="oilpipefromsep_dis">-->
-            <!--<img src="img/OilPipeFromSep/1.png">-->
-            <!--</div>-->
-
-            <!--<div class="oilpipefromadaptertoengine">-->
-            <!--<img src="img/gif/oilpipefromadaptertoengine.gif">-->
-            <!--</div>-->
-            <!--<div class="oilpipefromadaptertoengine_dis">-->
-            <!--<img src="img/OilPipeFromAdapterToEngine/1.png">-->
-            <!--</div>-->
-
-            <!--<div class="smallgreenpipe">-->
-            <!--<img src="img/gif/smallgreenpipe.gif">-->
-            <!--</div>-->
-            <!--<div class="smallgreenpipe_dis">-->
-            <!--<img src="img/568.png">-->
-            <!--</div>-->
-
-            <!--<div class="airvalvespring">-->
-            <!--<img src="img/gif/airvalvespring_rev.gif">-->
-            <!--</div>-->
-
-            <!--<div class="solenoidvalve">-->
-            <!--<img src="img/gif/solenoidvalve_rev.gif">-->
-            <!--</div>-->
-
-            <!--<div class="solenoidvalveblowdown">-->
-            <!--<img src="img/gif/solenoidvalveblowdown.gif">-->
-            <!--</div>-->
-
-            <!--<div class="airvalvespringsmall">-->
-            <!--<img src="img/gif/airvalvespringsmall.gif">-->
-            <!--</div>-->
-
-            <!--<div class="sepspring">-->
-            <!--<img src="img/gif/sepspring_rev.gif">-->
-            <!--</div>-->
-
-            <!--<div class="enginespring">-->
-            <!--<img src="img/gif/enginespring.gif">-->
-            <!--</div>-->
-
-            <!--<div class="violetarrowssmall">-->
-            <!--<img src="img/gif/violetarrows.gif">-->
-            <!--</div>-->
-
-            <!--<div class="violetarrowssmall2_">-->
-            <!--<img src="img/gif/violetarrows.gif">-->
-            <!--</div>-->
-
-            <!--<div class="violetarrowssmall3_">-->
-            <!--<img src="img/gif/violetarrows.gif">-->
-            <!--</div>-->
-
-            <!--<div class="violetpipe2_">-->
-            <!--<img src="img/gif/violetpipe2_rev.gif">-->
-            <!--</div>-->
-
-            <!--<div class="violetpipe1_">-->
-            <!--<img src="img/gif/violetpipe1_rev.gif">-->
-            <!--</div>-->
-
-            <!--<div class="violetpipe3_">-->
-            <!--<img src="img/gif/violetpipe3_rev.gif">-->
-            <!--</div>-->
-
-            <!--<div style="position: absolute; top:205px; left:720px"><img-->
-            <!--style="margin:0;padding:0;border:0px;width:180px;height:309px;" src="img/4.png">-->
-            <!--</div>-->
-            <!--<div style="position: absolute; top:223px; left:369px"-->
-            <!--&gt;<img style="margin:0;padding:0;border:0px;width:171px;height:200px;"-->
-            <!--src="img/310.png">-->
-            <!--</div>-->
-            <!--<div style="position: absolute; top:137px; left:302px"-->
-            <!--&gt;<img style="margin:0;padding:0;border:0px;width:173px;height:163px;"-->
-            <!--src="img/1.png">-->
-            <!--</div>-->
-            <!--<div style="position: absolute; top:101px; left:453px"-->
-            <!--&gt;<img style="margin:0;padding:0;border:0px;width:126px;height:106px;"-->
-            <!--src="img/Image%20289.png">-->
-            <!--</div>-->
-
-            <!--<div style="position: absolute; top:56px; left:185px;z-index: 0"-->
-            <!--&gt;<img style="margin:0;padding:0;border:0px;width:655px;height:40px;"-->
-            <!--src="img/566.png">-->
-            <!--</div>-->
-            <!--<div style="position: absolute; top:544px; left:246px;z-index: 6;"-->
-            <!--&gt;<img style="margin:0;padding:0;border:0px;width:17px;height:15px;"-->
-            <!--src="img/692.png">-->
-            <!--</div>-->
-
-            <!--<div style="position: absolute; top:328px; left:471px;"-->
-            <!--&gt;<img style="margin:0;padding:0;border:0px;width:50px;height:15px;"-->
-            <!--src="img/2.png">-->
-            <!--</div>-->
-            <!--<div style="position: absolute; top:232px; left:421px;"-->
-            <!--&gt;<img style="margin:0;padding:0;border:0px;width:52px;height:181px;"-->
-            <!--src="img/3.png">-->
-            <!--</div>-->
-            <!--<div style="position: absolute; top:62px; left:648px;"-->
-            <!--&gt;<img style="margin:0;padding:0;border:0px;width:251px;height:183px;"-->
-            <!--src="img/577.png">-->
-            <!--</div>-->
-
-            <!--<div style="position: absolute; top:275px; left:472px;"-->
-            <!--&gt;<img style="margin:0;padding:0;border:0px;width:303px;height:140px;"-->
-            <!--src="img/568.png">-->
-            <!--</div>-->
-
-            <!--<div style="position: absolute; top:240px; left:499px;"-->
-            <!--&gt;<img style="margin:0;padding:0;border:0px;width:325px;height:195px;"-->
-            <!--src="img/962.png">-->
-            <!--</div>-->
-
-
-            <!--<div class="violetarrows" style="position: absolute; top: 14px; left: 600px;display: none;">-->
-            <!--<div class="wrap">-->
-            <!--&lt;!&ndash;<iframe class="frame" style="width: 350px;height: 350px;" src="canvas/frames.html" seamless></iframe>&ndash;&gt;-->
-            <!--<iframe class="frame" src="canvas/frames.html" seamless></iframe>-->
-            <!--</div>-->
-            <!--</div>-->
-            <!--<div class="ggas">-->
-            <!--<div class="wrap">-->
-            <!--&lt;!&ndash;<iframe class="frame" style="width: 450px;height: 338px;" src="canvas/ggas.html" seamless></iframe>&ndash;&gt;-->
-            <!--<iframe class="frame" src="canvas/ggas.html" seamless></iframe>-->
-            <!--</div>-->
-            <!--</div>-->
-            <!--<div class="resarrows" style="display: block; width: 110px; height: 110px">-->
-            <!--&lt;!&ndash;<div class="wrap">&ndash;&gt;-->
-            <!--&lt;!&ndash;<iframe class="frame" style="width: 100px;height: 110px;" src="canvas/resarrows.html" seamless></iframe>&ndash;&gt;-->
-            <!--<iframe class="frame" src="canvas/resarrows.html" seamless></iframe>-->
-            <!--&lt;!&ndash;</div>&ndash;&gt;-->
-            <!--</div>-->
-
-            <!--<div style="height: 600px;width: 103%;margin-bottom: 20px;background-image: url('img/BG/223.png');">-->
-            <!--&lt;!&ndash;<img src="img/BG/red.png" style="position: relative;width: 1920px;margin-top: 653px;bottom: 0px;">&ndash;&gt;-->
-            <!--&lt;!&ndash;<img src="img/BG/red.png" style="position: relative;width: 100%;margin-top: 700px;bottom: 0px;">&ndash;&gt;-->
-            <!--&lt;!&ndash;<img src="img/BG/red.png" style="position: absolute;width: 100%;bottom: 0px;">&ndash;&gt;-->
-            <!--</div>-->
-
-            <!--<div class="row information-block" style="font-size: 2.5em">-->
-            <!--<div class="col-md-4 info">-->
-            <!--<div class="row">-->
-            <!--&lt;!&ndash;<div class="col-md-6">&ndash;&gt;-->
-            <!--&lt;!&ndash;<p></p>&ndash;&gt;-->
-            <!--&lt;!&ndash;</div>&ndash;&gt;-->
-            <!--</div>-->
-            <!--<h3 style="font-size: 4.8rem; text-align: center"><span class="label label-primary">СТАН</span></h3>-->
-            <!--<ul class="stan" style="list-style-type: none; font-size: 3rem">-->
-            <!--<li>-->
-            <!--<div class="row">-->
-            <!--<div class="col-md-10">-->
-            <!--<p>Ввімкн. </p>-->
-            <!--</div>-->
-            <!--<div class="col-md-2">-->
-            <!--<div class="status-vvimkn" style="width: 25px; height: 25px; border: solid 1px">-->
-
-            <!--</div>-->
-            <!--</div>-->
-
-            <!--</div>-->
-            <!--</li>-->
-            <!--<li>-->
-            <!--<div class="row">-->
-            <!--<div class="col-md-10">-->
-            <!--<p>Двигун </p>-->
-            <!--</div>-->
-            <!--<div class="col-md-2">-->
-            <!--<div class="status-motor" style="width: 25px; height: 25px; border: solid 1px">-->
-
-            <!--</div>-->
-            <!--</div>-->
-
-            <!--</div>-->
-            <!--</li>-->
-            <!--<li>-->
-            <!--<div class="row">-->
-            <!--<div class="col-md-10">-->
-            <!--<p>Навантаження </p>-->
-            <!--</div>-->
-            <!--<div class="col-md-2">-->
-            <!--<div class="status-load" style="width: 25px; height: 25px; border: solid 1px">-->
-
-            <!--</div>-->
-            <!--</div>-->
-
-            <!--</div>-->
-            <!--</li>-->
-            <!--&lt;!&ndash; <li class="temperature"><p></p></li> &ndash;&gt;-->
-            <!--</ul>-->
-            <!--</div>-->
-            <!--<div class="col-md-4 info">-->
-            <!--<div class="row">-->
-            <!--&lt;!&ndash;<div class="col-md-2">&ndash;&gt;-->
-            <!--&lt;!&ndash;<p>м3/хв</p>&ndash;&gt;-->
-            <!--&lt;!&ndash;</div>&ndash;&gt;-->
-            <!--</div>-->
-            <!--<h3 style="font-size: 4.8rem; text-align: center"><span class="label label-danger">УВАГА</span></h3>-->
-            <!--<ul class="stan" style="list-style-type: none; font-size: 3rem">-->
-            <!--<li>-->
-            <!--<div class="row">-->
-            <!--<div class="col-md-10">-->
-            <!--<p>Аварія </p>-->
-            <!--</div>-->
-            <!--<div class="col-md-2">-->
-            <!--<div class="status-avaria" style="width: 25px; height: 25px; border: solid 1px">-->
-
-            <!--</div>-->
-            <!--</div>-->
-
-            <!--</div>-->
-            <!--</li>-->
-            <!--<li>-->
-            <!--<div class="row">-->
-            <!--<div class="col-md-10">-->
-            <!--<p>Попередження </p>-->
-            <!--</div>-->
-            <!--<div class="col-md-2">-->
-            <!--<div class="status-poperedzhennia"-->
-            <!--style="width: 25px; height: 25px; border: solid 1px">-->
-
-            <!--</div>-->
-            <!--</div>-->
-
-            <!--</div>-->
-            <!--</li>-->
-            <!--<li>-->
-            <!--<div class="row">-->
-            <!--<div class="col-md-10">-->
-            <!--<p>Сервіс </p>-->
-            <!--</div>-->
-            <!--<div class="col-md-2">-->
-            <!--<div class="status-service"-->
-            <!--style="width: 25px; height: 25px; border: solid 1px">-->
-
-            <!--</div>-->
-            <!--</div>-->
-
-            <!--</div>-->
-            <!--</li>-->
-            <!--</ul>-->
-            <!--</div>-->
-            <!--<div class="col-md-4 info">-->
-            <!--<div class="row">-->
-            <!--&lt;!&ndash;<div class="col-md-2">&ndash;&gt;-->
-            <!--&lt;!&ndash;<p class="pressure"></p>&ndash;&gt;-->
-            <!--&lt;!&ndash;</div>&ndash;&gt;-->
-            <!--&lt;!&ndash; <div class="col-md-12" style="text-align: center">-->
-            <!--<p class="running-hrs"></p>-->
-            <!--</div> &ndash;&gt;-->
-            <!--</div>-->
-            <!--<h3 style="font-size: 4.8rem; text-align: center"><span class="label label-default">НАПРАЦЮВАННЯ</span></h3>-->
-            <!--<div class='jqxChart' style="width: 380px; height: 300px;font-size: 2.8rem; margin-left: 10%">-->
-            <!--</div>-->
-            <!--</div>-->
-            <!--</div>-->
-
-
-            <!--<div style="position: absolute;top: -140px; left: -90px">-->
-            <!--<div class="indicatorcontainer"-->
-            <!--style="position:absolute;top: 150px;left: 979px;width: 100px;height: 100px;">-->
-            <!--</div>-->
-            <!--<div class="indicatorValue">-->
-            <!--<p>0</p>-->
-            <!--</div>-->
-            <!--<div class="info-scheme">-->
-            <!--<p class="temperature bg-primary"></p>-->
-            <!--<p class="pressure bg-primary"></p>-->
-            <!--<p class="volume bg-primary"></p>-->
-            <!--</div>-->
-            <!--</div>-->
-            <!--</div>-->
         </div>
 
 
     </div>
 
-    <!--<div id="date-time" style="border: solid 1px black; float: right; padding: 10px; font-size: 1.5em; font-weight: bold">-->
-
-    <!--</div>-->
-
     <div class="row">
         <div class="col-md-4 col-md-offset-8 right">
-            <div id="datetimepicker" class="col-md-7" style="width: 100px;left:80px;font-size: 8px"></div>
-            <div class="col-md-6 pull-right" style="bottom:5px">
+            <div id="datetimepicker" class="col-md-7" style="width: 100px;left:80px;top: 3px;font-size: 8px"></div>
+            <div class="col-md-6 pull-right">
                 <canvas id="clock" width="240" height="150">
                 </canvas>
             </div>
