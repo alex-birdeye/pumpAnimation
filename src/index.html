@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="" xmlns:border-right="http://www.w3.org/1999/xhtml">
 <head>
     <link rel="stylesheet" type="text/css" href="dist/css/main.css"/>
     <meta charset="utf-8">
@@ -50,28 +50,32 @@
         <img class="air-intake-pipe-img" src="img/air-intake-pipe.jpg">
     </div>
 
-    <div style="position: absolute;top: 135px; left: 1070px;">
+    <div style="position: absolute;top: 137px; left: 1070px;">
         <h3 style="font-size: 0.9em">
             На виробництво
         </h3>
     </div>
 
-    <div id="air-intake-1" style="position: absolute;top: 110px;left: 220px; width: 130px; font-size: 0.9em; line-height: 80%">
+    <div id="air-intake-1" class="bordered"
+         style="position: absolute;top: 110px;left: 220px; width: 130px; font-size: 0.9em; line-height: 80%">
         <p>Тиск бар <input type="text" class="pressure bg-input" value="" style="float: right;width: 50px"></p>
         <br>
         <p>Т масла °C <input type="text" class="temperature bg-input" value="" style="float: right;width: 50px"></p>
     </div>
-    <div id="dryer" style="position: absolute;top: 120px;left: 560px;width: 160px; font-size: 0.9em; line-height: 80%">
+    <div id="dryer" class="bordered"
+         style="position: absolute;top: 110px;left: 546px;width: 200px; font-size: 0.9em; line-height: 80%">
         <!--<p id="dryer-pressure"></p>-->
         <!--<p id="dew_point"></p>-->
         <p>Тиск бар <input type="text" class="pressure bg-input" value="" style="float: right;width: 50px"></p>
         <br>
         <p>Точка роси °C <input type="text" class="dew_point bg-input" value="" style="float: right;width: 50px"></p>
     </div>
-    <div id="air-intake-2" style="position: absolute;top: 95px;left: 950px;width: 200px; font-size: 0.9em; line-height: 80%">
+    <div id="air-intake-2" class="bordered"
+         style="position: absolute;top: 88px;left: 950px;width: 200px; font-size: 0.9em; line-height: 80%">
         <p>Тиск бар <input type="text" class="pressure bg-input" value="" style="float: right;width: 50px"></p>
         <br>
-        <p>Продуктивність м³/хв <input type="text" class="volume bg-input" value="" style="float: right;width: 50px"></p>
+        <p>Продуктивність м³/хв <input type="text" class="volume bg-input" value="" style="float: right;width: 50px">
+        </p>
         <br>
         <p>Температура °C <input type="text" class="temperature bg-input" value="" style="float: right;width: 50px"></p>
 
@@ -109,21 +113,24 @@
             <div style="width:200px; height: 100px;text-align: center">
                 <img src="img/Adsorption%20dryer_4.png" style="height: 85%; float: left">
             </div>
-            <div id="dryer-indicators" style="border: solid 1px black; margin-top: 25px">
+            <div id="dryer-indicators" class="bordered" style="margin-top: 25px; padding-top: 0; width: 200px; left: 100px; position: relative">
 
-                <h4 style="font-size: 1em; font-weight: bold; text-align: center;">Стан</h4>
-                <div class="row">
-                    <div class="col-md-3 col-md-offset-1">
-                        <p>Ввімкн. </p>
-                    </div>
-                    <div class="col-md-2">
-                        <div class="status-vvimkn" style="width: 15px; height: 15px; border: solid 1px">
+                <h4 style="font-size: 1em; font-weight: bold; text-align: center; margin-top: 5px; margin-bottom: 5px">Стан</h4>
+                <div class="row" style="padding-bottom: 0; padding-top: 5px; border-top: solid 1px black; width: 104%; left: 10px; position: relative">
+                    <!--<div style="border-right: solid 1px red; width: 150px; height: 10px">-->
 
+                        <div class="col-md-3 <!--col-md-offset-1-->">
+                            <p>Ввімкн. </p>
                         </div>
-                    </div>
+                        <div class="col-md-2" >
+                            <div class="status-vvimkn" style="width: 15px; height: 15px; border: solid 1px">
+
+                            </div>
+                        </div>
+                    <!--</div>-->
                     <!--</div>-->
                     <!--<div class="row">-->
-                    <div class="col-md-3 col-md-offset-1">
+                    <div class="col-md-3 col-md-offset-1" style="border-left: solid 1px black">
                         <p>Аварія </p>
                     </div>
                     <div class="col-md-2">
@@ -153,7 +160,8 @@
                     </div>
                 </div>
                 <div class="col-md-1 col-md-offset-1">
-                    <button class="btn-default" style="float: right; width: 26px; padding: 0; border: none"><img src="img/exit-arrow.png" style="width: 25px">
+                    <button class="btn-default" style="float: right; width: 26px; padding: 0; border: none"><img
+                        src="img/exit-arrow.png" style="width: 25px">
                     </button>
                 </div>
 

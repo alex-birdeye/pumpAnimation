@@ -918,3 +918,8 @@ line-height: 38px;
     background-color: lightgray;
     border: none;
 }
+
+.bordered {
+    border: solid 1px black;
+    padding: 5px;
+}
